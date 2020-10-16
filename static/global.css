@@ -588,8 +588,8 @@ video {
 
 body {
   --bg-opacity: 1;
-  background-color: #c3dafe;
-  background-color: rgba(195, 218, 254, var(--bg-opacity));
+  background-color: #feebc8;
+  background-color: rgba(254, 235, 200, var(--bg-opacity));
 }
 
 .container {

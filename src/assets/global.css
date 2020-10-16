@@ -1,7 +1,7 @@
 @tailwind base;
 
 body {
-  @apply bg-indigo-200;
+  @apply bg-orange-200;
 }
 
 @tailwind components;

@@ -62,6 +62,15 @@
 		});
 		return Object.entries(formatted);
 	}
+
+	function formatPeeLength(time) {
+		console.log(time)
+		const totalSeconds = time / 1000;
+		const minutes = parseInt(totalSeconds / 60);
+		let seconds = parseInt(totalSeconds % 60) + '';
+		if (seconds.length === 1) seconds = `0${seconds}`;
+		return `${minutes}:${seconds}`;
+	}
 </script>
 
 <h1 class="text-yellow-500 bold text-3xl md:text-4xl text-center">Pee Log</h1>
@@ -105,10 +114,16 @@
 			</tr>
 			{#each pee[1] as history}
 			<tr>
-				<td>{formatTime(history[0])}</td>
-				<td>{history[1] / 1000} seconds</td>
+				<td class="text-sm">{formatTime(history[0])}</td>
+				<td>{formatPeeLength(history[1])}</td>
 			</tr>
 			{/each}
 		{/each}
 	</table>
 {/if}
+
+<style>
+  tr > * {
+    padding: .125rem 1rem 0 0;
+  }
+</style>
