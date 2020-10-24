@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, C as listen_dev, u as noop, x as validate_each_argument, f as space, j as claim_space, A as destroy_each, D as empty, q as query_selector_all, z as _slicedToArray, v as validate_slots, H as globals } from './client.da7b52ff.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, C as listen_dev, u as noop, x as validate_each_argument, f as space, j as claim_space, A as destroy_each, D as empty, q as query_selector_all, z as _slicedToArray, v as validate_slots, H as globals } from './client.a6b6a81a.js';
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -36,7 +36,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[3] = list[i];
   return child_ctx;
-} // (85:19) 
+} // (90:19) 
 
 
 function create_if_block_3(ctx) {
@@ -61,7 +61,7 @@ function create_if_block_3(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-red-700");
-      add_location(button, file, 85, 1, 1860);
+      add_location(button, file, 90, 1, 2002);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -85,11 +85,11 @@ function create_if_block_3(ctx) {
     block: block,
     id: create_if_block_3.name,
     type: "if",
-    source: "(85:19) ",
+    source: "(90:19) ",
     ctx: ctx
   });
   return block;
-} // (78:0) {#if !isPeeing}
+} // (83:0) {#if !isPeeing}
 
 
 function create_if_block_2(ctx) {
@@ -114,7 +114,7 @@ function create_if_block_2(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "block mb-4 mx-auto rounded-md border-black border py-2 px-4 text-white bg-green-700");
-      add_location(button, file, 78, 1, 1689);
+      add_location(button, file, 83, 1, 1831);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -138,11 +138,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(78:0) {#if !isPeeing}",
+    source: "(83:0) {#if !isPeeing}",
     ctx: ctx
   });
   return block;
-} // (94:0) {#if Object.values(peeHistory).length}
+} // (99:0) {#if Object.values(peeHistory).length}
 
 
 function create_if_block_1(ctx) {
@@ -167,7 +167,7 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
-      add_location(button, file, 94, 1, 2051);
+      add_location(button, file, 99, 1, 2193);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -191,11 +191,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(94:0) {#if Object.values(peeHistory).length}",
+    source: "(99:0) {#if Object.values(peeHistory).length}",
     ctx: ctx
   });
   return block;
-} // (103:0) {#if isHistoryShown}
+} // (108:0) {#if isHistoryShown}
 
 
 function create_if_block(ctx) {
@@ -279,14 +279,14 @@ function create_if_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 103, 1, 2230);
+      add_location(h2, file, 108, 1, 2372);
       attr_dev(th0, "class", "svelte-9xrsgv");
-      add_location(th0, file, 106, 3, 2332);
+      add_location(th0, file, 111, 3, 2474);
       attr_dev(th1, "class", "svelte-9xrsgv");
-      add_location(th1, file, 107, 3, 2349);
+      add_location(th1, file, 112, 3, 2491);
       attr_dev(tr, "class", "svelte-9xrsgv");
-      add_location(tr, file, 105, 2, 2324);
-      add_location(table, file, 104, 1, 2314);
+      add_location(tr, file, 110, 2, 2466);
+      add_location(table, file, 109, 1, 2456);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -348,11 +348,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(103:0) {#if isHistoryShown}",
+    source: "(108:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (115:3) {#each pee[1] as history}
+} // (120:3) {#each pee[1] as history}
 
 
 function create_each_block_1(ctx) {
@@ -404,11 +404,11 @@ function create_each_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(td0, "class", "text-sm svelte-9xrsgv");
-      add_location(td0, file, 116, 4, 2500);
+      add_location(td0, file, 121, 4, 2642);
       attr_dev(td1, "class", "svelte-9xrsgv");
-      add_location(td1, file, 117, 4, 2554);
+      add_location(td1, file, 122, 4, 2696);
       attr_dev(tr, "class", "svelte-9xrsgv");
-      add_location(tr, file, 115, 3, 2491);
+      add_location(tr, file, 120, 3, 2633);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -428,11 +428,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(115:3) {#each pee[1] as history}",
+    source: "(120:3) {#each pee[1] as history}",
     ctx: ctx
   });
   return block;
-} // (110:2) {#each formatHistory() as pee}
+} // (115:2) {#each formatHistory() as pee}
 
 
 function create_each_block(ctx) {
@@ -500,11 +500,11 @@ function create_each_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(th0, "class", "svelte-9xrsgv");
-      add_location(th0, file, 111, 4, 2418);
+      add_location(th0, file, 116, 4, 2560);
       attr_dev(th1, "class", "svelte-9xrsgv");
-      add_location(th1, file, 112, 4, 2440);
+      add_location(th1, file, 117, 4, 2582);
       attr_dev(tr, "class", "svelte-9xrsgv");
-      add_location(tr, file, 110, 3, 2409);
+      add_location(tr, file, 115, 3, 2551);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -563,7 +563,7 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(110:2) {#each formatHistory() as pee}",
+    source: "(115:2) {#each formatHistory() as pee}",
     ctx: ctx
   });
   return block;
@@ -577,17 +577,17 @@ function create_fragment(ctx) {
   var t3;
   var show_if = Object.values(
   /*peeHistory*/
-  ctx[2]).length;
+  ctx[1]).length;
   var t4;
   var if_block2_anchor;
 
   function select_block_type(ctx, dirty) {
     if (!
     /*isPeeing*/
-    ctx[0]) return create_if_block_2;
+    ctx[2]) return create_if_block_2;
     if (
     /*isPeeing*/
-    ctx[0]) return create_if_block_3;
+    ctx[2]) return create_if_block_3;
   }
 
   var current_block_type = select_block_type(ctx);
@@ -595,7 +595,7 @@ function create_fragment(ctx) {
   var if_block1 = show_if && create_if_block_1(ctx);
   var if_block2 =
   /*isHistoryShown*/
-  ctx[1] && create_if_block(ctx);
+  ctx[0] && create_if_block(ctx);
   var block = {
     c: function create() {
       t0 = space();
@@ -632,7 +632,7 @@ function create_fragment(ctx) {
     h: function hydrate() {
       document.title = "Pee Log";
       attr_dev(h1, "class", "text-yellow-500 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 75, 0, 1592);
+      add_location(h1, file, 80, 0, 1734);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -664,9 +664,9 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*peeHistory*/
-      4) show_if = Object.values(
+      2) show_if = Object.values(
       /*peeHistory*/
-      ctx[2]).length;
+      ctx[1]).length;
 
       if (show_if) {
         if (if_block1) {
@@ -683,7 +683,7 @@ function create_fragment(ctx) {
 
       if (
       /*isHistoryShown*/
-      ctx[1]) {
+      ctx[0]) {
         if (if_block2) {
           if_block2.p(ctx, dirty);
         } else {
@@ -748,23 +748,23 @@ function instance($$self, $$props, $$invalidate) {
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
       $$scope = $$props.$$scope;
   validate_slots("Pee", slots, []);
-  var isPeeing = false;
-  var isHistoryShown = false;
   var peeInit = {
     startTime: null,
     totalTime: null
   };
-
-  var pee = _objectSpread({}, peeInit);
-
+  var isHistoryShown = false;
   var peeHistory = {};
+  var isPeeing = false;
+  var pee;
 
   {
+    isPeeing = localStorage.isPeeing || false;
+    pee = localStorage.pee || _objectSpread({}, peeInit);
     peeHistory = !!localStorage.peeHistory ? JSON.parse(localStorage.peeHistory) : {};
   }
 
   function submitPee() {
-    $$invalidate(2, peeHistory[pee.startTime] = pee.totalTime, peeHistory);
+    $$invalidate(1, peeHistory[pee.startTime] = pee.totalTime, peeHistory);
 
     {
       localStorage.peeHistory = JSON.stringify(peeHistory);
@@ -774,18 +774,20 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function startPee() {
-    $$invalidate(0, isPeeing = true);
+    $$invalidate(2, isPeeing = true);
+    localStorage.isPeeing = true;
     $$invalidate(3, pee.startTime = new Date().getTime(), pee);
+    localStorage.pee = pee;
   }
 
   function endPee() {
-    $$invalidate(0, isPeeing = false);
+    $$invalidate(2, isPeeing = false);
     $$invalidate(3, pee.totalTime = new Date().getTime() - pee.startTime, pee);
     submitPee();
   }
 
   function showHistory() {
-    $$invalidate(1, isHistoryShown = true);
+    $$invalidate(0, isHistoryShown = !isHistoryShown);
   }
 
   function formatHistory() {
@@ -809,11 +811,11 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$capture_state = function () {
     return {
-      isPeeing: isPeeing,
-      isHistoryShown: isHistoryShown,
       peeInit: peeInit,
-      pee: pee,
+      isHistoryShown: isHistoryShown,
       peeHistory: peeHistory,
+      isPeeing: isPeeing,
+      pee: pee,
       submitPee: submitPee,
       startPee: startPee,
       endPee: endPee,
@@ -826,17 +828,17 @@ function instance($$self, $$props, $$invalidate) {
   };
 
   $$self.$inject_state = function ($$props) {
-    if ("isPeeing" in $$props) $$invalidate(0, isPeeing = $$props.isPeeing);
-    if ("isHistoryShown" in $$props) $$invalidate(1, isHistoryShown = $$props.isHistoryShown);
+    if ("isHistoryShown" in $$props) $$invalidate(0, isHistoryShown = $$props.isHistoryShown);
+    if ("peeHistory" in $$props) $$invalidate(1, peeHistory = $$props.peeHistory);
+    if ("isPeeing" in $$props) $$invalidate(2, isPeeing = $$props.isPeeing);
     if ("pee" in $$props) $$invalidate(3, pee = $$props.pee);
-    if ("peeHistory" in $$props) $$invalidate(2, peeHistory = $$props.peeHistory);
   };
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [isPeeing, isHistoryShown, peeHistory, pee, startPee, endPee, showHistory, formatHistory];
+  return [isHistoryShown, peeHistory, isPeeing, pee, startPee, endPee, showHistory, formatHistory];
 }
 
 var Pee = /*#__PURE__*/function (_SvelteComponentDev) {
