@@ -1078,6 +1078,10 @@ function attr(node, attribute, value) {
   if (value == null) node.removeAttribute(attribute);else if (node.getAttribute(attribute) !== value) node.setAttribute(attribute, value);
 }
 
+function to_number(value) {
+  return value === '' ? null : +value;
+}
+
 function children(element) {
   return Array.from(element.childNodes);
 }
@@ -1154,6 +1158,22 @@ function get_current_component() {
 
 function afterUpdate(fn) {
   get_current_component().$$.after_update.push(fn);
+}
+
+function createEventDispatcher() {
+  var component = get_current_component();
+  return function (type, detail) {
+    var callbacks = component.$$.callbacks[type];
+
+    if (callbacks) {
+      // TODO are there situations where events could be dispatched
+      // in a server (non-DOM) environment?
+      var event = custom_event(type, detail);
+      callbacks.slice().forEach(function (fn) {
+        fn.call(component, event);
+      });
+    }
+  };
 }
 
 function setContext(key, context) {
@@ -1706,6 +1726,18 @@ function create_fragment(ctx) {
   var t4;
   var a2_aria_current_value;
   var a2_class_value;
+  var t5;
+  var li3;
+  var a3;
+  var t6;
+  var a3_aria_current_value;
+  var a3_class_value;
+  var t7;
+  var li4;
+  var a4;
+  var t8;
+  var a4_aria_current_value;
+  var a4_class_value;
   var block = {
     c: function create() {
       nav = element("nav");
@@ -1721,6 +1753,14 @@ function create_fragment(ctx) {
       li2 = element("li");
       a2 = element("a");
       t4 = text("Food Log");
+      t5 = space();
+      li3 = element("li");
+      a3 = element("a");
+      t6 = text("Activity Log");
+      t7 = space();
+      li4 = element("li");
+      a4 = element("a");
+      t8 = text("Symptom Log");
       this.h();
     },
     l: function claim(nodes) {
@@ -1767,6 +1807,30 @@ function create_fragment(ctx) {
       t4 = claim_text(a2_nodes, "Food Log");
       a2_nodes.forEach(detach_dev);
       li2_nodes.forEach(detach_dev);
+      t5 = claim_space(ul_nodes);
+      li3 = claim_element(ul_nodes, "LI", {});
+      var li3_nodes = children(li3);
+      a3 = claim_element(li3_nodes, "A", {
+        "aria-current": true,
+        class: true,
+        href: true
+      });
+      var a3_nodes = children(a3);
+      t6 = claim_text(a3_nodes, "Activity Log");
+      a3_nodes.forEach(detach_dev);
+      li3_nodes.forEach(detach_dev);
+      t7 = claim_space(ul_nodes);
+      li4 = claim_element(ul_nodes, "LI", {});
+      var li4_nodes = children(li4);
+      a4 = claim_element(li4_nodes, "A", {
+        "aria-current": true,
+        class: true,
+        href: true
+      });
+      var a4_nodes = children(a4);
+      t8 = claim_text(a4_nodes, "Symptom Log");
+      a4_nodes.forEach(detach_dev);
+      li4_nodes.forEach(detach_dev);
       ul_nodes.forEach(detach_dev);
       nav_nodes.forEach(detach_dev);
       this.h();
@@ -1779,8 +1843,8 @@ function create_fragment(ctx) {
       /*segment*/
       ctx[0] === undefined ? "" : "underline");
       attr_dev(a0, "href", ".");
-      add_location(a0, file, 6, 6, 127);
-      add_location(li0, file, 6, 2, 123);
+      add_location(a0, file, 6, 6, 150);
+      add_location(li0, file, 6, 2, 146);
       attr_dev(a1, "aria-current", a1_aria_current_value =
       /*segment*/
       ctx[0] === "pee" ? "page" : undefined);
@@ -1788,8 +1852,8 @@ function create_fragment(ctx) {
       /*segment*/
       ctx[0] === "pee" ? "" : "underline");
       attr_dev(a1, "href", "pee");
-      add_location(a1, file, 12, 6, 286);
-      add_location(li1, file, 12, 2, 282);
+      add_location(a1, file, 12, 6, 309);
+      add_location(li1, file, 12, 2, 305);
       attr_dev(a2, "aria-current", a2_aria_current_value =
       /*segment*/
       ctx[0] === "food" ? "page" : undefined);
@@ -1797,9 +1861,27 @@ function create_fragment(ctx) {
       /*segment*/
       ctx[0] === "food" ? "" : "underline");
       attr_dev(a2, "href", "food");
-      add_location(a2, file, 17, 6, 438);
-      add_location(li2, file, 17, 2, 434);
-      attr_dev(ul, "class", "space-x-4 flex justify-between");
+      add_location(a2, file, 17, 6, 461);
+      add_location(li2, file, 17, 2, 457);
+      attr_dev(a3, "aria-current", a3_aria_current_value =
+      /*segment*/
+      ctx[0] === "activity" ? "page" : undefined);
+      attr_dev(a3, "class", a3_class_value =
+      /*segment*/
+      ctx[0] === "activity" ? "" : "underline");
+      attr_dev(a3, "href", "activity");
+      add_location(a3, file, 22, 6, 617);
+      add_location(li3, file, 22, 2, 613);
+      attr_dev(a4, "aria-current", a4_aria_current_value =
+      /*segment*/
+      ctx[0] === "symptom" ? "page" : undefined);
+      attr_dev(a4, "class", a4_class_value =
+      /*segment*/
+      ctx[0] === "symptom" ? "" : "underline");
+      attr_dev(a4, "href", "symptom");
+      add_location(a4, file, 27, 6, 789);
+      add_location(li4, file, 27, 2, 785);
+      attr_dev(ul, "class", "space-x-2 md:space-x-4 flex flex-wrap justify-between");
       add_location(ul, file, 5, 1, 77);
       attr_dev(nav, "class", "wrapper mx-auto py-2");
       add_location(nav, file, 4, 0, 41);
@@ -1818,6 +1900,14 @@ function create_fragment(ctx) {
       append_dev(ul, li2);
       append_dev(li2, a2);
       append_dev(a2, t4);
+      append_dev(ul, t5);
+      append_dev(ul, li3);
+      append_dev(li3, a3);
+      append_dev(a3, t6);
+      append_dev(ul, t7);
+      append_dev(ul, li4);
+      append_dev(li4, a4);
+      append_dev(a4, t8);
     },
     p: function update(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
@@ -1869,6 +1959,38 @@ function create_fragment(ctx) {
       /*segment*/
       ctx[0] === "food" ? "" : "underline")) {
         attr_dev(a2, "class", a2_class_value);
+      }
+
+      if (dirty &
+      /*segment*/
+      1 && a3_aria_current_value !== (a3_aria_current_value =
+      /*segment*/
+      ctx[0] === "activity" ? "page" : undefined)) {
+        attr_dev(a3, "aria-current", a3_aria_current_value);
+      }
+
+      if (dirty &
+      /*segment*/
+      1 && a3_class_value !== (a3_class_value =
+      /*segment*/
+      ctx[0] === "activity" ? "" : "underline")) {
+        attr_dev(a3, "class", a3_class_value);
+      }
+
+      if (dirty &
+      /*segment*/
+      1 && a4_aria_current_value !== (a4_aria_current_value =
+      /*segment*/
+      ctx[0] === "symptom" ? "page" : undefined)) {
+        attr_dev(a4, "aria-current", a4_aria_current_value);
+      }
+
+      if (dirty &
+      /*segment*/
+      1 && a4_class_value !== (a4_class_value =
+      /*segment*/
+      ctx[0] === "symptom" ? "" : "underline")) {
+        attr_dev(a4, "class", a4_class_value);
       }
     },
     i: noop,
@@ -2016,8 +2138,8 @@ function create_fragment$1(ctx) {
     },
     h: function hydrate() {
       attr_dev(main, "class", "wrapper bg-gray-800 text-white p-4 md:p-8 mx-auto shadow");
-      add_location(main, file$1, 9, 1, 134);
-      attr_dev(div, "class", "px-4 md:px-0");
+      add_location(main, file$1, 9, 1, 173);
+      attr_dev(div, "class", "px-4 py-2 md:px-0 flex flex-col-reverse md:flex-col");
       add_location(div, file$1, 6, 0, 87);
     },
     m: function mount(target, anchor) {
@@ -2989,23 +3111,31 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/blog\.json$/, /^\/blog\/([^\/]+?)\.json$/];
 var components = [{
   js: function js() {
-    return Promise.all([import('./index.4524c314.js'), __inject_styles(["client-baa77aa8.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./index.50398ccc.js'), __inject_styles(["client-baa77aa8.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./index.01787543.js'), __inject_styles(["client-baa77aa8.css","index-ccc6c026.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./activity.9f0510ce.js'), __inject_styles(["client-baa77aa8.css","Modal-aa110086.css","activity-d51c0553.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./[slug].ac526f3f.js'), __inject_styles(["client-baa77aa8.css","[slug]-c55cf7e1.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./symptom.0417b5eb.js'), __inject_styles(["client-baa77aa8.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./food.6d383b94.js'), __inject_styles(["client-baa77aa8.css","food-fe357f43.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./index.3bcfde5a.js'), __inject_styles(["client-baa77aa8.css","index-ccc6c026.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./pee.fbe29ba7.js'), __inject_styles(["client-baa77aa8.css","pee-60e9168b.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./[slug].4e4f6014.js'), __inject_styles(["client-baa77aa8.css","[slug]-c55cf7e1.css"])]).then(function(x) { return x[0]; });
+  }
+}, {
+  js: function js() {
+    return Promise.all([import('./food.5db2f654.js'), __inject_styles(["client-baa77aa8.css","food-fe357f43.css"])]).then(function(x) { return x[0]; });
+  }
+}, {
+  js: function js() {
+    return Promise.all([import('./pee.9bc9b7ae.js'), __inject_styles(["client-baa77aa8.css","Modal-aa110086.css","pee-3a8d1dcf.css"])]).then(function(x) { return x[0]; });
   }
 }];
 var routes = function (d) {
@@ -3016,16 +3146,28 @@ var routes = function (d) {
       i: 0
     }]
   }, {
+    // activity.svelte
+    pattern: /^\/activity\/?$/,
+    parts: [{
+      i: 1
+    }]
+  }, {
+    // symptom.svelte
+    pattern: /^\/symptom\/?$/,
+    parts: [{
+      i: 2
+    }]
+  }, {
     // blog/index.svelte
     pattern: /^\/blog\/?$/,
     parts: [{
-      i: 1
+      i: 3
     }]
   }, {
     // blog/[slug].svelte
     pattern: /^\/blog\/([^\/]+?)\/?$/,
     parts: [null, {
-      i: 2,
+      i: 4,
       params: function params(match) {
         return {
           slug: d(match[1])
@@ -3036,13 +3178,13 @@ var routes = function (d) {
     // food.svelte
     pattern: /^\/food\/?$/,
     parts: [{
-      i: 3
+      i: 5
     }]
   }, {
     // pee.svelte
     pattern: /^\/pee\/?$/,
     parts: [{
-      i: 4
+      i: 6
     }]
   }];
 }(decodeURIComponent);
@@ -3933,6 +4075,6 @@ start$1({
   target: document.querySelector('#sapper')
 });
 
-export { destroy_each as A, regenerator as B, listen_dev as C, empty as D, set_input_value as E, prevent_default as F, run_all as G, globals as H, SvelteComponentDev as S, _inherits as _, _getPrototypeOf as a, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, space as f, element as g, detach_dev as h, init as i, claim_space as j, claim_element as k, children as l, claim_text as m, attr_dev as n, add_location as o, insert_dev as p, query_selector_all as q, append_dev as r, safe_not_equal as s, text as t, noop as u, validate_slots as v, _createClass as w, validate_each_argument as x, set_data_dev as y, _slicedToArray as z };
+export { destroy_each as A, create_component as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, prevent_default as H, check_outros as I, run_all as J, globals as K, group_outros as L, create_slot as M, createEventDispatcher as N, _slicedToArray as O, update_slot as P, set_data_dev as Q, to_number as R, SvelteComponentDev as S, _createClass as T, regenerator as U, _inherits as _, _getPrototypeOf as a, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, space as f, element as g, detach_dev as h, init as i, claim_space as j, claim_element as k, children as l, claim_text as m, attr_dev as n, add_location as o, insert_dev as p, query_selector_all as q, append_dev as r, safe_not_equal as s, text as t, listen_dev as u, noop as v, validate_slots as w, empty as x, set_input_value as y, validate_each_argument as z };
 
 import __inject_styles from './inject_styles.fe622066.js';

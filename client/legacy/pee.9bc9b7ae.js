@@ -1,4 +1,5 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, C as listen_dev, u as noop, x as validate_each_argument, f as space, j as claim_space, A as destroy_each, D as empty, q as query_selector_all, z as _slicedToArray, v as validate_slots, H as globals } from './client.d903a1dc.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, u as listen_dev, v as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, x as empty, B as create_component, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component, q as query_selector_all, O as _slicedToArray, I as check_outros, w as validate_slots, K as globals, y as set_input_value, J as run_all, L as group_outros } from './client.8b10c686.js';
+import { M as Modal } from './Modal.ae41745b.js';
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -27,124 +28,168 @@ var file = "src/routes/pee.svelte";
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[12] = list[i];
+  child_ctx[7] = list[i];
   return child_ctx;
 }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[3] = list[i];
+  child_ctx[21] = list[i];
   return child_ctx;
-} // (95:19) 
+} // (139:19) 
 
 
-function create_if_block_3(ctx) {
-  var button;
-  var t;
+function create_if_block_4(ctx) {
+  var button0;
+  var t0;
+  var t1;
+  var button1;
+  var t2;
   var mounted;
   var dispose;
   var block = {
     c: function create() {
-      button = element("button");
-      t = text("End Pee");
+      button0 = element("button");
+      t0 = text("End Pee");
+      t1 = space();
+      button1 = element("button");
+      t2 = text("Cancel Pee");
       this.h();
     },
     l: function claim(nodes) {
-      button = claim_element(nodes, "BUTTON", {
+      button0 = claim_element(nodes, "BUTTON", {
         class: true
       });
-      var button_nodes = children(button);
-      t = claim_text(button_nodes, "End Pee");
-      button_nodes.forEach(detach_dev);
+      var button0_nodes = children(button0);
+      t0 = claim_text(button0_nodes, "End Pee");
+      button0_nodes.forEach(detach_dev);
+      t1 = claim_space(nodes);
+      button1 = claim_element(nodes, "BUTTON", {
+        class: true
+      });
+      var button1_nodes = children(button1);
+      t2 = claim_text(button1_nodes, "Cancel Pee");
+      button1_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
-      attr_dev(button, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-red-700");
-      add_location(button, file, 95, 1, 2131);
+      attr_dev(button0, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-red-700");
+      add_location(button0, file, 139, 1, 3169);
+      attr_dev(button1, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-gray-700");
+      add_location(button1, file, 145, 1, 3314);
     },
     m: function mount(target, anchor) {
-      insert_dev(target, button, anchor);
-      append_dev(button, t);
+      insert_dev(target, button0, anchor);
+      append_dev(button0, t0);
+      insert_dev(target, t1, anchor);
+      insert_dev(target, button1, anchor);
+      append_dev(button1, t2);
 
       if (!mounted) {
-        dispose = listen_dev(button, "click",
+        dispose = [listen_dev(button0, "click",
         /*endPee*/
-        ctx[5], false, false, false);
+        ctx[9], false, false, false), listen_dev(button1, "click",
+        /*cancelPee*/
+        ctx[10], false, false, false)];
         mounted = true;
       }
     },
     p: noop,
     d: function destroy(detaching) {
-      if (detaching) detach_dev(button);
+      if (detaching) detach_dev(button0);
+      if (detaching) detach_dev(t1);
+      if (detaching) detach_dev(button1);
       mounted = false;
-      dispose();
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_if_block_4.name,
+    type: "if",
+    source: "(139:19) ",
+    ctx: ctx
+  });
+  return block;
+} // (126:0) {#if !isPeeing}
+
+
+function create_if_block_3(ctx) {
+  var button0;
+  var t0;
+  var t1;
+  var button1;
+  var t2;
+  var mounted;
+  var dispose;
+  var block = {
+    c: function create() {
+      button0 = element("button");
+      t0 = text("Start Pee");
+      t1 = space();
+      button1 = element("button");
+      t2 = text("Manual Add");
+      this.h();
+    },
+    l: function claim(nodes) {
+      button0 = claim_element(nodes, "BUTTON", {
+        class: true
+      });
+      var button0_nodes = children(button0);
+      t0 = claim_text(button0_nodes, "Start Pee");
+      button0_nodes.forEach(detach_dev);
+      t1 = claim_space(nodes);
+      button1 = claim_element(nodes, "BUTTON", {
+        class: true
+      });
+      var button1_nodes = children(button1);
+      t2 = claim_text(button1_nodes, "Manual Add");
+      button1_nodes.forEach(detach_dev);
+      this.h();
+    },
+    h: function hydrate() {
+      attr_dev(button0, "class", "block mb-4 mx-auto rounded-md border-black border py-2 px-4 text-white bg-green-700");
+      add_location(button0, file, 126, 1, 2846);
+      attr_dev(button1, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-gray-700");
+      add_location(button1, file, 132, 1, 2997);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, button0, anchor);
+      append_dev(button0, t0);
+      insert_dev(target, t1, anchor);
+      insert_dev(target, button1, anchor);
+      append_dev(button1, t2);
+
+      if (!mounted) {
+        dispose = [listen_dev(button0, "click",
+        /*startPee*/
+        ctx[8], false, false, false), listen_dev(button1, "click",
+        /*manualAdd*/
+        ctx[11], false, false, false)];
+        mounted = true;
+      }
+    },
+    p: noop,
+    d: function destroy(detaching) {
+      if (detaching) detach_dev(button0);
+      if (detaching) detach_dev(t1);
+      if (detaching) detach_dev(button1);
+      mounted = false;
+      run_all(dispose);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
     id: create_if_block_3.name,
     type: "if",
-    source: "(95:19) ",
+    source: "(126:0) {#if !isPeeing}",
     ctx: ctx
   });
   return block;
-} // (88:0) {#if !isPeeing}
+} // (154:0) {#if Object.values(peeHistory).length}
 
 
 function create_if_block_2(ctx) {
-  var button;
-  var t;
-  var mounted;
-  var dispose;
-  var block = {
-    c: function create() {
-      button = element("button");
-      t = text("Start Pee");
-      this.h();
-    },
-    l: function claim(nodes) {
-      button = claim_element(nodes, "BUTTON", {
-        class: true
-      });
-      var button_nodes = children(button);
-      t = claim_text(button_nodes, "Start Pee");
-      button_nodes.forEach(detach_dev);
-      this.h();
-    },
-    h: function hydrate() {
-      attr_dev(button, "class", "block mb-4 mx-auto rounded-md border-black border py-2 px-4 text-white bg-green-700");
-      add_location(button, file, 88, 1, 1960);
-    },
-    m: function mount(target, anchor) {
-      insert_dev(target, button, anchor);
-      append_dev(button, t);
-
-      if (!mounted) {
-        dispose = listen_dev(button, "click",
-        /*startPee*/
-        ctx[4], false, false, false);
-        mounted = true;
-      }
-    },
-    p: noop,
-    d: function destroy(detaching) {
-      if (detaching) detach_dev(button);
-      mounted = false;
-      dispose();
-    }
-  };
-  dispatch_dev("SvelteRegisterBlock", {
-    block: block,
-    id: create_if_block_2.name,
-    type: "if",
-    source: "(88:0) {#if !isPeeing}",
-    ctx: ctx
-  });
-  return block;
-} // (104:0) {#if Object.values(peeHistory).length}
-
-
-function create_if_block_1(ctx) {
   var button;
   var t;
   var mounted;
@@ -166,7 +211,7 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
-      add_location(button, file, 104, 1, 2322);
+      add_location(button, file, 154, 1, 3512);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -175,7 +220,7 @@ function create_if_block_1(ctx) {
       if (!mounted) {
         dispose = listen_dev(button, "click",
         /*showHistory*/
-        ctx[6], false, false, false);
+        ctx[14], false, false, false);
         mounted = true;
       }
     },
@@ -188,16 +233,16 @@ function create_if_block_1(ctx) {
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
-    id: create_if_block_1.name,
+    id: create_if_block_2.name,
     type: "if",
-    source: "(104:0) {#if Object.values(peeHistory).length}",
+    source: "(154:0) {#if Object.values(peeHistory).length}",
     ctx: ctx
   });
   return block;
-} // (113:0) {#if isHistoryShown}
+} // (163:0) {#if isHistoryShown}
 
 
-function create_if_block(ctx) {
+function create_if_block_1(ctx) {
   var h2;
   var t0;
   var t1;
@@ -211,7 +256,7 @@ function create_if_block(ctx) {
   var t5;
   var each_value =
   /*formatHistory*/
-  ctx[7]();
+  ctx[15]();
   validate_each_argument(each_value);
   var each_blocks = [];
 
@@ -278,14 +323,14 @@ function create_if_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 113, 1, 2501);
-      attr_dev(th0, "class", "svelte-9xrsgv");
-      add_location(th0, file, 116, 3, 2603);
-      attr_dev(th1, "class", "svelte-9xrsgv");
-      add_location(th1, file, 117, 3, 2620);
-      attr_dev(tr, "class", "svelte-9xrsgv");
-      add_location(tr, file, 115, 2, 2595);
-      add_location(table, file, 114, 1, 2585);
+      add_location(h2, file, 163, 1, 3691);
+      attr_dev(th0, "class", "svelte-sfl9m0");
+      add_location(th0, file, 166, 3, 3793);
+      attr_dev(th1, "class", "svelte-sfl9m0");
+      add_location(th1, file, 167, 3, 3810);
+      attr_dev(tr, "class", "svelte-sfl9m0");
+      add_location(tr, file, 165, 2, 3785);
+      add_location(table, file, 164, 1, 3775);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -307,10 +352,10 @@ function create_if_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatPeeLength, formatTime*/
-      128) {
+      32768) {
         each_value =
         /*formatHistory*/
-        ctx[7]();
+        ctx[15]();
         validate_each_argument(each_value);
 
         var _i4;
@@ -345,27 +390,27 @@ function create_if_block(ctx) {
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
-    id: create_if_block.name,
+    id: create_if_block_1.name,
     type: "if",
-    source: "(113:0) {#if isHistoryShown}",
+    source: "(163:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (125:3) {#each pee[1] as history}
+} // (175:3) {#each day[1] as pee}
 
 
 function create_each_block_1(ctx) {
   var tr;
   var td0;
   var t0_value = formatTime(
-  /*history*/
-  ctx[12][0]) + "";
+  /*pee*/
+  ctx[7].startTime) + "";
   var t0;
   var t1;
   var td1;
   var t2_value = formatPeeLength(
-  /*history*/
-  ctx[12][1]) + "";
+  /*pee*/
+  ctx[7].totalTime) + "";
   var t2;
   var t3;
   var block = {
@@ -402,12 +447,12 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(td0, "class", "text-sm svelte-9xrsgv");
-      add_location(td0, file, 126, 4, 2771);
-      attr_dev(td1, "class", "svelte-9xrsgv");
-      add_location(td1, file, 127, 4, 2825);
-      attr_dev(tr, "class", "svelte-9xrsgv");
-      add_location(tr, file, 125, 3, 2762);
+      attr_dev(td0, "class", "text-sm svelte-sfl9m0");
+      add_location(td0, file, 176, 4, 3957);
+      attr_dev(td1, "class", "svelte-sfl9m0");
+      add_location(td1, file, 177, 4, 4014);
+      attr_dev(tr, "class", "svelte-sfl9m0");
+      add_location(tr, file, 175, 3, 3948);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -427,27 +472,27 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(125:3) {#each pee[1] as history}",
+    source: "(175:3) {#each day[1] as pee}",
     ctx: ctx
   });
   return block;
-} // (120:2) {#each formatHistory() as pee}
+} // (170:2) {#each formatHistory() as day}
 
 
 function create_each_block(ctx) {
   var tr;
   var th0;
   var t0_value =
-  /*pee*/
-  ctx[3][0] + "";
+  /*day*/
+  ctx[21][0] + "";
   var t0;
   var t1;
   var th1;
   var t2;
   var each_1_anchor;
   var each_value_1 =
-  /*pee*/
-  ctx[3][1];
+  /*day*/
+  ctx[21][1];
   validate_each_argument(each_value_1);
   var each_blocks = [];
 
@@ -498,12 +543,12 @@ function create_each_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(th0, "class", "svelte-9xrsgv");
-      add_location(th0, file, 121, 4, 2689);
-      attr_dev(th1, "class", "svelte-9xrsgv");
-      add_location(th1, file, 122, 4, 2711);
-      attr_dev(tr, "class", "svelte-9xrsgv");
-      add_location(tr, file, 120, 3, 2680);
+      attr_dev(th0, "class", "svelte-sfl9m0");
+      add_location(th0, file, 171, 4, 3879);
+      attr_dev(th1, "class", "svelte-sfl9m0");
+      add_location(th1, file, 172, 4, 3901);
+      attr_dev(tr, "class", "svelte-sfl9m0");
+      add_location(tr, file, 170, 3, 3870);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -522,10 +567,10 @@ function create_each_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatPeeLength, formatHistory, formatTime*/
-      128) {
+      32768) {
         each_value_1 =
-        /*pee*/
-        ctx[3][1];
+        /*day*/
+        ctx[21][1];
         validate_each_argument(each_value_1);
 
         var _i8;
@@ -562,7 +607,281 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(120:2) {#each formatHistory() as pee}",
+    source: "(170:2) {#each formatHistory() as day}",
+    ctx: ctx
+  });
+  return block;
+} // (185:0) {#if isManualAdd}
+
+
+function create_if_block(ctx) {
+  var modal;
+  var current;
+  modal = new Modal({
+    props: {
+      $$slots: {
+        default: [create_default_slot]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    },
+    $$inline: true
+  });
+  modal.$on("closeModal",
+  /*cancelManualAdd*/
+  ctx[12]);
+  var block = {
+    c: function create() {
+      create_component(modal.$$.fragment);
+    },
+    l: function claim(nodes) {
+      claim_component(modal.$$.fragment, nodes);
+    },
+    m: function mount(target, anchor) {
+      mount_component(modal, target, anchor);
+      current = true;
+    },
+    p: function update(ctx, dirty) {
+      var modal_changes = {};
+
+      if (dirty &
+      /*$$scope, manualAddLength, manualAddTime, manualAddDate*/
+      67108976) {
+        modal_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      modal.$set(modal_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(modal.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(modal.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(modal, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_if_block.name,
+    type: "if",
+    source: "(185:0) {#if isManualAdd}",
+    ctx: ctx
+  });
+  return block;
+} // (186:1) <Modal on:closeModal={cancelManualAdd}>
+
+
+function create_default_slot(ctx) {
+  var div;
+  var label0;
+  var t0;
+  var input0;
+  var t1;
+  var label1;
+  var t2;
+  var input1;
+  var t3;
+  var label2;
+  var t4;
+  var input2;
+  var t5;
+  var button0;
+  var t6;
+  var t7;
+  var button1;
+  var t8;
+  var mounted;
+  var dispose;
+  var block = {
+    c: function create() {
+      div = element("div");
+      label0 = element("label");
+      t0 = text("DATE\n\t\t\t\t");
+      input0 = element("input");
+      t1 = space();
+      label1 = element("label");
+      t2 = text("TIME\n\t\t\t\t");
+      input1 = element("input");
+      t3 = space();
+      label2 = element("label");
+      t4 = text("LENGTH (minutes)\n\t\t\t\t");
+      input2 = element("input");
+      t5 = space();
+      button0 = element("button");
+      t6 = text("SUBMIT");
+      t7 = space();
+      button1 = element("button");
+      t8 = text("ABORT");
+      this.h();
+    },
+    l: function claim(nodes) {
+      div = claim_element(nodes, "DIV", {
+        class: true
+      });
+      var div_nodes = children(div);
+      label0 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label0_nodes = children(label0);
+      t0 = claim_text(label0_nodes, "DATE\n\t\t\t\t");
+      input0 = claim_element(label0_nodes, "INPUT", {
+        class: true,
+        type: true
+      });
+      label0_nodes.forEach(detach_dev);
+      t1 = claim_space(div_nodes);
+      label1 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label1_nodes = children(label1);
+      t2 = claim_text(label1_nodes, "TIME\n\t\t\t\t");
+      input1 = claim_element(label1_nodes, "INPUT", {
+        class: true,
+        type: true
+      });
+      label1_nodes.forEach(detach_dev);
+      t3 = claim_space(div_nodes);
+      label2 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label2_nodes = children(label2);
+      t4 = claim_text(label2_nodes, "LENGTH (minutes)\n\t\t\t\t");
+      input2 = claim_element(label2_nodes, "INPUT", {
+        class: true,
+        type: true
+      });
+      label2_nodes.forEach(detach_dev);
+      t5 = claim_space(div_nodes);
+      button0 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button0_nodes = children(button0);
+      t6 = claim_text(button0_nodes, "SUBMIT");
+      button0_nodes.forEach(detach_dev);
+      t7 = claim_space(div_nodes);
+      button1 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button1_nodes = children(button1);
+      t8 = claim_text(button1_nodes, "ABORT");
+      button1_nodes.forEach(detach_dev);
+      div_nodes.forEach(detach_dev);
+      this.h();
+    },
+    h: function hydrate() {
+      attr_dev(input0, "class", "block bg-gray-900 pl-1 svelte-sfl9m0");
+      attr_dev(input0, "type", "date");
+      add_location(input0, file, 189, 4, 4259);
+      attr_dev(label0, "class", "block p-1 mb-1");
+      add_location(label0, file, 187, 3, 4215);
+      attr_dev(input1, "class", "block bg-gray-900 pl-1 svelte-sfl9m0");
+      attr_dev(input1, "type", "time");
+      add_location(input1, file, 197, 4, 4416);
+      attr_dev(label1, "class", "block p-1 mb-1");
+      add_location(label1, file, 195, 3, 4372);
+      attr_dev(input2, "class", "block bg-gray-900 pl-1 svelte-sfl9m0");
+      attr_dev(input2, "type", "text");
+      add_location(input2, file, 205, 4, 4585);
+      attr_dev(label2, "class", "block p-1 mb-1");
+      add_location(label2, file, 203, 3, 4529);
+      attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
+      add_location(button0, file, 211, 3, 4700);
+      attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
+      add_location(button1, file, 215, 3, 4865);
+      attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
+      add_location(div, file, 186, 2, 4164);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, label0);
+      append_dev(label0, t0);
+      append_dev(label0, input0);
+      set_input_value(input0,
+      /*manualAddDate*/
+      ctx[4]);
+      append_dev(div, t1);
+      append_dev(div, label1);
+      append_dev(label1, t2);
+      append_dev(label1, input1);
+      set_input_value(input1,
+      /*manualAddTime*/
+      ctx[5]);
+      append_dev(div, t3);
+      append_dev(div, label2);
+      append_dev(label2, t4);
+      append_dev(label2, input2);
+      set_input_value(input2,
+      /*manualAddLength*/
+      ctx[6]);
+      append_dev(div, t5);
+      append_dev(div, button0);
+      append_dev(button0, t6);
+      append_dev(div, t7);
+      append_dev(div, button1);
+      append_dev(button1, t8);
+
+      if (!mounted) {
+        dispose = [listen_dev(input0, "input",
+        /*input0_input_handler*/
+        ctx[16]), listen_dev(input1, "input",
+        /*input1_input_handler*/
+        ctx[17]), listen_dev(input2, "input",
+        /*input2_input_handler*/
+        ctx[18]), listen_dev(button0, "click",
+        /*submitManualAdd*/
+        ctx[13], false, false, false), listen_dev(button1, "click",
+        /*cancelManualAdd*/
+        ctx[12], false, false, false)];
+        mounted = true;
+      }
+    },
+    p: function update(ctx, dirty) {
+      if (dirty &
+      /*manualAddDate*/
+      16) {
+        set_input_value(input0,
+        /*manualAddDate*/
+        ctx[4]);
+      }
+
+      if (dirty &
+      /*manualAddTime*/
+      32) {
+        set_input_value(input1,
+        /*manualAddTime*/
+        ctx[5]);
+      }
+
+      if (dirty &
+      /*manualAddLength*/
+      64 && input2.value !==
+      /*manualAddLength*/
+      ctx[6]) {
+        set_input_value(input2,
+        /*manualAddLength*/
+        ctx[6]);
+      }
+    },
+    d: function destroy(detaching) {
+      if (detaching) detach_dev(div);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_default_slot.name,
+    type: "slot",
+    source: "(186:1) <Modal on:closeModal={cancelManualAdd}>",
     ctx: ctx
   });
   return block;
@@ -578,23 +897,28 @@ function create_fragment(ctx) {
   /*peeHistory*/
   ctx[1]).length;
   var t4;
-  var if_block2_anchor;
+  var t5;
+  var if_block3_anchor;
+  var current;
 
   function select_block_type(ctx, dirty) {
     if (!
     /*isPeeing*/
-    ctx[2]) return create_if_block_2;
+    ctx[2]) return create_if_block_3;
     if (
     /*isPeeing*/
-    ctx[2]) return create_if_block_3;
+    ctx[2]) return create_if_block_4;
   }
 
   var current_block_type = select_block_type(ctx);
   var if_block0 = current_block_type && current_block_type(ctx);
-  var if_block1 = show_if && create_if_block_1(ctx);
+  var if_block1 = show_if && create_if_block_2(ctx);
   var if_block2 =
   /*isHistoryShown*/
-  ctx[0] && create_if_block(ctx);
+  ctx[0] && create_if_block_1(ctx);
+  var if_block3 =
+  /*isManualAdd*/
+  ctx[3] && create_if_block(ctx);
   var block = {
     c: function create() {
       t0 = space();
@@ -606,7 +930,9 @@ function create_fragment(ctx) {
       if (if_block1) if_block1.c();
       t4 = space();
       if (if_block2) if_block2.c();
-      if_block2_anchor = empty();
+      t5 = space();
+      if (if_block3) if_block3.c();
+      if_block3_anchor = empty();
       this.h();
     },
     l: function claim(nodes) {
@@ -625,13 +951,15 @@ function create_fragment(ctx) {
       if (if_block1) if_block1.l(nodes);
       t4 = claim_space(nodes);
       if (if_block2) if_block2.l(nodes);
-      if_block2_anchor = empty();
+      t5 = claim_space(nodes);
+      if (if_block3) if_block3.l(nodes);
+      if_block3_anchor = empty();
       this.h();
     },
     h: function hydrate() {
       document.title = "Pee Log";
       attr_dev(h1, "class", "text-yellow-500 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 85, 0, 1863);
+      add_location(h1, file, 123, 0, 2749);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -643,7 +971,10 @@ function create_fragment(ctx) {
       if (if_block1) if_block1.m(target, anchor);
       insert_dev(target, t4, anchor);
       if (if_block2) if_block2.m(target, anchor);
-      insert_dev(target, if_block2_anchor, anchor);
+      insert_dev(target, t5, anchor);
+      if (if_block3) if_block3.m(target, anchor);
+      insert_dev(target, if_block3_anchor, anchor);
+      current = true;
     },
     p: function update(ctx, _ref) {
       var _ref2 = _slicedToArray(_ref, 1),
@@ -671,7 +1002,7 @@ function create_fragment(ctx) {
         if (if_block1) {
           if_block1.p(ctx, dirty);
         } else {
-          if_block1 = create_if_block_1(ctx);
+          if_block1 = create_if_block_2(ctx);
           if_block1.c();
           if_block1.m(t4.parentNode, t4);
         }
@@ -686,17 +1017,49 @@ function create_fragment(ctx) {
         if (if_block2) {
           if_block2.p(ctx, dirty);
         } else {
-          if_block2 = create_if_block(ctx);
+          if_block2 = create_if_block_1(ctx);
           if_block2.c();
-          if_block2.m(if_block2_anchor.parentNode, if_block2_anchor);
+          if_block2.m(t5.parentNode, t5);
         }
       } else if (if_block2) {
         if_block2.d(1);
         if_block2 = null;
       }
+
+      if (
+      /*isManualAdd*/
+      ctx[3]) {
+        if (if_block3) {
+          if_block3.p(ctx, dirty);
+
+          if (dirty &
+          /*isManualAdd*/
+          8) {
+            transition_in(if_block3, 1);
+          }
+        } else {
+          if_block3 = create_if_block(ctx);
+          if_block3.c();
+          transition_in(if_block3, 1);
+          if_block3.m(if_block3_anchor.parentNode, if_block3_anchor);
+        }
+      } else if (if_block3) {
+        group_outros();
+        transition_out(if_block3, 1, 1, function () {
+          if_block3 = null;
+        });
+        check_outros();
+      }
     },
-    i: noop,
-    o: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block3);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block3);
+      current = false;
+    },
     d: function destroy(detaching) {
       if (detaching) detach_dev(t0);
       if (detaching) detach_dev(h1);
@@ -710,7 +1073,9 @@ function create_fragment(ctx) {
       if (if_block1) if_block1.d(detaching);
       if (detaching) detach_dev(t4);
       if (if_block2) if_block2.d(detaching);
-      if (detaching) detach_dev(if_block2_anchor);
+      if (detaching) detach_dev(t5);
+      if (if_block3) if_block3.d(detaching);
+      if (detaching) detach_dev(if_block3_anchor);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
@@ -751,9 +1116,13 @@ function instance($$self, $$props, $$invalidate) {
     totalTime: null
   };
   var isHistoryShown = false;
-  var peeHistory = {};
+  var peeHistory = [];
   var isPeeing = false;
   var pee;
+  var isManualAdd = false;
+  var manualAddDate;
+  var manualAddTime;
+  var manualAddLength;
 
   {
     if (localStorage.isPeeing === "true") {
@@ -761,12 +1130,13 @@ function instance($$self, $$props, $$invalidate) {
     }
 
     pee = localStorage.pee ? JSON.parse(localStorage.pee) : _objectSpread({}, peeInit);
-    peeHistory = !!localStorage.peeHistory ? JSON.parse(localStorage.peeHistory) : {};
+    peeHistory = !!localStorage.peeHistory ? JSON.parse(localStorage.peeHistory) : [];
   }
 
   function submitPee() {
-    $$invalidate(1, peeHistory[pee.startTime] = pee.totalTime, peeHistory);
-    $$invalidate(3, pee = _objectSpread({}, peeInit));
+    peeHistory.push(pee);
+    $$invalidate(1, peeHistory);
+    $$invalidate(7, pee = _objectSpread({}, peeInit));
 
     {
       localStorage.peeHistory = JSON.stringify(peeHistory);
@@ -777,15 +1147,49 @@ function instance($$self, $$props, $$invalidate) {
   function startPee() {
     $$invalidate(2, isPeeing = true);
     localStorage.isPeeing = true;
-    $$invalidate(3, pee.startTime = new Date().getTime(), pee);
+    $$invalidate(7, pee.startTime = new Date().getTime(), pee);
     localStorage.pee = JSON.stringify(pee);
   }
 
   function endPee() {
     $$invalidate(2, isPeeing = false);
     localStorage.isPeeing = false;
-    $$invalidate(3, pee.totalTime = new Date().getTime() - pee.startTime, pee);
+    $$invalidate(7, pee.totalTime = new Date().getTime() - pee.startTime, pee);
     submitPee();
+  }
+
+  function cancelPee() {
+    $$invalidate(2, isPeeing = false);
+    localStorage.isPeeing = false;
+  }
+
+  function manualAdd() {
+    $$invalidate(3, isManualAdd = true);
+  }
+
+  function cancelManualAdd() {
+    $$invalidate(3, isManualAdd = false);
+  }
+
+  function submitManualAdd() {
+    var year = parseInt(manualAddDate);
+    var month = parseInt(manualAddDate.slice(5, 7)) - 1;
+    var day = parseInt(manualAddDate.slice(8, 11));
+    var hour = parseInt(manualAddTime);
+    var min = parseInt(manualAddTime.slice(3, 5));
+    var startTime = new Date(year, month, day, hour, min).getTime();
+    var totalTime = parseInt(manualAddLength) * 60000;
+    peeHistory.push({
+      startTime: startTime,
+      totalTime: totalTime,
+      flag: "manualAdd"
+    });
+
+    {
+      localStorage.peeHistory = JSON.stringify(peeHistory);
+    }
+
+    $$invalidate(3, isManualAdd = false);
   }
 
   function showHistory() {
@@ -794,16 +1198,16 @@ function instance($$self, $$props, $$invalidate) {
 
   function formatHistory() {
     var formatted = {};
-    Object.entries(peeHistory).forEach(function (history) {
-      var date = formatDate(history[0]);
+    peeHistory.forEach(function (pee) {
+      var date = formatDate(pee.startTime);
 
       if (!formatted[date]) {
-        formatted[date] = [history];
+        formatted[date] = [pee];
       } else {
-        formatted[date].push(history);
+        formatted[date].push(pee);
       }
     });
-    return Object.entries(formatted);
+    return Object.entries(formatted).reverse();
   }
 
   var writable_props = [];
@@ -811,16 +1215,40 @@ function instance($$self, $$props, $$invalidate) {
     if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<Pee> was created with unknown prop '".concat(key, "'"));
   });
 
+  function input0_input_handler() {
+    manualAddDate = this.value;
+    $$invalidate(4, manualAddDate);
+  }
+
+  function input1_input_handler() {
+    manualAddTime = this.value;
+    $$invalidate(5, manualAddTime);
+  }
+
+  function input2_input_handler() {
+    manualAddLength = this.value;
+    $$invalidate(6, manualAddLength);
+  }
+
   $$self.$capture_state = function () {
     return {
+      Modal: Modal,
       peeInit: peeInit,
       isHistoryShown: isHistoryShown,
       peeHistory: peeHistory,
       isPeeing: isPeeing,
       pee: pee,
+      isManualAdd: isManualAdd,
+      manualAddDate: manualAddDate,
+      manualAddTime: manualAddTime,
+      manualAddLength: manualAddLength,
       submitPee: submitPee,
       startPee: startPee,
       endPee: endPee,
+      cancelPee: cancelPee,
+      manualAdd: manualAdd,
+      cancelManualAdd: cancelManualAdd,
+      submitManualAdd: submitManualAdd,
       showHistory: showHistory,
       formatDate: formatDate,
       formatTime: formatTime,
@@ -833,14 +1261,18 @@ function instance($$self, $$props, $$invalidate) {
     if ("isHistoryShown" in $$props) $$invalidate(0, isHistoryShown = $$props.isHistoryShown);
     if ("peeHistory" in $$props) $$invalidate(1, peeHistory = $$props.peeHistory);
     if ("isPeeing" in $$props) $$invalidate(2, isPeeing = $$props.isPeeing);
-    if ("pee" in $$props) $$invalidate(3, pee = $$props.pee);
+    if ("pee" in $$props) $$invalidate(7, pee = $$props.pee);
+    if ("isManualAdd" in $$props) $$invalidate(3, isManualAdd = $$props.isManualAdd);
+    if ("manualAddDate" in $$props) $$invalidate(4, manualAddDate = $$props.manualAddDate);
+    if ("manualAddTime" in $$props) $$invalidate(5, manualAddTime = $$props.manualAddTime);
+    if ("manualAddLength" in $$props) $$invalidate(6, manualAddLength = $$props.manualAddLength);
   };
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [isHistoryShown, peeHistory, isPeeing, pee, startPee, endPee, showHistory, formatHistory];
+  return [isHistoryShown, peeHistory, isPeeing, isManualAdd, manualAddDate, manualAddTime, manualAddLength, pee, startPee, endPee, cancelPee, manualAdd, cancelManualAdd, submitManualAdd, showHistory, formatHistory, input0_input_handler, input1_input_handler, input2_input_handler];
 }
 
 var Pee = /*#__PURE__*/function (_SvelteComponentDev) {

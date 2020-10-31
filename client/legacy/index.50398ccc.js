@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, f as space, g as element, t as text, q as query_selector_all, h as detach_dev, j as claim_space, k as claim_element, l as children, m as claim_text, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, u as noop, v as validate_slots } from './client.d903a1dc.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, f as space, g as element, t as text, q as query_selector_all, h as detach_dev, j as claim_space, k as claim_element, l as children, m as claim_text, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, u as listen_dev, v as noop, w as validate_slots } from './client.8b10c686.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -12,6 +12,11 @@ function create_fragment(ctx) {
   var t2;
   var p;
   var t3;
+  var t4;
+  var button;
+  var t5;
+  var mounted;
+  var dispose;
   var block = {
     c: function create() {
       t0 = space();
@@ -20,6 +25,9 @@ function create_fragment(ctx) {
       t2 = space();
       p = element("p");
       t3 = text("Welcome");
+      t4 = space();
+      button = element("button");
+      t5 = text("clear history");
       this.h();
     },
     l: function claim(nodes) {
@@ -39,14 +47,23 @@ function create_fragment(ctx) {
       var p_nodes = children(p);
       t3 = claim_text(p_nodes, "Welcome");
       p_nodes.forEach(detach_dev);
+      t4 = claim_space(nodes);
+      button = claim_element(nodes, "BUTTON", {
+        class: true
+      });
+      var button_nodes = children(button);
+      t5 = claim_text(button_nodes, "clear history");
+      button_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
       document.title = "Symptom Tracker";
       attr_dev(h1, "class", "text-orange-400 text-3xl md:text-4xl text-center");
-      add_location(h1, file, 4, 0, 62);
-      attr_dev(p, "class", "text-xl");
-      add_location(p, file, 5, 0, 144);
+      add_location(h1, file, 12, 0, 172);
+      attr_dev(p, "class", "text-xl mb-2");
+      add_location(p, file, 13, 0, 254);
+      attr_dev(button, "class", "border-double border-8 border-red-700 p-2 block rounded-lg mx-auto");
+      add_location(button, file, 14, 0, 290);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -55,6 +72,14 @@ function create_fragment(ctx) {
       insert_dev(target, t2, anchor);
       insert_dev(target, p, anchor);
       append_dev(p, t3);
+      insert_dev(target, t4, anchor);
+      insert_dev(target, button, anchor);
+      append_dev(button, t5);
+
+      if (!mounted) {
+        dispose = listen_dev(button, "click", clearHistory, false, false, false);
+        mounted = true;
+      }
     },
     p: noop,
     i: noop,
@@ -64,6 +89,10 @@ function create_fragment(ctx) {
       if (detaching) detach_dev(h1);
       if (detaching) detach_dev(t2);
       if (detaching) detach_dev(p);
+      if (detaching) detach_dev(t4);
+      if (detaching) detach_dev(button);
+      mounted = false;
+      dispose();
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
@@ -76,7 +105,13 @@ function create_fragment(ctx) {
   return block;
 }
 
-function instance($$self, $$props) {
+function clearHistory() {
+  {
+    localStorage.removeItem("peeHistory");
+  }
+}
+
+function instance($$self, $$props, $$invalidate) {
   var _$$props$$$slots = $$props.$$slots,
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
       $$scope = $$props.$$scope;
@@ -85,6 +120,13 @@ function instance($$self, $$props) {
   Object.keys($$props).forEach(function (key) {
     if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<Routes> was created with unknown prop '".concat(key, "'"));
   });
+
+  $$self.$capture_state = function () {
+    return {
+      clearHistory: clearHistory
+    };
+  };
+
   return [];
 }
 

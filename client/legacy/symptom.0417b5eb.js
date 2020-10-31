@@ -1,22 +1,22 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, C as listen_dev, u as noop, x as validate_each_argument, f as space, j as claim_space, A as destroy_each, D as empty, q as query_selector_all, E as set_input_value, F as prevent_default, z as _slicedToArray, G as run_all, v as validate_slots, H as globals } from './client.d903a1dc.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, u as listen_dev, v as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, x as empty, q as query_selector_all, y as set_input_value, H as prevent_default, O as _slicedToArray, Q as set_data_dev, J as run_all, w as validate_slots, K as globals, R as to_number } from './client.8b10c686.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 var Object_1 = globals.Object;
-var file = "src/routes/food.svelte";
+var file = "src/routes/symptom.svelte";
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[11] = list[i];
+  child_ctx[12] = list[i];
   return child_ctx;
 }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[3] = list[i];
+  child_ctx[9] = list[i];
   return child_ctx;
-} // (85:0) {#if Object.values(foodHistory).length}
+} // (85:0) {#if Object.values(symptomHistory).length}
 
 
 function create_if_block_1(ctx) {
@@ -40,8 +40,8 @@ function create_if_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(button, "class", "mt-4 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-yellow-700");
-      add_location(button, file, 85, 1, 2023);
+      attr_dev(button, "class", "mt-2 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
+      add_location(button, file, 85, 1, 2038);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -65,7 +65,7 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(85:0) {#if Object.values(foodHistory).length}",
+    source: "(85:0) {#if Object.values(symptomHistory).length}",
     ctx: ctx
   });
   return block;
@@ -100,7 +100,7 @@ function create_if_block(ctx) {
   var block = {
     c: function create() {
       h2 = element("h2");
-      t0 = text("Food History");
+      t0 = text("Pee History");
       t1 = space();
       table = element("table");
       tr = element("tr");
@@ -111,7 +111,7 @@ function create_if_block(ctx) {
       t4 = text("Name");
       t5 = space();
       th2 = element("th");
-      t6 = text("Quantity");
+      t6 = text("Intensity");
       t7 = space();
 
       for (var _i = 0; _i < each_blocks.length; _i += 1) {
@@ -125,34 +125,26 @@ function create_if_block(ctx) {
         class: true
       });
       var h2_nodes = children(h2);
-      t0 = claim_text(h2_nodes, "Food History");
+      t0 = claim_text(h2_nodes, "Pee History");
       h2_nodes.forEach(detach_dev);
       t1 = claim_space(nodes);
       table = claim_element(nodes, "TABLE", {});
       var table_nodes = children(table);
-      tr = claim_element(table_nodes, "TR", {
-        class: true
-      });
+      tr = claim_element(table_nodes, "TR", {});
       var tr_nodes = children(tr);
-      th0 = claim_element(tr_nodes, "TH", {
-        class: true
-      });
+      th0 = claim_element(tr_nodes, "TH", {});
       var th0_nodes = children(th0);
       t2 = claim_text(th0_nodes, "Date");
       th0_nodes.forEach(detach_dev);
       t3 = claim_space(tr_nodes);
-      th1 = claim_element(tr_nodes, "TH", {
-        class: true
-      });
+      th1 = claim_element(tr_nodes, "TH", {});
       var th1_nodes = children(th1);
       t4 = claim_text(th1_nodes, "Name");
       th1_nodes.forEach(detach_dev);
       t5 = claim_space(tr_nodes);
-      th2 = claim_element(tr_nodes, "TH", {
-        class: true
-      });
+      th2 = claim_element(tr_nodes, "TH", {});
       var th2_nodes = children(th2);
-      t6 = claim_text(th2_nodes, "Quantity");
+      t6 = claim_text(th2_nodes, "Intensity");
       th2_nodes.forEach(detach_dev);
       tr_nodes.forEach(detach_dev);
       t7 = claim_space(table_nodes);
@@ -165,17 +157,13 @@ function create_if_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(h2, "class", "text-yellow-300 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 94, 1, 2209);
-      attr_dev(th0, "class", "svelte-jorie6");
-      add_location(th0, file, 97, 3, 2312);
-      attr_dev(th1, "class", "svelte-jorie6");
-      add_location(th1, file, 98, 3, 2329);
-      attr_dev(th2, "class", "svelte-jorie6");
-      add_location(th2, file, 99, 6, 2349);
-      attr_dev(tr, "class", "svelte-jorie6");
-      add_location(tr, file, 96, 2, 2304);
-      add_location(table, file, 95, 1, 2294);
+      attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
+      add_location(h2, file, 94, 1, 2222);
+      add_location(th0, file, 97, 3, 2324);
+      add_location(th1, file, 98, 3, 2341);
+      add_location(th2, file, 99, 3, 2358);
+      add_location(tr, file, 96, 2, 2316);
+      add_location(table, file, 95, 1, 2306);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -244,27 +232,27 @@ function create_if_block(ctx) {
     ctx: ctx
   });
   return block;
-} // (106:3) {#each food[1] as history}
+} // (107:3) {#each day[1] as symptom}
 
 
 function create_each_block_1(ctx) {
   var tr;
   var td0;
   var t0_value = formatTime(
-  /*history*/
-  ctx[11].time) + "";
+  /*symptom*/
+  ctx[12].time) + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
-  /*history*/
-  ctx[11].name + "";
+  /*symptom*/
+  ctx[12].name + "";
   var t2;
   var t3;
   var td2;
-  var t4_value = (
-  /*history*/
-  ctx[11].quantity || "") + "";
+  var t4_value =
+  /*symptom*/
+  ctx[12].intensity + "";
   var t4;
   var t5;
   var block = {
@@ -282,9 +270,7 @@ function create_each_block_1(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      tr = claim_element(nodes, "TR", {
-        class: true
-      });
+      tr = claim_element(nodes, "TR", {});
       var tr_nodes = children(tr);
       td0 = claim_element(tr_nodes, "TD", {
         class: true
@@ -293,16 +279,12 @@ function create_each_block_1(ctx) {
       t0 = claim_text(td0_nodes, t0_value);
       td0_nodes.forEach(detach_dev);
       t1 = claim_space(tr_nodes);
-      td1 = claim_element(tr_nodes, "TD", {
-        class: true
-      });
+      td1 = claim_element(tr_nodes, "TD", {});
       var td1_nodes = children(td1);
       t2 = claim_text(td1_nodes, t2_value);
       td1_nodes.forEach(detach_dev);
       t3 = claim_space(tr_nodes);
-      td2 = claim_element(tr_nodes, "TD", {
-        class: true
-      });
+      td2 = claim_element(tr_nodes, "TD", {});
       var td2_nodes = children(td2);
       t4 = claim_text(td2_nodes, t4_value);
       td2_nodes.forEach(detach_dev);
@@ -311,14 +293,11 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(td0, "class", "text-sm svelte-jorie6");
-      add_location(td0, file, 107, 4, 2507);
-      attr_dev(td1, "class", "svelte-jorie6");
-      add_location(td1, file, 108, 4, 2563);
-      attr_dev(td2, "class", "svelte-jorie6");
-      add_location(td2, file, 109, 8, 2595);
-      attr_dev(tr, "class", "svelte-jorie6");
-      add_location(tr, file, 106, 3, 2498);
+      attr_dev(td0, "class", "text-sm");
+      add_location(td0, file, 108, 4, 2512);
+      add_location(td1, file, 109, 4, 2568);
+      add_location(td2, file, 110, 4, 2596);
+      add_location(tr, file, 107, 3, 2503);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -341,25 +320,27 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(106:3) {#each food[1] as history}",
+    source: "(107:3) {#each day[1] as symptom}",
     ctx: ctx
   });
   return block;
-} // (102:2) {#each formatHistory() as food}
+} // (102:2) {#each formatHistory() as day}
 
 
 function create_each_block(ctx) {
   var tr;
-  var th;
+  var th0;
   var t0_value =
-  /*food*/
-  ctx[3][0] + "";
+  /*day*/
+  ctx[9][0] + "";
   var t0;
   var t1;
+  var th1;
+  var t2;
   var each_1_anchor;
   var each_value_1 =
-  /*food*/
-  ctx[3][1];
+  /*day*/
+  ctx[9][1];
   validate_each_argument(each_value_1);
   var each_blocks = [];
 
@@ -370,9 +351,11 @@ function create_each_block(ctx) {
   var block = {
     c: function create() {
       tr = element("tr");
-      th = element("th");
+      th0 = element("th");
       t0 = text(t0_value);
       t1 = space();
+      th1 = element("th");
+      t2 = space();
 
       for (var _i5 = 0; _i5 < each_blocks.length; _i5 += 1) {
         each_blocks[_i5].c();
@@ -382,18 +365,17 @@ function create_each_block(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      tr = claim_element(nodes, "TR", {
-        class: true
-      });
+      tr = claim_element(nodes, "TR", {});
       var tr_nodes = children(tr);
-      th = claim_element(tr_nodes, "TH", {
-        class: true
-      });
-      var th_nodes = children(th);
-      t0 = claim_text(th_nodes, t0_value);
-      th_nodes.forEach(detach_dev);
+      th0 = claim_element(tr_nodes, "TH", {});
+      var th0_nodes = children(th0);
+      t0 = claim_text(th0_nodes, t0_value);
+      th0_nodes.forEach(detach_dev);
+      t1 = claim_space(tr_nodes);
+      th1 = claim_element(tr_nodes, "TH", {});
+      children(th1).forEach(detach_dev);
       tr_nodes.forEach(detach_dev);
-      t1 = claim_space(nodes);
+      t2 = claim_space(nodes);
 
       for (var _i6 = 0; _i6 < each_blocks.length; _i6 += 1) {
         each_blocks[_i6].l(nodes);
@@ -403,16 +385,17 @@ function create_each_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(th, "class", "text-sm svelte-jorie6");
-      add_location(th, file, 103, 4, 2421);
-      attr_dev(tr, "class", "svelte-jorie6");
-      add_location(tr, file, 102, 3, 2412);
+      add_location(th0, file, 103, 4, 2430);
+      add_location(th1, file, 104, 4, 2452);
+      add_location(tr, file, 102, 3, 2421);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
-      append_dev(tr, th);
-      append_dev(th, t0);
-      insert_dev(target, t1, anchor);
+      append_dev(tr, th0);
+      append_dev(th0, t0);
+      append_dev(tr, t1);
+      append_dev(tr, th1);
+      insert_dev(target, t2, anchor);
 
       for (var _i7 = 0; _i7 < each_blocks.length; _i7 += 1) {
         each_blocks[_i7].m(target, anchor);
@@ -425,8 +408,8 @@ function create_each_block(ctx) {
       /*formatHistory, formatTime*/
       64) {
         each_value_1 =
-        /*food*/
-        ctx[3][1];
+        /*day*/
+        ctx[9][1];
         validate_each_argument(each_value_1);
 
         var _i8;
@@ -454,7 +437,7 @@ function create_each_block(ctx) {
     },
     d: function destroy(detaching) {
       if (detaching) detach_dev(tr);
-      if (detaching) detach_dev(t1);
+      if (detaching) detach_dev(t2);
       destroy_each(each_blocks, detaching);
       if (detaching) detach_dev(each_1_anchor);
     }
@@ -463,7 +446,7 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(102:2) {#each formatHistory() as food}",
+    source: "(102:2) {#each formatHistory() as day}",
     ctx: ctx
   });
   return block;
@@ -485,59 +468,63 @@ function create_fragment(ctx) {
   var span1;
   var t6;
   var t7;
-  var input1;
   var t8;
-  var button;
+  var input1;
   var t9;
+  var button;
   var t10;
-  var show_if = Object.values(
-  /*foodHistory*/
-  ctx[2]).length;
   var t11;
+  var show_if = Object.values(
+  /*symptomHistory*/
+  ctx[3]).length;
+  var t12;
   var if_block1_anchor;
   var mounted;
   var dispose;
   var if_block0 = show_if && create_if_block_1(ctx);
   var if_block1 =
   /*isHistoryShown*/
-  ctx[0] && create_if_block(ctx);
+  ctx[2] && create_if_block(ctx);
   var block = {
     c: function create() {
       t0 = space();
       h1 = element("h1");
-      t1 = text("Food Log");
+      t1 = text("Symptom Log");
       t2 = space();
       form = element("form");
       label0 = element("label");
       span0 = element("span");
-      t3 = text("Food name");
+      t3 = text("Symptom");
       t4 = space();
       input0 = element("input");
       t5 = space();
       label1 = element("label");
       span1 = element("span");
-      t6 = text("Quantity");
-      t7 = space();
-      input1 = element("input");
+      t6 = text("Intensity: ");
+      t7 = text(
+      /*intensity*/
+      ctx[0]);
       t8 = space();
+      input1 = element("input");
+      t9 = space();
       button = element("button");
-      t9 = text("Add Food");
-      t10 = space();
-      if (if_block0) if_block0.c();
+      t10 = text("Add Symptom");
       t11 = space();
+      if (if_block0) if_block0.c();
+      t12 = space();
       if (if_block1) if_block1.c();
       if_block1_anchor = empty();
       this.h();
     },
     l: function claim(nodes) {
-      var head_nodes = query_selector_all("[data-svelte=\"svelte-1po7aon\"]", document.head);
+      var head_nodes = query_selector_all("[data-svelte=\"svelte-1bl38qn\"]", document.head);
       head_nodes.forEach(detach_dev);
       t0 = claim_space(nodes);
       h1 = claim_element(nodes, "H1", {
         class: true
       });
       var h1_nodes = children(h1);
-      t1 = claim_text(h1_nodes, "Food Log");
+      t1 = claim_text(h1_nodes, "Symptom Log");
       h1_nodes.forEach(detach_dev);
       t2 = claim_space(nodes);
       form = claim_element(nodes, "FORM", {
@@ -552,11 +539,12 @@ function create_fragment(ctx) {
         class: true
       });
       var span0_nodes = children(span0);
-      t3 = claim_text(span0_nodes, "Food name");
+      t3 = claim_text(span0_nodes, "Symptom");
       span0_nodes.forEach(detach_dev);
       t4 = claim_space(label0_nodes);
       input0 = claim_element(label0_nodes, "INPUT", {
-        class: true
+        class: true,
+        type: true
       });
       label0_nodes.forEach(detach_dev);
       t5 = claim_space(form_nodes);
@@ -568,48 +556,60 @@ function create_fragment(ctx) {
         class: true
       });
       var span1_nodes = children(span1);
-      t6 = claim_text(span1_nodes, "Quantity");
+      t6 = claim_text(span1_nodes, "Intensity: ");
+      t7 = claim_text(span1_nodes,
+      /*intensity*/
+      ctx[0]);
       span1_nodes.forEach(detach_dev);
-      t7 = claim_space(label1_nodes);
+      t8 = claim_space(label1_nodes);
       input1 = claim_element(label1_nodes, "INPUT", {
-        class: true
+        class: true,
+        type: true,
+        min: true,
+        max: true,
+        step: true
       });
       label1_nodes.forEach(detach_dev);
-      t8 = claim_space(form_nodes);
+      t9 = claim_space(form_nodes);
       button = claim_element(form_nodes, "BUTTON", {
         class: true
       });
       var button_nodes = children(button);
-      t9 = claim_text(button_nodes, "Add Food");
+      t10 = claim_text(button_nodes, "Add Symptom");
       button_nodes.forEach(detach_dev);
       form_nodes.forEach(detach_dev);
-      t10 = claim_space(nodes);
-      if (if_block0) if_block0.l(nodes);
       t11 = claim_space(nodes);
+      if (if_block0) if_block0.l(nodes);
+      t12 = claim_space(nodes);
       if (if_block1) if_block1.l(nodes);
       if_block1_anchor = empty();
       this.h();
     },
     h: function hydrate() {
-      document.title = "Food Log";
-      attr_dev(h1, "class", "text-yellow-400 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 64, 0, 1251);
+      document.title = "Symptom Log";
+      attr_dev(h1, "class", "text-yellow-500 bold text-3xl md:text-4xl text-center");
+      add_location(h1, file, 60, 0, 1209);
       attr_dev(span0, "class", "text-xl");
-      add_location(span0, file, 67, 4, 1444);
+      add_location(span0, file, 63, 4, 1408);
       attr_dev(input0, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input0, file, 68, 4, 1487);
+      attr_dev(input0, "type", "text");
+      add_location(input0, file, 64, 4, 1449);
       attr_dev(label0, "class", "space-y-1 block text-center");
-      add_location(label0, file, 66, 2, 1396);
+      add_location(label0, file, 62, 2, 1360);
       attr_dev(span1, "class", "text-xl");
-      add_location(span1, file, 73, 4, 1651);
-      attr_dev(input1, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input1, file, 74, 4, 1693);
+      add_location(span1, file, 70, 4, 1631);
+      attr_dev(input1, "class", "block mx-auto");
+      attr_dev(input1, "type", "range");
+      attr_dev(input1, "min", "0");
+      attr_dev(input1, "max", "5");
+      attr_dev(input1, "step", "1");
+      add_location(input1, file, 71, 4, 1687);
       attr_dev(label1, "class", "space-y-1 block text-center");
-      add_location(label1, file, 72, 2, 1603);
+      add_location(label1, file, 69, 2, 1583);
       attr_dev(button, "class", "text-black border-2 bg-white border-solid rounded-lg shadow-sm border-yellow-500 px-3 py-1 block mx-auto text-xl");
-      add_location(button, file, 78, 2, 1817);
+      add_location(button, file, 79, 2, 1827);
       attr_dev(form, "class", "space-y-4");
-      add_location(form, file, 65, 0, 1331);
+      add_location(form, file, 61, 0, 1292);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -623,33 +623,36 @@ function create_fragment(ctx) {
       append_dev(label0, t4);
       append_dev(label0, input0);
       set_input_value(input0,
-      /*food*/
-      ctx[3]);
+      /*name*/
+      ctx[1]);
       append_dev(form, t5);
       append_dev(form, label1);
       append_dev(label1, span1);
       append_dev(span1, t6);
-      append_dev(label1, t7);
+      append_dev(span1, t7);
+      append_dev(label1, t8);
       append_dev(label1, input1);
       set_input_value(input1,
-      /*foodQuantity*/
-      ctx[1]);
-      append_dev(form, t8);
+      /*intensity*/
+      ctx[0]);
+      append_dev(form, t9);
       append_dev(form, button);
-      append_dev(button, t9);
-      insert_dev(target, t10, anchor);
-      if (if_block0) if_block0.m(target, anchor);
+      append_dev(button, t10);
       insert_dev(target, t11, anchor);
+      if (if_block0) if_block0.m(target, anchor);
+      insert_dev(target, t12, anchor);
       if (if_block1) if_block1.m(target, anchor);
       insert_dev(target, if_block1_anchor, anchor);
 
       if (!mounted) {
         dispose = [listen_dev(input0, "input",
         /*input0_input_handler*/
-        ctx[7]), listen_dev(input1, "input",
-        /*input1_input_handler*/
+        ctx[7]), listen_dev(input1, "change",
+        /*input1_change_input_handler*/
+        ctx[8]), listen_dev(input1, "input",
+        /*input1_change_input_handler*/
         ctx[8]), listen_dev(form, "submit", prevent_default(
-        /*submitFood*/
+        /*submitSymptom*/
         ctx[5]), false, true, false)];
         mounted = true;
       }
@@ -659,30 +662,34 @@ function create_fragment(ctx) {
           dirty = _ref2[0];
 
       if (dirty &
-      /*food*/
-      8 && input0.value !==
-      /*food*/
-      ctx[3]) {
-        set_input_value(input0,
-        /*food*/
-        ctx[3]);
-      }
-
-      if (dirty &
-      /*foodQuantity*/
-      2 && input1.value !==
-      /*foodQuantity*/
+      /*name*/
+      2 && input0.value !==
+      /*name*/
       ctx[1]) {
-        set_input_value(input1,
-        /*foodQuantity*/
+        set_input_value(input0,
+        /*name*/
         ctx[1]);
       }
 
       if (dirty &
-      /*foodHistory*/
-      4) show_if = Object.values(
-      /*foodHistory*/
-      ctx[2]).length;
+      /*intensity*/
+      1) set_data_dev(t7,
+      /*intensity*/
+      ctx[0]);
+
+      if (dirty &
+      /*intensity*/
+      1) {
+        set_input_value(input1,
+        /*intensity*/
+        ctx[0]);
+      }
+
+      if (dirty &
+      /*symptomHistory*/
+      8) show_if = Object.values(
+      /*symptomHistory*/
+      ctx[3]).length;
 
       if (show_if) {
         if (if_block0) {
@@ -690,7 +697,7 @@ function create_fragment(ctx) {
         } else {
           if_block0 = create_if_block_1(ctx);
           if_block0.c();
-          if_block0.m(t11.parentNode, t11);
+          if_block0.m(t12.parentNode, t12);
         }
       } else if (if_block0) {
         if_block0.d(1);
@@ -699,7 +706,7 @@ function create_fragment(ctx) {
 
       if (
       /*isHistoryShown*/
-      ctx[0]) {
+      ctx[2]) {
         if (if_block1) {
           if_block1.p(ctx, dirty);
         } else {
@@ -719,9 +726,9 @@ function create_fragment(ctx) {
       if (detaching) detach_dev(h1);
       if (detaching) detach_dev(t2);
       if (detaching) detach_dev(form);
-      if (detaching) detach_dev(t10);
-      if (if_block0) if_block0.d(detaching);
       if (detaching) detach_dev(t11);
+      if (if_block0) if_block0.d(detaching);
+      if (detaching) detach_dev(t12);
       if (if_block1) if_block1.d(detaching);
       if (detaching) detach_dev(if_block1_anchor);
       mounted = false;
@@ -755,76 +762,72 @@ function instance($$self, $$props, $$invalidate) {
   var _$$props$$$slots = $$props.$$slots,
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
       $$scope = $$props.$$scope;
-  validate_slots("Food", slots, []);
-  var isHistoryShown = false; // const foodInit = {
-  //   time: null,
-  //   name: null
-  // };
-
-  var food;
-  var foodQuantity;
-  var foodHistory = [];
+  validate_slots("Symptom", slots, []);
+  var intensity = 0;
+  var name;
+  var isHistoryShown = false;
+  var symptomHistory = [];
 
   {
-    foodHistory = !!localStorage.foodHistory ? JSON.parse(localStorage.foodHistory) : [];
+    symptomHistory = !!localStorage.symptomHistory ? JSON.parse(localStorage.symptomHistory) : [];
   }
 
   function showHistory() {
-    $$invalidate(0, isHistoryShown = true);
+    $$invalidate(2, isHistoryShown = true);
   }
 
-  function submitFood() {
-    foodHistory.push({
+  function submitSymptom() {
+    symptomHistory.push({
       time: new Date().getTime(),
-      name: food,
-      quantity: foodQuantity
+      name: name,
+      intensity: intensity
     });
 
     {
-      localStorage.foodHistory = JSON.stringify(foodHistory);
+      localStorage.symptomHistory = JSON.stringify(symptomHistory);
     }
 
-    $$invalidate(3, food = "");
-    $$invalidate(1, foodQuantity = "");
+    $$invalidate(1, name = "");
+    $$invalidate(0, intensity = 0);
   }
 
   function formatHistory() {
     var formatted = {};
-    foodHistory.forEach(function (history) {
-      var date = formatDate(history.time);
+    symptomHistory.forEach(function (symptom) {
+      var date = formatDate(symptom.time);
 
       if (!formatted[date]) {
-        formatted[date] = [history];
+        formatted[date] = [symptom];
       } else {
-        formatted[date].push(history);
+        formatted[date].push(symptom);
       }
     });
-    return Object.entries(formatted);
+    return Object.entries(formatted).reverse();
   }
 
   var writable_props = [];
   Object_1.keys($$props).forEach(function (key) {
-    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<Food> was created with unknown prop '".concat(key, "'"));
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<Symptom> was created with unknown prop '".concat(key, "'"));
   });
 
   function input0_input_handler() {
-    food = this.value;
-    $$invalidate(3, food);
+    name = this.value;
+    $$invalidate(1, name);
   }
 
-  function input1_input_handler() {
-    foodQuantity = this.value;
-    $$invalidate(1, foodQuantity);
+  function input1_change_input_handler() {
+    intensity = to_number(this.value);
+    $$invalidate(0, intensity);
   }
 
   $$self.$capture_state = function () {
     return {
+      intensity: intensity,
+      name: name,
       isHistoryShown: isHistoryShown,
-      food: food,
-      foodQuantity: foodQuantity,
-      foodHistory: foodHistory,
+      symptomHistory: symptomHistory,
       showHistory: showHistory,
-      submitFood: submitFood,
+      submitSymptom: submitSymptom,
       formatDate: formatDate,
       formatTime: formatTime,
       formatHistory: formatHistory
@@ -832,41 +835,41 @@ function instance($$self, $$props, $$invalidate) {
   };
 
   $$self.$inject_state = function ($$props) {
-    if ("isHistoryShown" in $$props) $$invalidate(0, isHistoryShown = $$props.isHistoryShown);
-    if ("food" in $$props) $$invalidate(3, food = $$props.food);
-    if ("foodQuantity" in $$props) $$invalidate(1, foodQuantity = $$props.foodQuantity);
-    if ("foodHistory" in $$props) $$invalidate(2, foodHistory = $$props.foodHistory);
+    if ("intensity" in $$props) $$invalidate(0, intensity = $$props.intensity);
+    if ("name" in $$props) $$invalidate(1, name = $$props.name);
+    if ("isHistoryShown" in $$props) $$invalidate(2, isHistoryShown = $$props.isHistoryShown);
+    if ("symptomHistory" in $$props) $$invalidate(3, symptomHistory = $$props.symptomHistory);
   };
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [isHistoryShown, foodQuantity, foodHistory, food, showHistory, submitFood, formatHistory, input0_input_handler, input1_input_handler];
+  return [intensity, name, isHistoryShown, symptomHistory, showHistory, submitSymptom, formatHistory, input0_input_handler, input1_change_input_handler];
 }
 
-var Food = /*#__PURE__*/function (_SvelteComponentDev) {
-  _inherits(Food, _SvelteComponentDev);
+var Symptom = /*#__PURE__*/function (_SvelteComponentDev) {
+  _inherits(Symptom, _SvelteComponentDev);
 
-  var _super = _createSuper(Food);
+  var _super = _createSuper(Symptom);
 
-  function Food(options) {
+  function Symptom(options) {
     var _this;
 
-    _classCallCheck(this, Food);
+    _classCallCheck(this, Symptom);
 
     _this = _super.call(this, options);
     init(_assertThisInitialized(_this), options, instance, create_fragment, safe_not_equal, {});
     dispatch_dev("SvelteRegisterComponent", {
       component: _assertThisInitialized(_this),
-      tagName: "Food",
+      tagName: "Symptom",
       options: options,
       id: create_fragment.name
     });
     return _this;
   }
 
-  return Food;
+  return Symptom;
 }(SvelteComponentDev);
 
-export default Food;
+export default Symptom;
