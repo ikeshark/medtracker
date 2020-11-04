@@ -1,4 +1,5 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, u as listen_dev, v as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, x as empty, q as query_selector_all, y as set_input_value, H as prevent_default, O as _slicedToArray, J as run_all, w as validate_slots, K as globals } from './client.8b10c686.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, y as listen_dev, u as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, w as empty, B as create_component, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component, q as query_selector_all, x as set_input_value, H as prevent_default, O as _slicedToArray, I as check_outros, J as run_all, v as validate_slots, K as globals, L as group_outros } from './client.02a3b31d.js';
+import { M as Modal } from './Modal.dd31a335.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -8,18 +9,18 @@ var file = "src/routes/food.svelte";
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[11] = list[i];
+  child_ctx[20] = list[i];
   return child_ctx;
 }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[3] = list[i];
+  child_ctx[6] = list[i];
   return child_ctx;
-} // (85:0) {#if Object.values(foodHistory).length}
+} // (127:0) {#if Object.values(foodHistory).length}
 
 
-function create_if_block_1(ctx) {
+function create_if_block_2(ctx) {
   var button;
   var t;
   var mounted;
@@ -41,7 +42,7 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "mt-4 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-yellow-700");
-      add_location(button, file, 85, 1, 2023);
+      add_location(button, file, 127, 1, 3085);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -50,7 +51,7 @@ function create_if_block_1(ctx) {
       if (!mounted) {
         dispose = listen_dev(button, "click",
         /*showHistory*/
-        ctx[4], false, false, false);
+        ctx[10], false, false, false);
         mounted = true;
       }
     },
@@ -63,16 +64,16 @@ function create_if_block_1(ctx) {
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
-    id: create_if_block_1.name,
+    id: create_if_block_2.name,
     type: "if",
-    source: "(85:0) {#if Object.values(foodHistory).length}",
+    source: "(127:0) {#if Object.values(foodHistory).length}",
     ctx: ctx
   });
   return block;
-} // (94:0) {#if isHistoryShown}
+} // (136:0) {#if isHistoryShown}
 
 
-function create_if_block(ctx) {
+function create_if_block_1(ctx) {
   var h2;
   var t0;
   var t1;
@@ -89,7 +90,7 @@ function create_if_block(ctx) {
   var t7;
   var each_value =
   /*formatHistory*/
-  ctx[6]();
+  ctx[12]();
   validate_each_argument(each_value);
   var each_blocks = [];
 
@@ -130,27 +131,19 @@ function create_if_block(ctx) {
       t1 = claim_space(nodes);
       table = claim_element(nodes, "TABLE", {});
       var table_nodes = children(table);
-      tr = claim_element(table_nodes, "TR", {
-        class: true
-      });
+      tr = claim_element(table_nodes, "TR", {});
       var tr_nodes = children(tr);
-      th0 = claim_element(tr_nodes, "TH", {
-        class: true
-      });
+      th0 = claim_element(tr_nodes, "TH", {});
       var th0_nodes = children(th0);
       t2 = claim_text(th0_nodes, "Date");
       th0_nodes.forEach(detach_dev);
       t3 = claim_space(tr_nodes);
-      th1 = claim_element(tr_nodes, "TH", {
-        class: true
-      });
+      th1 = claim_element(tr_nodes, "TH", {});
       var th1_nodes = children(th1);
       t4 = claim_text(th1_nodes, "Name");
       th1_nodes.forEach(detach_dev);
       t5 = claim_space(tr_nodes);
-      th2 = claim_element(tr_nodes, "TH", {
-        class: true
-      });
+      th2 = claim_element(tr_nodes, "TH", {});
       var th2_nodes = children(th2);
       t6 = claim_text(th2_nodes, "Quantity");
       th2_nodes.forEach(detach_dev);
@@ -166,16 +159,12 @@ function create_if_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-300 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 94, 1, 2209);
-      attr_dev(th0, "class", "svelte-jorie6");
-      add_location(th0, file, 97, 3, 2312);
-      attr_dev(th1, "class", "svelte-jorie6");
-      add_location(th1, file, 98, 3, 2329);
-      attr_dev(th2, "class", "svelte-jorie6");
-      add_location(th2, file, 99, 6, 2349);
-      attr_dev(tr, "class", "svelte-jorie6");
-      add_location(tr, file, 96, 2, 2304);
-      add_location(table, file, 95, 1, 2294);
+      add_location(h2, file, 136, 1, 3271);
+      add_location(th0, file, 139, 3, 3374);
+      add_location(th1, file, 140, 3, 3391);
+      add_location(th2, file, 141, 6, 3411);
+      add_location(tr, file, 138, 2, 3366);
+      add_location(table, file, 137, 1, 3356);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -200,10 +189,10 @@ function create_if_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      64) {
+      4096) {
         each_value =
         /*formatHistory*/
-        ctx[6]();
+        ctx[12]();
         validate_each_argument(each_value);
 
         var _i4;
@@ -238,13 +227,13 @@ function create_if_block(ctx) {
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
-    id: create_if_block.name,
+    id: create_if_block_1.name,
     type: "if",
-    source: "(94:0) {#if isHistoryShown}",
+    source: "(136:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (106:3) {#each food[1] as history}
+} // (148:3) {#each food[1] as history}
 
 
 function create_each_block_1(ctx) {
@@ -252,19 +241,19 @@ function create_each_block_1(ctx) {
   var td0;
   var t0_value = formatTime(
   /*history*/
-  ctx[11].time) + "";
+  ctx[20].time) + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*history*/
-  ctx[11].name + "";
+  ctx[20].name + "";
   var t2;
   var t3;
   var td2;
   var t4_value = (
   /*history*/
-  ctx[11].quantity || "") + "";
+  ctx[20].quantity || "") + "";
   var t4;
   var t5;
   var block = {
@@ -282,9 +271,7 @@ function create_each_block_1(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      tr = claim_element(nodes, "TR", {
-        class: true
-      });
+      tr = claim_element(nodes, "TR", {});
       var tr_nodes = children(tr);
       td0 = claim_element(tr_nodes, "TD", {
         class: true
@@ -293,16 +280,12 @@ function create_each_block_1(ctx) {
       t0 = claim_text(td0_nodes, t0_value);
       td0_nodes.forEach(detach_dev);
       t1 = claim_space(tr_nodes);
-      td1 = claim_element(tr_nodes, "TD", {
-        class: true
-      });
+      td1 = claim_element(tr_nodes, "TD", {});
       var td1_nodes = children(td1);
       t2 = claim_text(td1_nodes, t2_value);
       td1_nodes.forEach(detach_dev);
       t3 = claim_space(tr_nodes);
-      td2 = claim_element(tr_nodes, "TD", {
-        class: true
-      });
+      td2 = claim_element(tr_nodes, "TD", {});
       var td2_nodes = children(td2);
       t4 = claim_text(td2_nodes, t4_value);
       td2_nodes.forEach(detach_dev);
@@ -311,14 +294,11 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(td0, "class", "text-sm svelte-jorie6");
-      add_location(td0, file, 107, 4, 2507);
-      attr_dev(td1, "class", "svelte-jorie6");
-      add_location(td1, file, 108, 4, 2563);
-      attr_dev(td2, "class", "svelte-jorie6");
-      add_location(td2, file, 109, 8, 2595);
-      attr_dev(tr, "class", "svelte-jorie6");
-      add_location(tr, file, 106, 3, 2498);
+      attr_dev(td0, "class", "text-sm");
+      add_location(td0, file, 149, 4, 3583);
+      add_location(td1, file, 150, 4, 3639);
+      add_location(td2, file, 151, 8, 3671);
+      add_location(tr, file, 148, 3, 3574);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -341,11 +321,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(106:3) {#each food[1] as history}",
+    source: "(148:3) {#each food[1] as history}",
     ctx: ctx
   });
   return block;
-} // (102:2) {#each formatHistory() as food}
+} // (144:2) {#each formatHistory() as food}
 
 
 function create_each_block(ctx) {
@@ -353,13 +333,13 @@ function create_each_block(ctx) {
   var th;
   var t0_value =
   /*food*/
-  ctx[3][0] + "";
+  ctx[6][0] + "";
   var t0;
   var t1;
   var each_1_anchor;
   var each_value_1 =
   /*food*/
-  ctx[3][1];
+  ctx[6][1];
   validate_each_argument(each_value_1);
   var each_blocks = [];
 
@@ -382,12 +362,11 @@ function create_each_block(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      tr = claim_element(nodes, "TR", {
-        class: true
-      });
+      tr = claim_element(nodes, "TR", {});
       var tr_nodes = children(tr);
       th = claim_element(tr_nodes, "TH", {
-        class: true
+        class: true,
+        colspan: true
       });
       var th_nodes = children(th);
       t0 = claim_text(th_nodes, t0_value);
@@ -403,10 +382,10 @@ function create_each_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(th, "class", "text-sm svelte-jorie6");
-      add_location(th, file, 103, 4, 2421);
-      attr_dev(tr, "class", "svelte-jorie6");
-      add_location(tr, file, 102, 3, 2412);
+      attr_dev(th, "class", "text-left");
+      attr_dev(th, "colspan", "3");
+      add_location(th, file, 145, 4, 3483);
+      add_location(tr, file, 144, 3, 3474);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -423,10 +402,10 @@ function create_each_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      64) {
+      4096) {
         each_value_1 =
         /*food*/
-        ctx[3][1];
+        ctx[6][1];
         validate_each_argument(each_value_1);
 
         var _i8;
@@ -463,7 +442,238 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(102:2) {#each formatHistory() as food}",
+    source: "(144:2) {#each formatHistory() as food}",
+    ctx: ctx
+  });
+  return block;
+} // (159:0) {#if isManualAdd}
+
+
+function create_if_block(ctx) {
+  var modal;
+  var current;
+  modal = new Modal({
+    props: {
+      $$slots: {
+        default: [create_default_slot]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    },
+    $$inline: true
+  });
+  modal.$on("closeModal",
+  /*cancelManualAdd*/
+  ctx[8]);
+  var block = {
+    c: function create() {
+      create_component(modal.$$.fragment);
+    },
+    l: function claim(nodes) {
+      claim_component(modal.$$.fragment, nodes);
+    },
+    m: function mount(target, anchor) {
+      mount_component(modal, target, anchor);
+      current = true;
+    },
+    p: function update(ctx, dirty) {
+      var modal_changes = {};
+
+      if (dirty &
+      /*$$scope, manualAddTime, manualAddDate*/
+      8388620) {
+        modal_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      modal.$set(modal_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(modal.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(modal.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(modal, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_if_block.name,
+    type: "if",
+    source: "(159:0) {#if isManualAdd}",
+    ctx: ctx
+  });
+  return block;
+} // (160:1) <Modal on:closeModal={cancelManualAdd}>
+
+
+function create_default_slot(ctx) {
+  var div;
+  var label0;
+  var t0;
+  var input0;
+  var t1;
+  var label1;
+  var t2;
+  var input1;
+  var t3;
+  var button0;
+  var t4;
+  var t5;
+  var button1;
+  var t6;
+  var mounted;
+  var dispose;
+  var block = {
+    c: function create() {
+      div = element("div");
+      label0 = element("label");
+      t0 = text("DATE\n\t\t\t\t");
+      input0 = element("input");
+      t1 = space();
+      label1 = element("label");
+      t2 = text("TIME\n\t\t\t\t");
+      input1 = element("input");
+      t3 = space();
+      button0 = element("button");
+      t4 = text("SUBMIT");
+      t5 = space();
+      button1 = element("button");
+      t6 = text("ABORT");
+      this.h();
+    },
+    l: function claim(nodes) {
+      div = claim_element(nodes, "DIV", {
+        class: true
+      });
+      var div_nodes = children(div);
+      label0 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label0_nodes = children(label0);
+      t0 = claim_text(label0_nodes, "DATE\n\t\t\t\t");
+      input0 = claim_element(label0_nodes, "INPUT", {
+        class: true,
+        type: true
+      });
+      label0_nodes.forEach(detach_dev);
+      t1 = claim_space(div_nodes);
+      label1 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label1_nodes = children(label1);
+      t2 = claim_text(label1_nodes, "TIME\n\t\t\t\t");
+      input1 = claim_element(label1_nodes, "INPUT", {
+        class: true,
+        type: true
+      });
+      label1_nodes.forEach(detach_dev);
+      t3 = claim_space(div_nodes);
+      button0 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button0_nodes = children(button0);
+      t4 = claim_text(button0_nodes, "SUBMIT");
+      button0_nodes.forEach(detach_dev);
+      t5 = claim_space(div_nodes);
+      button1 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button1_nodes = children(button1);
+      t6 = claim_text(button1_nodes, "ABORT");
+      button1_nodes.forEach(detach_dev);
+      div_nodes.forEach(detach_dev);
+      this.h();
+    },
+    h: function hydrate() {
+      attr_dev(input0, "class", "block bg-gray-900 pl-1");
+      attr_dev(input0, "type", "date");
+      add_location(input0, file, 163, 4, 3908);
+      attr_dev(label0, "class", "block p-1 mb-1");
+      add_location(label0, file, 161, 3, 3864);
+      attr_dev(input1, "class", "block bg-gray-900 pl-1");
+      attr_dev(input1, "type", "time");
+      add_location(input1, file, 171, 4, 4065);
+      attr_dev(label1, "class", "block p-1 mb-1");
+      add_location(label1, file, 169, 3, 4021);
+      attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
+      add_location(button0, file, 177, 3, 4178);
+      attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
+      add_location(button1, file, 181, 3, 4343);
+      attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
+      add_location(div, file, 160, 2, 3813);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, label0);
+      append_dev(label0, t0);
+      append_dev(label0, input0);
+      set_input_value(input0,
+      /*manualAddDate*/
+      ctx[2]);
+      append_dev(div, t1);
+      append_dev(div, label1);
+      append_dev(label1, t2);
+      append_dev(label1, input1);
+      set_input_value(input1,
+      /*manualAddTime*/
+      ctx[3]);
+      append_dev(div, t3);
+      append_dev(div, button0);
+      append_dev(button0, t4);
+      append_dev(div, t5);
+      append_dev(div, button1);
+      append_dev(button1, t6);
+
+      if (!mounted) {
+        dispose = [listen_dev(input0, "input",
+        /*input0_input_handler_1*/
+        ctx[15]), listen_dev(input1, "input",
+        /*input1_input_handler_1*/
+        ctx[16]), listen_dev(button0, "click",
+        /*submitManualAdd*/
+        ctx[9], false, false, false), listen_dev(button1, "click",
+        /*cancelManualAdd*/
+        ctx[8], false, false, false)];
+        mounted = true;
+      }
+    },
+    p: function update(ctx, dirty) {
+      if (dirty &
+      /*manualAddDate*/
+      4) {
+        set_input_value(input0,
+        /*manualAddDate*/
+        ctx[2]);
+      }
+
+      if (dirty &
+      /*manualAddTime*/
+      8) {
+        set_input_value(input1,
+        /*manualAddTime*/
+        ctx[3]);
+      }
+    },
+    d: function destroy(detaching) {
+      if (detaching) detach_dev(div);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_default_slot.name,
+    type: "slot",
+    source: "(160:1) <Modal on:closeModal={cancelManualAdd}>",
     ctx: ctx
   });
   return block;
@@ -473,60 +683,79 @@ function create_fragment(ctx) {
   var t0;
   var h1;
   var t1;
+  var br;
   var t2;
+  var t3;
   var form;
   var label0;
   var span0;
-  var t3;
   var t4;
-  var input0;
   var t5;
+  var input0;
+  var t6;
   var label1;
   var span1;
-  var t6;
   var t7;
-  var input1;
   var t8;
-  var button;
+  var input1;
   var t9;
+  var div;
+  var button0;
   var t10;
+  var t11;
+  var button1;
+  var t12;
+  var t13;
   var show_if = Object.values(
   /*foodHistory*/
-  ctx[2]).length;
-  var t11;
-  var if_block1_anchor;
+  ctx[5]).length;
+  var t14;
+  var t15;
+  var if_block2_anchor;
+  var current;
   var mounted;
   var dispose;
-  var if_block0 = show_if && create_if_block_1(ctx);
+  var if_block0 = show_if && create_if_block_2(ctx);
   var if_block1 =
   /*isHistoryShown*/
-  ctx[0] && create_if_block(ctx);
+  ctx[0] && create_if_block_1(ctx);
+  var if_block2 =
+  /*isManualAdd*/
+  ctx[1] && create_if_block(ctx);
   var block = {
     c: function create() {
       t0 = space();
       h1 = element("h1");
-      t1 = text("Food Log");
-      t2 = space();
+      t1 = text("Food / Drug ");
+      br = element("br");
+      t2 = text("Log");
+      t3 = space();
       form = element("form");
       label0 = element("label");
       span0 = element("span");
-      t3 = text("Food name");
-      t4 = space();
-      input0 = element("input");
+      t4 = text("Food name");
       t5 = space();
+      input0 = element("input");
+      t6 = space();
       label1 = element("label");
       span1 = element("span");
-      t6 = text("Quantity");
-      t7 = space();
-      input1 = element("input");
+      t7 = text("Quantity");
       t8 = space();
-      button = element("button");
-      t9 = text("Add Food");
-      t10 = space();
-      if (if_block0) if_block0.c();
+      input1 = element("input");
+      t9 = space();
+      div = element("div");
+      button0 = element("button");
+      t10 = text("Add");
       t11 = space();
+      button1 = element("button");
+      t12 = text("Manual Add");
+      t13 = space();
+      if (if_block0) if_block0.c();
+      t14 = space();
       if (if_block1) if_block1.c();
-      if_block1_anchor = empty();
+      t15 = space();
+      if (if_block2) if_block2.c();
+      if_block2_anchor = empty();
       this.h();
     },
     l: function claim(nodes) {
@@ -537,9 +766,11 @@ function create_fragment(ctx) {
         class: true
       });
       var h1_nodes = children(h1);
-      t1 = claim_text(h1_nodes, "Food Log");
+      t1 = claim_text(h1_nodes, "Food / Drug ");
+      br = claim_element(h1_nodes, "BR", {});
+      t2 = claim_text(h1_nodes, "Log");
       h1_nodes.forEach(detach_dev);
-      t2 = claim_space(nodes);
+      t3 = claim_space(nodes);
       form = claim_element(nodes, "FORM", {
         class: true
       });
@@ -552,14 +783,14 @@ function create_fragment(ctx) {
         class: true
       });
       var span0_nodes = children(span0);
-      t3 = claim_text(span0_nodes, "Food name");
+      t4 = claim_text(span0_nodes, "Food name");
       span0_nodes.forEach(detach_dev);
-      t4 = claim_space(label0_nodes);
+      t5 = claim_space(label0_nodes);
       input0 = claim_element(label0_nodes, "INPUT", {
         class: true
       });
       label0_nodes.forEach(detach_dev);
-      t5 = claim_space(form_nodes);
+      t6 = claim_space(form_nodes);
       label1 = claim_element(form_nodes, "LABEL", {
         class: true
       });
@@ -568,89 +799,121 @@ function create_fragment(ctx) {
         class: true
       });
       var span1_nodes = children(span1);
-      t6 = claim_text(span1_nodes, "Quantity");
+      t7 = claim_text(span1_nodes, "Quantity");
       span1_nodes.forEach(detach_dev);
-      t7 = claim_space(label1_nodes);
+      t8 = claim_space(label1_nodes);
       input1 = claim_element(label1_nodes, "INPUT", {
         class: true
       });
       label1_nodes.forEach(detach_dev);
-      t8 = claim_space(form_nodes);
-      button = claim_element(form_nodes, "BUTTON", {
+      t9 = claim_space(form_nodes);
+      div = claim_element(form_nodes, "DIV", {
         class: true
       });
-      var button_nodes = children(button);
-      t9 = claim_text(button_nodes, "Add Food");
-      button_nodes.forEach(detach_dev);
+      var div_nodes = children(div);
+      button0 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button0_nodes = children(button0);
+      t10 = claim_text(button0_nodes, "Add");
+      button0_nodes.forEach(detach_dev);
+      t11 = claim_space(div_nodes);
+      button1 = claim_element(div_nodes, "BUTTON", {
+        type: true,
+        class: true
+      });
+      var button1_nodes = children(button1);
+      t12 = claim_text(button1_nodes, "Manual Add");
+      button1_nodes.forEach(detach_dev);
+      div_nodes.forEach(detach_dev);
       form_nodes.forEach(detach_dev);
-      t10 = claim_space(nodes);
+      t13 = claim_space(nodes);
       if (if_block0) if_block0.l(nodes);
-      t11 = claim_space(nodes);
+      t14 = claim_space(nodes);
       if (if_block1) if_block1.l(nodes);
-      if_block1_anchor = empty();
+      t15 = claim_space(nodes);
+      if (if_block2) if_block2.l(nodes);
+      if_block2_anchor = empty();
       this.h();
     },
     h: function hydrate() {
       document.title = "Food Log";
-      attr_dev(h1, "class", "text-yellow-400 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 64, 0, 1251);
+      add_location(br, file, 94, 14, 2137);
+      attr_dev(h1, "class", "mb-4 text-yellow-400 bold text-3xl md:text-4xl text-center leading-tight");
+      add_location(h1, file, 93, 0, 2037);
       attr_dev(span0, "class", "text-xl");
-      add_location(span0, file, 67, 4, 1444);
+      add_location(span0, file, 98, 4, 2292);
       attr_dev(input0, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input0, file, 68, 4, 1487);
+      add_location(input0, file, 99, 4, 2335);
       attr_dev(label0, "class", "space-y-1 block text-center");
-      add_location(label0, file, 66, 2, 1396);
+      add_location(label0, file, 97, 2, 2244);
       attr_dev(span1, "class", "text-xl");
-      add_location(span1, file, 73, 4, 1651);
-      attr_dev(input1, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input1, file, 74, 4, 1693);
+      add_location(span1, file, 104, 4, 2499);
+      attr_dev(input1, "class", "w-10 ml-2 px-1 shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
+      add_location(input1, file, 105, 4, 2541);
       attr_dev(label1, "class", "space-y-1 block text-center");
-      add_location(label1, file, 72, 2, 1603);
-      attr_dev(button, "class", "text-black border-2 bg-white border-solid rounded-lg shadow-sm border-yellow-500 px-3 py-1 block mx-auto text-xl");
-      add_location(button, file, 78, 2, 1817);
-      attr_dev(form, "class", "space-y-4");
-      add_location(form, file, 65, 0, 1331);
+      add_location(label1, file, 103, 2, 2451);
+      attr_dev(button0, "class", "rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
+      add_location(button0, file, 110, 4, 2723);
+      attr_dev(button1, "type", "button");
+      attr_dev(button1, "class", "rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
+      add_location(button1, file, 115, 4, 2849);
+      attr_dev(div, "class", "pt-1 flex justify-evenly");
+      add_location(div, file, 109, 2, 2680);
+      attr_dev(form, "class", "space-y-2 border border-gray-700 py-2");
+      add_location(form, file, 96, 0, 2151);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
       insert_dev(target, h1, anchor);
       append_dev(h1, t1);
-      insert_dev(target, t2, anchor);
+      append_dev(h1, br);
+      append_dev(h1, t2);
+      insert_dev(target, t3, anchor);
       insert_dev(target, form, anchor);
       append_dev(form, label0);
       append_dev(label0, span0);
-      append_dev(span0, t3);
-      append_dev(label0, t4);
+      append_dev(span0, t4);
+      append_dev(label0, t5);
       append_dev(label0, input0);
       set_input_value(input0,
       /*food*/
-      ctx[3]);
-      append_dev(form, t5);
+      ctx[6]);
+      append_dev(form, t6);
       append_dev(form, label1);
       append_dev(label1, span1);
-      append_dev(span1, t6);
-      append_dev(label1, t7);
+      append_dev(span1, t7);
+      append_dev(label1, t8);
       append_dev(label1, input1);
       set_input_value(input1,
       /*foodQuantity*/
-      ctx[1]);
-      append_dev(form, t8);
-      append_dev(form, button);
-      append_dev(button, t9);
-      insert_dev(target, t10, anchor);
+      ctx[4]);
+      append_dev(form, t9);
+      append_dev(form, div);
+      append_dev(div, button0);
+      append_dev(button0, t10);
+      append_dev(div, t11);
+      append_dev(div, button1);
+      append_dev(button1, t12);
+      insert_dev(target, t13, anchor);
       if (if_block0) if_block0.m(target, anchor);
-      insert_dev(target, t11, anchor);
+      insert_dev(target, t14, anchor);
       if (if_block1) if_block1.m(target, anchor);
-      insert_dev(target, if_block1_anchor, anchor);
+      insert_dev(target, t15, anchor);
+      if (if_block2) if_block2.m(target, anchor);
+      insert_dev(target, if_block2_anchor, anchor);
+      current = true;
 
       if (!mounted) {
         dispose = [listen_dev(input0, "input",
         /*input0_input_handler*/
-        ctx[7]), listen_dev(input1, "input",
+        ctx[13]), listen_dev(input1, "input",
         /*input1_input_handler*/
-        ctx[8]), listen_dev(form, "submit", prevent_default(
+        ctx[14]), listen_dev(button1, "click",
+        /*manualAdd*/
+        ctx[7], false, false, false), listen_dev(form, "submit", prevent_default(
         /*submitFood*/
-        ctx[5]), false, true, false)];
+        ctx[11]), false, true, false)];
         mounted = true;
       }
     },
@@ -660,37 +923,37 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*food*/
-      8 && input0.value !==
+      64 && input0.value !==
       /*food*/
-      ctx[3]) {
+      ctx[6]) {
         set_input_value(input0,
         /*food*/
-        ctx[3]);
+        ctx[6]);
       }
 
       if (dirty &
       /*foodQuantity*/
-      2 && input1.value !==
+      16 && input1.value !==
       /*foodQuantity*/
-      ctx[1]) {
+      ctx[4]) {
         set_input_value(input1,
         /*foodQuantity*/
-        ctx[1]);
+        ctx[4]);
       }
 
       if (dirty &
       /*foodHistory*/
-      4) show_if = Object.values(
+      32) show_if = Object.values(
       /*foodHistory*/
-      ctx[2]).length;
+      ctx[5]).length;
 
       if (show_if) {
         if (if_block0) {
           if_block0.p(ctx, dirty);
         } else {
-          if_block0 = create_if_block_1(ctx);
+          if_block0 = create_if_block_2(ctx);
           if_block0.c();
-          if_block0.m(t11.parentNode, t11);
+          if_block0.m(t14.parentNode, t14);
         }
       } else if (if_block0) {
         if_block0.d(1);
@@ -703,27 +966,61 @@ function create_fragment(ctx) {
         if (if_block1) {
           if_block1.p(ctx, dirty);
         } else {
-          if_block1 = create_if_block(ctx);
+          if_block1 = create_if_block_1(ctx);
           if_block1.c();
-          if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
+          if_block1.m(t15.parentNode, t15);
         }
       } else if (if_block1) {
         if_block1.d(1);
         if_block1 = null;
       }
+
+      if (
+      /*isManualAdd*/
+      ctx[1]) {
+        if (if_block2) {
+          if_block2.p(ctx, dirty);
+
+          if (dirty &
+          /*isManualAdd*/
+          2) {
+            transition_in(if_block2, 1);
+          }
+        } else {
+          if_block2 = create_if_block(ctx);
+          if_block2.c();
+          transition_in(if_block2, 1);
+          if_block2.m(if_block2_anchor.parentNode, if_block2_anchor);
+        }
+      } else if (if_block2) {
+        group_outros();
+        transition_out(if_block2, 1, 1, function () {
+          if_block2 = null;
+        });
+        check_outros();
+      }
     },
-    i: noop,
-    o: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block2);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block2);
+      current = false;
+    },
     d: function destroy(detaching) {
       if (detaching) detach_dev(t0);
       if (detaching) detach_dev(h1);
-      if (detaching) detach_dev(t2);
+      if (detaching) detach_dev(t3);
       if (detaching) detach_dev(form);
-      if (detaching) detach_dev(t10);
+      if (detaching) detach_dev(t13);
       if (if_block0) if_block0.d(detaching);
-      if (detaching) detach_dev(t11);
+      if (detaching) detach_dev(t14);
       if (if_block1) if_block1.d(detaching);
-      if (detaching) detach_dev(if_block1_anchor);
+      if (detaching) detach_dev(t15);
+      if (if_block2) if_block2.d(detaching);
+      if (detaching) detach_dev(if_block2_anchor);
       mounted = false;
       run_all(dispose);
     }
@@ -756,11 +1053,11 @@ function instance($$self, $$props, $$invalidate) {
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
       $$scope = $$props.$$scope;
   validate_slots("Food", slots, []);
-  var isHistoryShown = false; // const foodInit = {
-  //   time: null,
-  //   name: null
-  // };
-
+  var isHistoryShown = false;
+  var isManualAdd;
+  var manualAddDate;
+  var manualAddTime;
+  var manualAddLength;
   var food;
   var foodQuantity;
   var foodHistory = [];
@@ -769,8 +1066,38 @@ function instance($$self, $$props, $$invalidate) {
     foodHistory = !!localStorage.foodHistory ? JSON.parse(localStorage.foodHistory) : [];
   }
 
+  function manualAdd() {
+    $$invalidate(1, isManualAdd = true);
+  }
+
+  function cancelManualAdd() {
+    $$invalidate(1, isManualAdd = false);
+  }
+
+  function submitManualAdd() {
+    var year = parseInt(manualAddDate);
+    var month = parseInt(manualAddDate.slice(5, 7)) - 1;
+    var day = parseInt(manualAddDate.slice(8, 11));
+    var hour = parseInt(manualAddTime);
+    var min = parseInt(manualAddTime.slice(3, 5));
+    var time = new Date(year, month, day, hour, min).getTime();
+    foodHistory.push({
+      time: time,
+      name: food,
+      quantity: foodQuantity
+    });
+
+    {
+      localStorage.foodHistory = JSON.stringify(foodHistory);
+    }
+
+    $$invalidate(6, food = "");
+    $$invalidate(4, foodQuantity = "");
+    $$invalidate(1, isManualAdd = false);
+  }
+
   function showHistory() {
-    $$invalidate(0, isHistoryShown = true);
+    $$invalidate(0, isHistoryShown = !isHistoryShown);
   }
 
   function submitFood() {
@@ -784,8 +1111,8 @@ function instance($$self, $$props, $$invalidate) {
       localStorage.foodHistory = JSON.stringify(foodHistory);
     }
 
-    $$invalidate(3, food = "");
-    $$invalidate(1, foodQuantity = "");
+    $$invalidate(6, food = "");
+    $$invalidate(4, foodQuantity = "");
   }
 
   function formatHistory() {
@@ -799,7 +1126,7 @@ function instance($$self, $$props, $$invalidate) {
         formatted[date].push(history);
       }
     });
-    return Object.entries(formatted);
+    return Object.entries(formatted).reverse();
   }
 
   var writable_props = [];
@@ -809,20 +1136,38 @@ function instance($$self, $$props, $$invalidate) {
 
   function input0_input_handler() {
     food = this.value;
-    $$invalidate(3, food);
+    $$invalidate(6, food);
   }
 
   function input1_input_handler() {
     foodQuantity = this.value;
-    $$invalidate(1, foodQuantity);
+    $$invalidate(4, foodQuantity);
+  }
+
+  function input0_input_handler_1() {
+    manualAddDate = this.value;
+    $$invalidate(2, manualAddDate);
+  }
+
+  function input1_input_handler_1() {
+    manualAddTime = this.value;
+    $$invalidate(3, manualAddTime);
   }
 
   $$self.$capture_state = function () {
     return {
+      Modal: Modal,
       isHistoryShown: isHistoryShown,
+      isManualAdd: isManualAdd,
+      manualAddDate: manualAddDate,
+      manualAddTime: manualAddTime,
+      manualAddLength: manualAddLength,
       food: food,
       foodQuantity: foodQuantity,
       foodHistory: foodHistory,
+      manualAdd: manualAdd,
+      cancelManualAdd: cancelManualAdd,
+      submitManualAdd: submitManualAdd,
       showHistory: showHistory,
       submitFood: submitFood,
       formatDate: formatDate,
@@ -833,16 +1178,20 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$inject_state = function ($$props) {
     if ("isHistoryShown" in $$props) $$invalidate(0, isHistoryShown = $$props.isHistoryShown);
-    if ("food" in $$props) $$invalidate(3, food = $$props.food);
-    if ("foodQuantity" in $$props) $$invalidate(1, foodQuantity = $$props.foodQuantity);
-    if ("foodHistory" in $$props) $$invalidate(2, foodHistory = $$props.foodHistory);
+    if ("isManualAdd" in $$props) $$invalidate(1, isManualAdd = $$props.isManualAdd);
+    if ("manualAddDate" in $$props) $$invalidate(2, manualAddDate = $$props.manualAddDate);
+    if ("manualAddTime" in $$props) $$invalidate(3, manualAddTime = $$props.manualAddTime);
+    if ("manualAddLength" in $$props) manualAddLength = $$props.manualAddLength;
+    if ("food" in $$props) $$invalidate(6, food = $$props.food);
+    if ("foodQuantity" in $$props) $$invalidate(4, foodQuantity = $$props.foodQuantity);
+    if ("foodHistory" in $$props) $$invalidate(5, foodHistory = $$props.foodHistory);
   };
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [isHistoryShown, foodQuantity, foodHistory, food, showHistory, submitFood, formatHistory, input0_input_handler, input1_input_handler];
+  return [isHistoryShown, isManualAdd, manualAddDate, manualAddTime, foodQuantity, foodHistory, food, manualAdd, cancelManualAdd, submitManualAdd, showHistory, submitFood, formatHistory, input0_input_handler, input1_input_handler, input0_input_handler_1, input1_input_handler_1];
 }
 
 var Food = /*#__PURE__*/function (_SvelteComponentDev) {

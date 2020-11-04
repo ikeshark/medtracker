@@ -1,4 +1,4 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, n as attr_dev, o as add_location, p as insert_dev, r as append_dev, u as listen_dev, v as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, x as empty, q as query_selector_all, y as set_input_value, H as prevent_default, O as _slicedToArray, Q as set_data_dev, J as run_all, w as validate_slots, K as globals, R as to_number } from './client.8b10c686.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, y as listen_dev, u as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, w as empty, q as query_selector_all, x as set_input_value, H as prevent_default, O as _slicedToArray, Q as prop_dev, R as set_data_dev, J as run_all, v as validate_slots, K as globals } from './client.02a3b31d.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -16,7 +16,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[9] = list[i];
   return child_ctx;
-} // (85:0) {#if Object.values(symptomHistory).length}
+} // (94:0) {#if Object.values(symptomHistory).length}
 
 
 function create_if_block_1(ctx) {
@@ -41,7 +41,7 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "mt-2 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
-      add_location(button, file, 85, 1, 2038);
+      add_location(button, file, 94, 1, 2360);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -65,11 +65,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(85:0) {#if Object.values(symptomHistory).length}",
+    source: "(94:0) {#if Object.values(symptomHistory).length}",
     ctx: ctx
   });
   return block;
-} // (94:0) {#if isHistoryShown}
+} // (103:0) {#if isHistoryShown}
 
 
 function create_if_block(ctx) {
@@ -89,7 +89,7 @@ function create_if_block(ctx) {
   var t7;
   var each_value =
   /*formatHistory*/
-  ctx[6]();
+  ctx[7]();
   validate_each_argument(each_value);
   var each_blocks = [];
 
@@ -158,12 +158,12 @@ function create_if_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 94, 1, 2222);
-      add_location(th0, file, 97, 3, 2324);
-      add_location(th1, file, 98, 3, 2341);
-      add_location(th2, file, 99, 3, 2358);
-      add_location(tr, file, 96, 2, 2316);
-      add_location(table, file, 95, 1, 2306);
+      add_location(h2, file, 103, 1, 2544);
+      add_location(th0, file, 106, 3, 2646);
+      add_location(th1, file, 107, 3, 2663);
+      add_location(th2, file, 108, 3, 2680);
+      add_location(tr, file, 105, 2, 2638);
+      add_location(table, file, 104, 1, 2628);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -188,10 +188,10 @@ function create_if_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      64) {
+      128) {
         each_value =
         /*formatHistory*/
-        ctx[6]();
+        ctx[7]();
         validate_each_argument(each_value);
 
         var _i4;
@@ -228,11 +228,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(94:0) {#if isHistoryShown}",
+    source: "(103:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (107:3) {#each day[1] as symptom}
+} // (115:3) {#each day[1] as symptom}
 
 
 function create_each_block_1(ctx) {
@@ -294,10 +294,10 @@ function create_each_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(td0, "class", "text-sm");
-      add_location(td0, file, 108, 4, 2512);
-      add_location(td1, file, 109, 4, 2568);
-      add_location(td2, file, 110, 4, 2596);
-      add_location(tr, file, 107, 3, 2503);
+      add_location(td0, file, 116, 4, 2850);
+      add_location(td1, file, 117, 4, 2906);
+      add_location(td2, file, 118, 4, 2934);
+      add_location(tr, file, 115, 3, 2841);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -320,23 +320,21 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(107:3) {#each day[1] as symptom}",
+    source: "(115:3) {#each day[1] as symptom}",
     ctx: ctx
   });
   return block;
-} // (102:2) {#each formatHistory() as day}
+} // (111:2) {#each formatHistory() as day}
 
 
 function create_each_block(ctx) {
   var tr;
-  var th0;
+  var th;
   var t0_value =
   /*day*/
   ctx[9][0] + "";
   var t0;
   var t1;
-  var th1;
-  var t2;
   var each_1_anchor;
   var each_value_1 =
   /*day*/
@@ -351,11 +349,9 @@ function create_each_block(ctx) {
   var block = {
     c: function create() {
       tr = element("tr");
-      th0 = element("th");
+      th = element("th");
       t0 = text(t0_value);
       t1 = space();
-      th1 = element("th");
-      t2 = space();
 
       for (var _i5 = 0; _i5 < each_blocks.length; _i5 += 1) {
         each_blocks[_i5].c();
@@ -367,15 +363,15 @@ function create_each_block(ctx) {
     l: function claim(nodes) {
       tr = claim_element(nodes, "TR", {});
       var tr_nodes = children(tr);
-      th0 = claim_element(tr_nodes, "TH", {});
-      var th0_nodes = children(th0);
-      t0 = claim_text(th0_nodes, t0_value);
-      th0_nodes.forEach(detach_dev);
-      t1 = claim_space(tr_nodes);
-      th1 = claim_element(tr_nodes, "TH", {});
-      children(th1).forEach(detach_dev);
+      th = claim_element(tr_nodes, "TH", {
+        class: true,
+        colspan: true
+      });
+      var th_nodes = children(th);
+      t0 = claim_text(th_nodes, t0_value);
+      th_nodes.forEach(detach_dev);
       tr_nodes.forEach(detach_dev);
-      t2 = claim_space(nodes);
+      t1 = claim_space(nodes);
 
       for (var _i6 = 0; _i6 < each_blocks.length; _i6 += 1) {
         each_blocks[_i6].l(nodes);
@@ -385,17 +381,16 @@ function create_each_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      add_location(th0, file, 103, 4, 2430);
-      add_location(th1, file, 104, 4, 2452);
-      add_location(tr, file, 102, 3, 2421);
+      attr_dev(th, "class", "text-left");
+      attr_dev(th, "colspan", "3");
+      add_location(th, file, 112, 4, 2752);
+      add_location(tr, file, 111, 3, 2743);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
-      append_dev(tr, th0);
-      append_dev(th0, t0);
-      append_dev(tr, t1);
-      append_dev(tr, th1);
-      insert_dev(target, t2, anchor);
+      append_dev(tr, th);
+      append_dev(th, t0);
+      insert_dev(target, t1, anchor);
 
       for (var _i7 = 0; _i7 < each_blocks.length; _i7 += 1) {
         each_blocks[_i7].m(target, anchor);
@@ -406,7 +401,7 @@ function create_each_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      64) {
+      128) {
         each_value_1 =
         /*day*/
         ctx[9][1];
@@ -437,7 +432,7 @@ function create_each_block(ctx) {
     },
     d: function destroy(detaching) {
       if (detaching) detach_dev(tr);
-      if (detaching) detach_dev(t2);
+      if (detaching) detach_dev(t1);
       destroy_each(each_blocks, detaching);
       if (detaching) detach_dev(each_1_anchor);
     }
@@ -446,7 +441,7 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(102:2) {#each formatHistory() as day}",
+    source: "(111:2) {#each formatHistory() as day}",
     ctx: ctx
   });
   return block;
@@ -458,26 +453,32 @@ function create_fragment(ctx) {
   var t1;
   var t2;
   var form;
-  var label0;
-  var span0;
+  var label;
+  var span;
   var t3;
   var t4;
-  var input0;
+  var input;
   var t5;
-  var label1;
-  var span1;
+  var div;
+  var button0;
   var t6;
+  var button0_disabled_value;
   var t7;
+  var p;
   var t8;
-  var input1;
   var t9;
-  var button;
   var t10;
+  var button1;
   var t11;
+  var button1_disabled_value;
+  var t12;
+  var button2;
+  var t13;
+  var t14;
   var show_if = Object.values(
   /*symptomHistory*/
   ctx[3]).length;
-  var t12;
+  var t15;
   var if_block1_anchor;
   var mounted;
   var dispose;
@@ -492,26 +493,30 @@ function create_fragment(ctx) {
       t1 = text("Symptom Log");
       t2 = space();
       form = element("form");
-      label0 = element("label");
-      span0 = element("span");
+      label = element("label");
+      span = element("span");
       t3 = text("Symptom");
       t4 = space();
-      input0 = element("input");
+      input = element("input");
       t5 = space();
-      label1 = element("label");
-      span1 = element("span");
-      t6 = text("Intensity: ");
-      t7 = text(
+      div = element("div");
+      button0 = element("button");
+      t6 = text("-");
+      t7 = space();
+      p = element("p");
+      t8 = text("Intensity: ");
+      t9 = text(
       /*intensity*/
       ctx[0]);
-      t8 = space();
-      input1 = element("input");
-      t9 = space();
-      button = element("button");
-      t10 = text("Add Symptom");
-      t11 = space();
-      if (if_block0) if_block0.c();
+      t10 = space();
+      button1 = element("button");
+      t11 = text("+");
       t12 = space();
+      button2 = element("button");
+      t13 = text("Add Symptom");
+      t14 = space();
+      if (if_block0) if_block0.c();
+      t15 = space();
       if (if_block1) if_block1.c();
       if_block1_anchor = empty();
       this.h();
@@ -531,56 +536,68 @@ function create_fragment(ctx) {
         class: true
       });
       var form_nodes = children(form);
-      label0 = claim_element(form_nodes, "LABEL", {
+      label = claim_element(form_nodes, "LABEL", {
         class: true
       });
-      var label0_nodes = children(label0);
-      span0 = claim_element(label0_nodes, "SPAN", {
+      var label_nodes = children(label);
+      span = claim_element(label_nodes, "SPAN", {
         class: true
       });
-      var span0_nodes = children(span0);
-      t3 = claim_text(span0_nodes, "Symptom");
-      span0_nodes.forEach(detach_dev);
-      t4 = claim_space(label0_nodes);
-      input0 = claim_element(label0_nodes, "INPUT", {
+      var span_nodes = children(span);
+      t3 = claim_text(span_nodes, "Symptom");
+      span_nodes.forEach(detach_dev);
+      t4 = claim_space(label_nodes);
+      input = claim_element(label_nodes, "INPUT", {
         class: true,
         type: true
       });
-      label0_nodes.forEach(detach_dev);
+      label_nodes.forEach(detach_dev);
       t5 = claim_space(form_nodes);
-      label1 = claim_element(form_nodes, "LABEL", {
+      div = claim_element(form_nodes, "DIV", {
         class: true
       });
-      var label1_nodes = children(label1);
-      span1 = claim_element(label1_nodes, "SPAN", {
+      var div_nodes = children(div);
+      button0 = claim_element(div_nodes, "BUTTON", {
+        value: true,
+        type: true,
+        disabled: true,
         class: true
       });
-      var span1_nodes = children(span1);
-      t6 = claim_text(span1_nodes, "Intensity: ");
-      t7 = claim_text(span1_nodes,
+      var button0_nodes = children(button0);
+      t6 = claim_text(button0_nodes, "-");
+      button0_nodes.forEach(detach_dev);
+      t7 = claim_space(div_nodes);
+      p = claim_element(div_nodes, "P", {
+        class: true
+      });
+      var p_nodes = children(p);
+      t8 = claim_text(p_nodes, "Intensity: ");
+      t9 = claim_text(p_nodes,
       /*intensity*/
       ctx[0]);
-      span1_nodes.forEach(detach_dev);
-      t8 = claim_space(label1_nodes);
-      input1 = claim_element(label1_nodes, "INPUT", {
-        class: true,
+      p_nodes.forEach(detach_dev);
+      t10 = claim_space(div_nodes);
+      button1 = claim_element(div_nodes, "BUTTON", {
         type: true,
-        min: true,
-        max: true,
-        step: true
-      });
-      label1_nodes.forEach(detach_dev);
-      t9 = claim_space(form_nodes);
-      button = claim_element(form_nodes, "BUTTON", {
+        value: true,
+        disabled: true,
         class: true
       });
-      var button_nodes = children(button);
-      t10 = claim_text(button_nodes, "Add Symptom");
-      button_nodes.forEach(detach_dev);
+      var button1_nodes = children(button1);
+      t11 = claim_text(button1_nodes, "+");
+      button1_nodes.forEach(detach_dev);
+      div_nodes.forEach(detach_dev);
+      t12 = claim_space(form_nodes);
+      button2 = claim_element(form_nodes, "BUTTON", {
+        class: true
+      });
+      var button2_nodes = children(button2);
+      t13 = claim_text(button2_nodes, "Add Symptom");
+      button2_nodes.forEach(detach_dev);
       form_nodes.forEach(detach_dev);
-      t11 = claim_space(nodes);
+      t14 = claim_space(nodes);
       if (if_block0) if_block0.l(nodes);
-      t12 = claim_space(nodes);
+      t15 = claim_space(nodes);
       if (if_block1) if_block1.l(nodes);
       if_block1_anchor = empty();
       this.h();
@@ -588,28 +605,36 @@ function create_fragment(ctx) {
     h: function hydrate() {
       document.title = "Symptom Log";
       attr_dev(h1, "class", "text-yellow-500 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 60, 0, 1209);
-      attr_dev(span0, "class", "text-xl");
-      add_location(span0, file, 63, 4, 1408);
-      attr_dev(input0, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      attr_dev(input0, "type", "text");
-      add_location(input0, file, 64, 4, 1449);
-      attr_dev(label0, "class", "space-y-1 block text-center");
-      add_location(label0, file, 62, 2, 1360);
-      attr_dev(span1, "class", "text-xl");
-      add_location(span1, file, 70, 4, 1631);
-      attr_dev(input1, "class", "block mx-auto");
-      attr_dev(input1, "type", "range");
-      attr_dev(input1, "min", "0");
-      attr_dev(input1, "max", "5");
-      attr_dev(input1, "step", "1");
-      add_location(input1, file, 71, 4, 1687);
-      attr_dev(label1, "class", "space-y-1 block text-center");
-      add_location(label1, file, 69, 2, 1583);
-      attr_dev(button, "class", "text-black border-2 bg-white border-solid rounded-lg shadow-sm border-yellow-500 px-3 py-1 block mx-auto text-xl");
-      add_location(button, file, 79, 2, 1827);
-      attr_dev(form, "class", "space-y-4");
-      add_location(form, file, 61, 0, 1292);
+      add_location(h1, file, 64, 0, 1304);
+      attr_dev(span, "class", "text-xl");
+      add_location(span, file, 67, 4, 1536);
+      attr_dev(input, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
+      attr_dev(input, "type", "text");
+      add_location(input, file, 68, 4, 1577);
+      attr_dev(label, "class", "space-y-1 block text-center");
+      add_location(label, file, 66, 2, 1488);
+      button0.value = "-1";
+      attr_dev(button0, "type", "button");
+      button0.disabled = button0_disabled_value =
+      /*intensity*/
+      ctx[0] === 0;
+      attr_dev(button0, "class", "border-black border bg-gray-700 px-2 rounded-lg svelte-kg2gg");
+      add_location(button0, file, 74, 2, 1746);
+      attr_dev(p, "class", "text-xl");
+      add_location(p, file, 80, 2, 1920);
+      attr_dev(button1, "type", "button");
+      button1.value = "1";
+      button1.disabled = button1_disabled_value =
+      /*intensity*/
+      ctx[0] === 5;
+      attr_dev(button1, "class", "border-black border bg-gray-700 px-2 rounded-lg svelte-kg2gg");
+      add_location(button1, file, 81, 2, 1968);
+      attr_dev(div, "class", "flex justify-around");
+      add_location(div, file, 73, 1, 1710);
+      attr_dev(button2, "class", "text-black border-2 bg-white border-solid rounded-lg shadow-sm border-yellow-500 px-3 py-1 block mx-auto text-xl");
+      add_location(button2, file, 88, 2, 2149);
+      attr_dev(form, "class", "space-y-4 mb-4 border border-gray-700 pb-2");
+      add_location(form, file, 65, 0, 1387);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -617,41 +642,42 @@ function create_fragment(ctx) {
       append_dev(h1, t1);
       insert_dev(target, t2, anchor);
       insert_dev(target, form, anchor);
-      append_dev(form, label0);
-      append_dev(label0, span0);
-      append_dev(span0, t3);
-      append_dev(label0, t4);
-      append_dev(label0, input0);
-      set_input_value(input0,
+      append_dev(form, label);
+      append_dev(label, span);
+      append_dev(span, t3);
+      append_dev(label, t4);
+      append_dev(label, input);
+      set_input_value(input,
       /*name*/
       ctx[1]);
       append_dev(form, t5);
-      append_dev(form, label1);
-      append_dev(label1, span1);
-      append_dev(span1, t6);
-      append_dev(span1, t7);
-      append_dev(label1, t8);
-      append_dev(label1, input1);
-      set_input_value(input1,
-      /*intensity*/
-      ctx[0]);
-      append_dev(form, t9);
-      append_dev(form, button);
-      append_dev(button, t10);
-      insert_dev(target, t11, anchor);
+      append_dev(form, div);
+      append_dev(div, button0);
+      append_dev(button0, t6);
+      append_dev(div, t7);
+      append_dev(div, p);
+      append_dev(p, t8);
+      append_dev(p, t9);
+      append_dev(div, t10);
+      append_dev(div, button1);
+      append_dev(button1, t11);
+      append_dev(form, t12);
+      append_dev(form, button2);
+      append_dev(button2, t13);
+      insert_dev(target, t14, anchor);
       if (if_block0) if_block0.m(target, anchor);
-      insert_dev(target, t12, anchor);
+      insert_dev(target, t15, anchor);
       if (if_block1) if_block1.m(target, anchor);
       insert_dev(target, if_block1_anchor, anchor);
 
       if (!mounted) {
-        dispose = [listen_dev(input0, "input",
-        /*input0_input_handler*/
-        ctx[7]), listen_dev(input1, "change",
-        /*input1_change_input_handler*/
-        ctx[8]), listen_dev(input1, "input",
-        /*input1_change_input_handler*/
-        ctx[8]), listen_dev(form, "submit", prevent_default(
+        dispose = [listen_dev(input, "input",
+        /*input_input_handler*/
+        ctx[8]), listen_dev(button0, "click",
+        /*incrementIntensity*/
+        ctx[6], false, false, false), listen_dev(button1, "click",
+        /*incrementIntensity*/
+        ctx[6], false, false, false), listen_dev(form, "submit", prevent_default(
         /*submitSymptom*/
         ctx[5]), false, true, false)];
         mounted = true;
@@ -663,26 +689,34 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*name*/
-      2 && input0.value !==
+      2 && input.value !==
       /*name*/
       ctx[1]) {
-        set_input_value(input0,
+        set_input_value(input,
         /*name*/
         ctx[1]);
       }
 
       if (dirty &
       /*intensity*/
-      1) set_data_dev(t7,
+      1 && button0_disabled_value !== (button0_disabled_value =
+      /*intensity*/
+      ctx[0] === 0)) {
+        prop_dev(button0, "disabled", button0_disabled_value);
+      }
+
+      if (dirty &
+      /*intensity*/
+      1) set_data_dev(t9,
       /*intensity*/
       ctx[0]);
 
       if (dirty &
       /*intensity*/
-      1) {
-        set_input_value(input1,
-        /*intensity*/
-        ctx[0]);
+      1 && button1_disabled_value !== (button1_disabled_value =
+      /*intensity*/
+      ctx[0] === 5)) {
+        prop_dev(button1, "disabled", button1_disabled_value);
       }
 
       if (dirty &
@@ -697,7 +731,7 @@ function create_fragment(ctx) {
         } else {
           if_block0 = create_if_block_1(ctx);
           if_block0.c();
-          if_block0.m(t12.parentNode, t12);
+          if_block0.m(t15.parentNode, t15);
         }
       } else if (if_block0) {
         if_block0.d(1);
@@ -726,9 +760,9 @@ function create_fragment(ctx) {
       if (detaching) detach_dev(h1);
       if (detaching) detach_dev(t2);
       if (detaching) detach_dev(form);
-      if (detaching) detach_dev(t11);
+      if (detaching) detach_dev(t14);
       if (if_block0) if_block0.d(detaching);
-      if (detaching) detach_dev(t12);
+      if (detaching) detach_dev(t15);
       if (if_block1) if_block1.d(detaching);
       if (detaching) detach_dev(if_block1_anchor);
       mounted = false;
@@ -773,7 +807,7 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function showHistory() {
-    $$invalidate(2, isHistoryShown = true);
+    $$invalidate(2, isHistoryShown = !isHistoryShown);
   }
 
   function submitSymptom() {
@@ -789,6 +823,11 @@ function instance($$self, $$props, $$invalidate) {
 
     $$invalidate(1, name = "");
     $$invalidate(0, intensity = 0);
+  }
+
+  function incrementIntensity(_ref3) {
+    var target = _ref3.target;
+    $$invalidate(0, intensity += parseInt(target.value));
   }
 
   function formatHistory() {
@@ -810,14 +849,9 @@ function instance($$self, $$props, $$invalidate) {
     if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<Symptom> was created with unknown prop '".concat(key, "'"));
   });
 
-  function input0_input_handler() {
+  function input_input_handler() {
     name = this.value;
     $$invalidate(1, name);
-  }
-
-  function input1_change_input_handler() {
-    intensity = to_number(this.value);
-    $$invalidate(0, intensity);
   }
 
   $$self.$capture_state = function () {
@@ -828,6 +862,7 @@ function instance($$self, $$props, $$invalidate) {
       symptomHistory: symptomHistory,
       showHistory: showHistory,
       submitSymptom: submitSymptom,
+      incrementIntensity: incrementIntensity,
       formatDate: formatDate,
       formatTime: formatTime,
       formatHistory: formatHistory
@@ -845,7 +880,7 @@ function instance($$self, $$props, $$invalidate) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [intensity, name, isHistoryShown, symptomHistory, showHistory, submitSymptom, formatHistory, input0_input_handler, input1_change_input_handler];
+  return [intensity, name, isHistoryShown, symptomHistory, showHistory, submitSymptom, incrementIntensity, formatHistory, input_input_handler];
 }
 
 var Symptom = /*#__PURE__*/function (_SvelteComponentDev) {

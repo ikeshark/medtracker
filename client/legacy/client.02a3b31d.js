@@ -1078,10 +1078,6 @@ function attr(node, attribute, value) {
   if (value == null) node.removeAttribute(attribute);else if (node.getAttribute(attribute) !== value) node.setAttribute(attribute, value);
 }
 
-function to_number(value) {
-  return value === '' ? null : +value;
-}
-
 function children(element) {
   return Array.from(element.childNodes);
 }
@@ -1559,6 +1555,15 @@ function attr_dev(node, attribute, value) {
   });
 }
 
+function prop_dev(node, property, value) {
+  node[property] = value;
+  dispatch_dev("SvelteDOMSetProperty", {
+    node: node,
+    property: property,
+    value: value
+  });
+}
+
 function set_data_dev(text, data) {
   data = '' + data;
   if (text.wholeText === data) return;
@@ -1744,23 +1749,23 @@ function create_fragment(ctx) {
       ul = element("ul");
       li0 = element("li");
       a0 = element("a");
-      t0 = text("Home");
+      t0 = text("HOME");
       t1 = space();
       li1 = element("li");
       a1 = element("a");
-      t2 = text("Pee Log");
+      t2 = text("URINE");
       t3 = space();
       li2 = element("li");
       a2 = element("a");
-      t4 = text("Food Log");
+      t4 = text("FOOD");
       t5 = space();
       li3 = element("li");
       a3 = element("a");
-      t6 = text("Activity Log");
+      t6 = text("ACTIVITY");
       t7 = space();
       li4 = element("li");
       a4 = element("a");
-      t8 = text("Symptom Log");
+      t8 = text("SYMPTOM");
       this.h();
     },
     l: function claim(nodes) {
@@ -1772,7 +1777,9 @@ function create_fragment(ctx) {
         class: true
       });
       var ul_nodes = children(ul);
-      li0 = claim_element(ul_nodes, "LI", {});
+      li0 = claim_element(ul_nodes, "LI", {
+        class: true
+      });
       var li0_nodes = children(li0);
       a0 = claim_element(li0_nodes, "A", {
         "aria-current": true,
@@ -1780,11 +1787,13 @@ function create_fragment(ctx) {
         href: true
       });
       var a0_nodes = children(a0);
-      t0 = claim_text(a0_nodes, "Home");
+      t0 = claim_text(a0_nodes, "HOME");
       a0_nodes.forEach(detach_dev);
       li0_nodes.forEach(detach_dev);
       t1 = claim_space(ul_nodes);
-      li1 = claim_element(ul_nodes, "LI", {});
+      li1 = claim_element(ul_nodes, "LI", {
+        class: true
+      });
       var li1_nodes = children(li1);
       a1 = claim_element(li1_nodes, "A", {
         "aria-current": true,
@@ -1792,11 +1801,13 @@ function create_fragment(ctx) {
         href: true
       });
       var a1_nodes = children(a1);
-      t2 = claim_text(a1_nodes, "Pee Log");
+      t2 = claim_text(a1_nodes, "URINE");
       a1_nodes.forEach(detach_dev);
       li1_nodes.forEach(detach_dev);
       t3 = claim_space(ul_nodes);
-      li2 = claim_element(ul_nodes, "LI", {});
+      li2 = claim_element(ul_nodes, "LI", {
+        class: true
+      });
       var li2_nodes = children(li2);
       a2 = claim_element(li2_nodes, "A", {
         "aria-current": true,
@@ -1804,11 +1815,13 @@ function create_fragment(ctx) {
         href: true
       });
       var a2_nodes = children(a2);
-      t4 = claim_text(a2_nodes, "Food Log");
+      t4 = claim_text(a2_nodes, "FOOD");
       a2_nodes.forEach(detach_dev);
       li2_nodes.forEach(detach_dev);
       t5 = claim_space(ul_nodes);
-      li3 = claim_element(ul_nodes, "LI", {});
+      li3 = claim_element(ul_nodes, "LI", {
+        class: true
+      });
       var li3_nodes = children(li3);
       a3 = claim_element(li3_nodes, "A", {
         "aria-current": true,
@@ -1816,11 +1829,13 @@ function create_fragment(ctx) {
         href: true
       });
       var a3_nodes = children(a3);
-      t6 = claim_text(a3_nodes, "Activity Log");
+      t6 = claim_text(a3_nodes, "ACTIVITY");
       a3_nodes.forEach(detach_dev);
       li3_nodes.forEach(detach_dev);
       t7 = claim_space(ul_nodes);
-      li4 = claim_element(ul_nodes, "LI", {});
+      li4 = claim_element(ul_nodes, "LI", {
+        class: true
+      });
       var li4_nodes = children(li4);
       a4 = claim_element(li4_nodes, "A", {
         "aria-current": true,
@@ -1828,7 +1843,7 @@ function create_fragment(ctx) {
         href: true
       });
       var a4_nodes = children(a4);
-      t8 = claim_text(a4_nodes, "Symptom Log");
+      t8 = claim_text(a4_nodes, "SYMPTOM");
       a4_nodes.forEach(detach_dev);
       li4_nodes.forEach(detach_dev);
       ul_nodes.forEach(detach_dev);
@@ -1841,50 +1856,55 @@ function create_fragment(ctx) {
       ctx[0] === undefined ? "page" : undefined);
       attr_dev(a0, "class", a0_class_value =
       /*segment*/
-      ctx[0] === undefined ? "" : "underline");
+      ctx[0] === undefined ? "" : activeLinkStyles);
       attr_dev(a0, "href", ".");
-      add_location(a0, file, 6, 6, 150);
-      add_location(li0, file, 6, 2, 146);
+      add_location(a0, file, 8, 6, 178);
+      attr_dev(li0, "class", "svelte-5yudmc");
+      add_location(li0, file, 8, 2, 174);
       attr_dev(a1, "aria-current", a1_aria_current_value =
       /*segment*/
       ctx[0] === "pee" ? "page" : undefined);
       attr_dev(a1, "class", a1_class_value =
       /*segment*/
-      ctx[0] === "pee" ? "" : "underline");
+      ctx[0] === "pee" ? "" : activeLinkStyles);
       attr_dev(a1, "href", "pee");
-      add_location(a1, file, 12, 6, 309);
-      add_location(li1, file, 12, 2, 305);
+      add_location(a1, file, 14, 6, 342);
+      attr_dev(li1, "class", "svelte-5yudmc");
+      add_location(li1, file, 14, 2, 338);
       attr_dev(a2, "aria-current", a2_aria_current_value =
       /*segment*/
       ctx[0] === "food" ? "page" : undefined);
       attr_dev(a2, "class", a2_class_value =
       /*segment*/
-      ctx[0] === "food" ? "" : "underline");
+      ctx[0] === "food" ? "" : activeLinkStyles);
       attr_dev(a2, "href", "food");
-      add_location(a2, file, 17, 6, 461);
-      add_location(li2, file, 17, 2, 457);
+      add_location(a2, file, 19, 6, 497);
+      attr_dev(li2, "class", "svelte-5yudmc");
+      add_location(li2, file, 19, 2, 493);
       attr_dev(a3, "aria-current", a3_aria_current_value =
       /*segment*/
       ctx[0] === "activity" ? "page" : undefined);
       attr_dev(a3, "class", a3_class_value =
       /*segment*/
-      ctx[0] === "activity" ? "" : "underline");
+      ctx[0] === "activity" ? "" : activeLinkStyles);
       attr_dev(a3, "href", "activity");
-      add_location(a3, file, 22, 6, 617);
-      add_location(li3, file, 22, 2, 613);
+      add_location(a3, file, 24, 6, 654);
+      attr_dev(li3, "class", "svelte-5yudmc");
+      add_location(li3, file, 24, 2, 650);
       attr_dev(a4, "aria-current", a4_aria_current_value =
       /*segment*/
       ctx[0] === "symptom" ? "page" : undefined);
       attr_dev(a4, "class", a4_class_value =
       /*segment*/
-      ctx[0] === "symptom" ? "" : "underline");
+      ctx[0] === "symptom" ? "" : activeLinkStyles);
       attr_dev(a4, "href", "symptom");
-      add_location(a4, file, 27, 6, 789);
-      add_location(li4, file, 27, 2, 785);
-      attr_dev(ul, "class", "space-x-2 md:space-x-4 flex flex-wrap justify-between");
-      add_location(ul, file, 5, 1, 77);
-      attr_dev(nav, "class", "wrapper mx-auto py-2");
-      add_location(nav, file, 4, 0, 41);
+      add_location(a4, file, 29, 26, 847);
+      attr_dev(li4, "class", "col-start-3 svelte-5yudmc");
+      add_location(li4, file, 29, 2, 823);
+      attr_dev(ul, "class", "md:space-x-4 grid grid-rows-2 grid-cols-3");
+      add_location(ul, file, 7, 1, 117);
+      attr_dev(nav, "class", "wrapper mx-auto pt-2");
+      add_location(nav, file, 6, 0, 81);
     },
     m: function mount(target, anchor) {
       insert_dev(target, nav, anchor);
@@ -1925,7 +1945,7 @@ function create_fragment(ctx) {
       /*segment*/
       1 && a0_class_value !== (a0_class_value =
       /*segment*/
-      ctx[0] === undefined ? "" : "underline")) {
+      ctx[0] === undefined ? "" : activeLinkStyles)) {
         attr_dev(a0, "class", a0_class_value);
       }
 
@@ -1941,7 +1961,7 @@ function create_fragment(ctx) {
       /*segment*/
       1 && a1_class_value !== (a1_class_value =
       /*segment*/
-      ctx[0] === "pee" ? "" : "underline")) {
+      ctx[0] === "pee" ? "" : activeLinkStyles)) {
         attr_dev(a1, "class", a1_class_value);
       }
 
@@ -1957,7 +1977,7 @@ function create_fragment(ctx) {
       /*segment*/
       1 && a2_class_value !== (a2_class_value =
       /*segment*/
-      ctx[0] === "food" ? "" : "underline")) {
+      ctx[0] === "food" ? "" : activeLinkStyles)) {
         attr_dev(a2, "class", a2_class_value);
       }
 
@@ -1973,7 +1993,7 @@ function create_fragment(ctx) {
       /*segment*/
       1 && a3_class_value !== (a3_class_value =
       /*segment*/
-      ctx[0] === "activity" ? "" : "underline")) {
+      ctx[0] === "activity" ? "" : activeLinkStyles)) {
         attr_dev(a3, "class", a3_class_value);
       }
 
@@ -1989,7 +2009,7 @@ function create_fragment(ctx) {
       /*segment*/
       1 && a4_class_value !== (a4_class_value =
       /*segment*/
-      ctx[0] === "symptom" ? "" : "underline")) {
+      ctx[0] === "symptom" ? "" : activeLinkStyles)) {
         attr_dev(a4, "class", a4_class_value);
       }
     },
@@ -2009,6 +2029,8 @@ function create_fragment(ctx) {
   return block;
 }
 
+var activeLinkStyles = "font-black";
+
 function instance($$self, $$props, $$invalidate) {
   var _$$props$$$slots = $$props.$$slots,
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
@@ -2026,7 +2048,8 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$capture_state = function () {
     return {
-      segment: segment
+      segment: segment,
+      activeLinkStyles: activeLinkStyles
     };
   };
 
@@ -2137,9 +2160,9 @@ function create_fragment$1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(main, "class", "wrapper bg-gray-800 text-white p-4 md:p-8 mx-auto shadow");
-      add_location(main, file$1, 9, 1, 173);
-      attr_dev(div, "class", "px-4 py-2 md:px-0 flex flex-col-reverse md:flex-col");
+      attr_dev(main, "class", "wrapper flex-grow overflow-y-scroll bg-gray-800 text-white p-4 md:p-8 mx-auto shadow");
+      add_location(main, file$1, 9, 1, 190);
+      attr_dev(div, "class", "h-full p-2 md:px-0 flex flex-col-reverse justify-between md:flex-col");
       add_location(div, file$1, 6, 0, 87);
     },
     m: function mount(target, anchor) {
@@ -3111,31 +3134,31 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/blog\.json$/, /^\/blog\/([^\/]+?)\.json$/];
 var components = [{
   js: function js() {
-    return Promise.all([import('./index.50398ccc.js'), __inject_styles(["client-baa77aa8.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./index.76ca78f3.js'), __inject_styles(["client-c2ed52fa.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./activity.9f0510ce.js'), __inject_styles(["client-baa77aa8.css","Modal-aa110086.css","activity-d51c0553.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./activity.d9c0692a.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","activity-d51c0553.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./symptom.0417b5eb.js'), __inject_styles(["client-baa77aa8.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./symptom.e3f3ebeb.js'), __inject_styles(["client-c2ed52fa.css","symptom-cb1c8e6e.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./index.3bcfde5a.js'), __inject_styles(["client-baa77aa8.css","index-ccc6c026.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./index.90c9a2dc.js'), __inject_styles(["client-c2ed52fa.css","index-ccc6c026.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./[slug].4e4f6014.js'), __inject_styles(["client-baa77aa8.css","[slug]-c55cf7e1.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./[slug].c6a93df8.js'), __inject_styles(["client-c2ed52fa.css","[slug]-c55cf7e1.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./food.5db2f654.js'), __inject_styles(["client-baa77aa8.css","food-fe357f43.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./food.90ddc295.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./pee.9bc9b7ae.js'), __inject_styles(["client-baa77aa8.css","Modal-aa110086.css","pee-3a8d1dcf.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./pee.8ae5bcb0.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","pee-4e5fa2cc.css"])]).then(function(x) { return x[0]; });
   }
 }];
 var routes = function (d) {
@@ -4075,6 +4098,6 @@ start$1({
   target: document.querySelector('#sapper')
 });
 
-export { destroy_each as A, create_component as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, prevent_default as H, check_outros as I, run_all as J, globals as K, group_outros as L, create_slot as M, createEventDispatcher as N, _slicedToArray as O, update_slot as P, set_data_dev as Q, to_number as R, SvelteComponentDev as S, _createClass as T, regenerator as U, _inherits as _, _getPrototypeOf as a, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, space as f, element as g, detach_dev as h, init as i, claim_space as j, claim_element as k, children as l, claim_text as m, attr_dev as n, add_location as o, insert_dev as p, query_selector_all as q, append_dev as r, safe_not_equal as s, text as t, listen_dev as u, noop as v, validate_slots as w, empty as x, set_input_value as y, validate_each_argument as z };
+export { destroy_each as A, create_component as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, prevent_default as H, check_outros as I, run_all as J, globals as K, group_outros as L, create_slot as M, createEventDispatcher as N, _slicedToArray as O, update_slot as P, prop_dev as Q, set_data_dev as R, SvelteComponentDev as S, _createClass as T, regenerator as U, _inherits as _, _getPrototypeOf as a, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, space as f, element as g, detach_dev as h, init as i, claim_space as j, claim_element as k, children as l, claim_text as m, add_location as n, attr_dev as o, insert_dev as p, query_selector_all as q, append_dev as r, safe_not_equal as s, text as t, noop as u, validate_slots as v, empty as w, set_input_value as x, listen_dev as y, validate_each_argument as z };
 
 import __inject_styles from './inject_styles.fe622066.js';
