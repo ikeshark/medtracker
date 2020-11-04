@@ -1,5 +1,5 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, y as listen_dev, u as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, w as empty, B as create_component, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component, q as query_selector_all, x as set_input_value, H as prevent_default, O as _slicedToArray, I as check_outros, J as run_all, v as validate_slots, K as globals, L as group_outros } from './client.02a3b31d.js';
-import { M as Modal } from './Modal.dd31a335.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, y as listen_dev, u as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, w as empty, B as create_component, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component, q as query_selector_all, x as set_input_value, H as prevent_default, O as _slicedToArray, I as check_outros, J as run_all, v as validate_slots, K as globals, L as group_outros } from './client.28dee6d6.js';
+import { M as Modal } from './Modal.791a1a30.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -112,7 +112,7 @@ function create_if_block_1(ctx) {
       t4 = text("Name");
       t5 = space();
       th2 = element("th");
-      t6 = text("Quantity");
+      t6 = text("Amount");
       t7 = space();
 
       for (var _i = 0; _i < each_blocks.length; _i += 1) {
@@ -131,21 +131,29 @@ function create_if_block_1(ctx) {
       t1 = claim_space(nodes);
       table = claim_element(nodes, "TABLE", {});
       var table_nodes = children(table);
-      tr = claim_element(table_nodes, "TR", {});
+      tr = claim_element(table_nodes, "TR", {
+        class: true
+      });
       var tr_nodes = children(tr);
-      th0 = claim_element(tr_nodes, "TH", {});
+      th0 = claim_element(tr_nodes, "TH", {
+        class: true
+      });
       var th0_nodes = children(th0);
       t2 = claim_text(th0_nodes, "Date");
       th0_nodes.forEach(detach_dev);
       t3 = claim_space(tr_nodes);
-      th1 = claim_element(tr_nodes, "TH", {});
+      th1 = claim_element(tr_nodes, "TH", {
+        class: true
+      });
       var th1_nodes = children(th1);
       t4 = claim_text(th1_nodes, "Name");
       th1_nodes.forEach(detach_dev);
       t5 = claim_space(tr_nodes);
-      th2 = claim_element(tr_nodes, "TH", {});
+      th2 = claim_element(tr_nodes, "TH", {
+        class: true
+      });
       var th2_nodes = children(th2);
-      t6 = claim_text(th2_nodes, "Quantity");
+      t6 = claim_text(th2_nodes, "Amount");
       th2_nodes.forEach(detach_dev);
       tr_nodes.forEach(detach_dev);
       t7 = claim_space(table_nodes);
@@ -160,9 +168,13 @@ function create_if_block_1(ctx) {
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-300 bold text-2xl md:text-3xl text-center");
       add_location(h2, file, 136, 1, 3271);
+      attr_dev(th0, "class", "svelte-cyr33f");
       add_location(th0, file, 139, 3, 3374);
+      attr_dev(th1, "class", "svelte-cyr33f");
       add_location(th1, file, 140, 3, 3391);
+      attr_dev(th2, "class", "svelte-cyr33f");
       add_location(th2, file, 141, 6, 3411);
+      attr_dev(tr, "class", "svelte-cyr33f");
       add_location(tr, file, 138, 2, 3366);
       add_location(table, file, 137, 1, 3356);
     },
@@ -271,7 +283,9 @@ function create_each_block_1(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      tr = claim_element(nodes, "TR", {});
+      tr = claim_element(nodes, "TR", {
+        class: true
+      });
       var tr_nodes = children(tr);
       td0 = claim_element(tr_nodes, "TD", {
         class: true
@@ -280,12 +294,16 @@ function create_each_block_1(ctx) {
       t0 = claim_text(td0_nodes, t0_value);
       td0_nodes.forEach(detach_dev);
       t1 = claim_space(tr_nodes);
-      td1 = claim_element(tr_nodes, "TD", {});
+      td1 = claim_element(tr_nodes, "TD", {
+        class: true
+      });
       var td1_nodes = children(td1);
       t2 = claim_text(td1_nodes, t2_value);
       td1_nodes.forEach(detach_dev);
       t3 = claim_space(tr_nodes);
-      td2 = claim_element(tr_nodes, "TD", {});
+      td2 = claim_element(tr_nodes, "TD", {
+        class: true
+      });
       var td2_nodes = children(td2);
       t4 = claim_text(td2_nodes, t4_value);
       td2_nodes.forEach(detach_dev);
@@ -294,11 +312,14 @@ function create_each_block_1(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(td0, "class", "text-sm");
-      add_location(td0, file, 149, 4, 3583);
-      add_location(td1, file, 150, 4, 3639);
-      add_location(td2, file, 151, 8, 3671);
-      add_location(tr, file, 148, 3, 3574);
+      attr_dev(td0, "class", "text-sm svelte-cyr33f");
+      add_location(td0, file, 149, 4, 3581);
+      attr_dev(td1, "class", "svelte-cyr33f");
+      add_location(td1, file, 150, 4, 3637);
+      attr_dev(td2, "class", "svelte-cyr33f");
+      add_location(td2, file, 151, 8, 3669);
+      attr_dev(tr, "class", "svelte-cyr33f");
+      add_location(tr, file, 148, 3, 3572);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -362,7 +383,9 @@ function create_each_block(ctx) {
       this.h();
     },
     l: function claim(nodes) {
-      tr = claim_element(nodes, "TR", {});
+      tr = claim_element(nodes, "TR", {
+        class: true
+      });
       var tr_nodes = children(tr);
       th = claim_element(tr_nodes, "TH", {
         class: true,
@@ -382,10 +405,11 @@ function create_each_block(ctx) {
       this.h();
     },
     h: function hydrate() {
-      attr_dev(th, "class", "text-left");
+      attr_dev(th, "class", "text-left svelte-cyr33f");
       attr_dev(th, "colspan", "3");
-      add_location(th, file, 145, 4, 3483);
-      add_location(tr, file, 144, 3, 3474);
+      add_location(th, file, 145, 4, 3481);
+      attr_dev(tr, "class", "svelte-cyr33f");
+      add_location(tr, file, 144, 3, 3472);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -596,20 +620,20 @@ function create_default_slot(ctx) {
     h: function hydrate() {
       attr_dev(input0, "class", "block bg-gray-900 pl-1");
       attr_dev(input0, "type", "date");
-      add_location(input0, file, 163, 4, 3908);
+      add_location(input0, file, 163, 4, 3906);
       attr_dev(label0, "class", "block p-1 mb-1");
-      add_location(label0, file, 161, 3, 3864);
+      add_location(label0, file, 161, 3, 3862);
       attr_dev(input1, "class", "block bg-gray-900 pl-1");
       attr_dev(input1, "type", "time");
-      add_location(input1, file, 171, 4, 4065);
+      add_location(input1, file, 171, 4, 4063);
       attr_dev(label1, "class", "block p-1 mb-1");
-      add_location(label1, file, 169, 3, 4021);
+      add_location(label1, file, 169, 3, 4019);
       attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
-      add_location(button0, file, 177, 3, 4178);
+      add_location(button0, file, 177, 3, 4176);
       attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button1, file, 181, 3, 4343);
+      add_location(button1, file, 181, 3, 4341);
       attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
-      add_location(div, file, 160, 2, 3813);
+      add_location(div, file, 160, 2, 3811);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);

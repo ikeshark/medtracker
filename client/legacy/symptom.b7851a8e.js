@@ -1,4 +1,5 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, y as listen_dev, u as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, w as empty, q as query_selector_all, x as set_input_value, H as prevent_default, O as _slicedToArray, Q as prop_dev, R as set_data_dev, J as run_all, v as validate_slots, K as globals } from './client.02a3b31d.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, y as listen_dev, u as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, w as empty, B as create_component, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component, q as query_selector_all, x as set_input_value, H as prevent_default, O as _slicedToArray, Q as prop_dev, R as set_data_dev, I as check_outros, J as run_all, v as validate_slots, K as globals, L as group_outros } from './client.28dee6d6.js';
+import { M as Modal } from './Modal.791a1a30.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -8,18 +9,18 @@ var file = "src/routes/symptom.svelte";
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[12] = list[i];
+  child_ctx[21] = list[i];
   return child_ctx;
 }
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[9] = list[i];
+  child_ctx[18] = list[i];
   return child_ctx;
-} // (94:0) {#if Object.values(symptomHistory).length}
+} // (137:0) {#if Object.values(symptomHistory).length}
 
 
-function create_if_block_1(ctx) {
+function create_if_block_2(ctx) {
   var button;
   var t;
   var mounted;
@@ -41,7 +42,7 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "mt-2 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
-      add_location(button, file, 94, 1, 2360);
+      add_location(button, file, 137, 1, 3317);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -50,7 +51,7 @@ function create_if_block_1(ctx) {
       if (!mounted) {
         dispose = listen_dev(button, "click",
         /*showHistory*/
-        ctx[4], false, false, false);
+        ctx[7], false, false, false);
         mounted = true;
       }
     },
@@ -63,16 +64,16 @@ function create_if_block_1(ctx) {
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
-    id: create_if_block_1.name,
+    id: create_if_block_2.name,
     type: "if",
-    source: "(94:0) {#if Object.values(symptomHistory).length}",
+    source: "(137:0) {#if Object.values(symptomHistory).length}",
     ctx: ctx
   });
   return block;
-} // (103:0) {#if isHistoryShown}
+} // (146:0) {#if isHistoryShown}
 
 
-function create_if_block(ctx) {
+function create_if_block_1(ctx) {
   var h2;
   var t0;
   var t1;
@@ -89,7 +90,7 @@ function create_if_block(ctx) {
   var t7;
   var each_value =
   /*formatHistory*/
-  ctx[7]();
+  ctx[13]();
   validate_each_argument(each_value);
   var each_blocks = [];
 
@@ -158,12 +159,12 @@ function create_if_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 103, 1, 2544);
-      add_location(th0, file, 106, 3, 2646);
-      add_location(th1, file, 107, 3, 2663);
-      add_location(th2, file, 108, 3, 2680);
-      add_location(tr, file, 105, 2, 2638);
-      add_location(table, file, 104, 1, 2628);
+      add_location(h2, file, 146, 1, 3501);
+      add_location(th0, file, 149, 3, 3603);
+      add_location(th1, file, 150, 3, 3620);
+      add_location(th2, file, 151, 3, 3637);
+      add_location(tr, file, 148, 2, 3595);
+      add_location(table, file, 147, 1, 3585);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -188,10 +189,10 @@ function create_if_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      128) {
+      8192) {
         each_value =
         /*formatHistory*/
-        ctx[7]();
+        ctx[13]();
         validate_each_argument(each_value);
 
         var _i4;
@@ -226,13 +227,13 @@ function create_if_block(ctx) {
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
-    id: create_if_block.name,
+    id: create_if_block_1.name,
     type: "if",
-    source: "(103:0) {#if isHistoryShown}",
+    source: "(146:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (115:3) {#each day[1] as symptom}
+} // (158:3) {#each day[1] as symptom}
 
 
 function create_each_block_1(ctx) {
@@ -240,19 +241,19 @@ function create_each_block_1(ctx) {
   var td0;
   var t0_value = formatTime(
   /*symptom*/
-  ctx[12].time) + "";
+  ctx[21].time) + "";
   var t0;
   var t1;
   var td1;
   var t2_value =
   /*symptom*/
-  ctx[12].name + "";
+  ctx[21].name + "";
   var t2;
   var t3;
   var td2;
   var t4_value =
   /*symptom*/
-  ctx[12].intensity + "";
+  ctx[21].intensity + "";
   var t4;
   var t5;
   var block = {
@@ -294,10 +295,10 @@ function create_each_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(td0, "class", "text-sm");
-      add_location(td0, file, 116, 4, 2850);
-      add_location(td1, file, 117, 4, 2906);
-      add_location(td2, file, 118, 4, 2934);
-      add_location(tr, file, 115, 3, 2841);
+      add_location(td0, file, 159, 4, 3807);
+      add_location(td1, file, 160, 4, 3863);
+      add_location(td2, file, 161, 4, 3891);
+      add_location(tr, file, 158, 3, 3798);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -320,11 +321,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(115:3) {#each day[1] as symptom}",
+    source: "(158:3) {#each day[1] as symptom}",
     ctx: ctx
   });
   return block;
-} // (111:2) {#each formatHistory() as day}
+} // (154:2) {#each formatHistory() as day}
 
 
 function create_each_block(ctx) {
@@ -332,13 +333,13 @@ function create_each_block(ctx) {
   var th;
   var t0_value =
   /*day*/
-  ctx[9][0] + "";
+  ctx[18][0] + "";
   var t0;
   var t1;
   var each_1_anchor;
   var each_value_1 =
   /*day*/
-  ctx[9][1];
+  ctx[18][1];
   validate_each_argument(each_value_1);
   var each_blocks = [];
 
@@ -383,8 +384,8 @@ function create_each_block(ctx) {
     h: function hydrate() {
       attr_dev(th, "class", "text-left");
       attr_dev(th, "colspan", "3");
-      add_location(th, file, 112, 4, 2752);
-      add_location(tr, file, 111, 3, 2743);
+      add_location(th, file, 155, 4, 3709);
+      add_location(tr, file, 154, 3, 3700);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -401,10 +402,10 @@ function create_each_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      128) {
+      8192) {
         each_value_1 =
         /*day*/
-        ctx[9][1];
+        ctx[18][1];
         validate_each_argument(each_value_1);
 
         var _i8;
@@ -441,7 +442,238 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(111:2) {#each formatHistory() as day}",
+    source: "(154:2) {#each formatHistory() as day}",
+    ctx: ctx
+  });
+  return block;
+} // (169:0) {#if isManualAdd}
+
+
+function create_if_block(ctx) {
+  var modal;
+  var current;
+  modal = new Modal({
+    props: {
+      $$slots: {
+        default: [create_default_slot]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    },
+    $$inline: true
+  });
+  modal.$on("closeModal",
+  /*cancelManualAdd*/
+  ctx[9]);
+  var block = {
+    c: function create() {
+      create_component(modal.$$.fragment);
+    },
+    l: function claim(nodes) {
+      claim_component(modal.$$.fragment, nodes);
+    },
+    m: function mount(target, anchor) {
+      mount_component(modal, target, anchor);
+      current = true;
+    },
+    p: function update(ctx, dirty) {
+      var modal_changes = {};
+
+      if (dirty &
+      /*$$scope, manualAddTime, manualAddDate*/
+      16777222) {
+        modal_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      modal.$set(modal_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(modal.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(modal.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(modal, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_if_block.name,
+    type: "if",
+    source: "(169:0) {#if isManualAdd}",
+    ctx: ctx
+  });
+  return block;
+} // (170:1) <Modal on:closeModal={cancelManualAdd}>
+
+
+function create_default_slot(ctx) {
+  var div;
+  var label0;
+  var t0;
+  var input0;
+  var t1;
+  var label1;
+  var t2;
+  var input1;
+  var t3;
+  var button0;
+  var t4;
+  var t5;
+  var button1;
+  var t6;
+  var mounted;
+  var dispose;
+  var block = {
+    c: function create() {
+      div = element("div");
+      label0 = element("label");
+      t0 = text("DATE\n\t\t\t\t");
+      input0 = element("input");
+      t1 = space();
+      label1 = element("label");
+      t2 = text("TIME\n\t\t\t\t");
+      input1 = element("input");
+      t3 = space();
+      button0 = element("button");
+      t4 = text("SUBMIT");
+      t5 = space();
+      button1 = element("button");
+      t6 = text("ABORT");
+      this.h();
+    },
+    l: function claim(nodes) {
+      div = claim_element(nodes, "DIV", {
+        class: true
+      });
+      var div_nodes = children(div);
+      label0 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label0_nodes = children(label0);
+      t0 = claim_text(label0_nodes, "DATE\n\t\t\t\t");
+      input0 = claim_element(label0_nodes, "INPUT", {
+        class: true,
+        type: true
+      });
+      label0_nodes.forEach(detach_dev);
+      t1 = claim_space(div_nodes);
+      label1 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label1_nodes = children(label1);
+      t2 = claim_text(label1_nodes, "TIME\n\t\t\t\t");
+      input1 = claim_element(label1_nodes, "INPUT", {
+        class: true,
+        type: true
+      });
+      label1_nodes.forEach(detach_dev);
+      t3 = claim_space(div_nodes);
+      button0 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button0_nodes = children(button0);
+      t4 = claim_text(button0_nodes, "SUBMIT");
+      button0_nodes.forEach(detach_dev);
+      t5 = claim_space(div_nodes);
+      button1 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button1_nodes = children(button1);
+      t6 = claim_text(button1_nodes, "ABORT");
+      button1_nodes.forEach(detach_dev);
+      div_nodes.forEach(detach_dev);
+      this.h();
+    },
+    h: function hydrate() {
+      attr_dev(input0, "class", "block bg-gray-900 pl-1");
+      attr_dev(input0, "type", "date");
+      add_location(input0, file, 173, 4, 4123);
+      attr_dev(label0, "class", "block p-1 mb-1");
+      add_location(label0, file, 171, 3, 4079);
+      attr_dev(input1, "class", "block bg-gray-900 pl-1");
+      attr_dev(input1, "type", "time");
+      add_location(input1, file, 181, 4, 4280);
+      attr_dev(label1, "class", "block p-1 mb-1");
+      add_location(label1, file, 179, 3, 4236);
+      attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
+      add_location(button0, file, 187, 3, 4393);
+      attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
+      add_location(button1, file, 191, 3, 4558);
+      attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
+      add_location(div, file, 170, 2, 4028);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, label0);
+      append_dev(label0, t0);
+      append_dev(label0, input0);
+      set_input_value(input0,
+      /*manualAddDate*/
+      ctx[1]);
+      append_dev(div, t1);
+      append_dev(div, label1);
+      append_dev(label1, t2);
+      append_dev(label1, input1);
+      set_input_value(input1,
+      /*manualAddTime*/
+      ctx[2]);
+      append_dev(div, t3);
+      append_dev(div, button0);
+      append_dev(button0, t4);
+      append_dev(div, t5);
+      append_dev(div, button1);
+      append_dev(button1, t6);
+
+      if (!mounted) {
+        dispose = [listen_dev(input0, "input",
+        /*input0_input_handler*/
+        ctx[15]), listen_dev(input1, "input",
+        /*input1_input_handler*/
+        ctx[16]), listen_dev(button0, "click",
+        /*submitManualAdd*/
+        ctx[10], false, false, false), listen_dev(button1, "click",
+        /*cancelManualAdd*/
+        ctx[9], false, false, false)];
+        mounted = true;
+      }
+    },
+    p: function update(ctx, dirty) {
+      if (dirty &
+      /*manualAddDate*/
+      2) {
+        set_input_value(input0,
+        /*manualAddDate*/
+        ctx[1]);
+      }
+
+      if (dirty &
+      /*manualAddTime*/
+      4) {
+        set_input_value(input1,
+        /*manualAddTime*/
+        ctx[2]);
+      }
+    },
+    d: function destroy(detaching) {
+      if (detaching) detach_dev(div);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_default_slot.name,
+    type: "slot",
+    source: "(170:1) <Modal on:closeModal={cancelManualAdd}>",
     ctx: ctx
   });
   return block;
@@ -475,17 +707,25 @@ function create_fragment(ctx) {
   var button2;
   var t13;
   var t14;
+  var button3;
+  var t15;
+  var t16;
   var show_if = Object.values(
   /*symptomHistory*/
-  ctx[3]).length;
-  var t15;
-  var if_block1_anchor;
+  ctx[6]).length;
+  var t17;
+  var t18;
+  var if_block2_anchor;
+  var current;
   var mounted;
   var dispose;
-  var if_block0 = show_if && create_if_block_1(ctx);
+  var if_block0 = show_if && create_if_block_2(ctx);
   var if_block1 =
   /*isHistoryShown*/
-  ctx[2] && create_if_block(ctx);
+  ctx[5] && create_if_block_1(ctx);
+  var if_block2 =
+  /*isManualAdd*/
+  ctx[0] && create_if_block(ctx);
   var block = {
     c: function create() {
       t0 = space();
@@ -507,7 +747,7 @@ function create_fragment(ctx) {
       t8 = text("Intensity: ");
       t9 = text(
       /*intensity*/
-      ctx[0]);
+      ctx[3]);
       t10 = space();
       button1 = element("button");
       t11 = text("+");
@@ -515,10 +755,15 @@ function create_fragment(ctx) {
       button2 = element("button");
       t13 = text("Add Symptom");
       t14 = space();
+      button3 = element("button");
+      t15 = text("Manual Add");
+      t16 = space();
       if (if_block0) if_block0.c();
-      t15 = space();
+      t17 = space();
       if (if_block1) if_block1.c();
-      if_block1_anchor = empty();
+      t18 = space();
+      if (if_block2) if_block2.c();
+      if_block2_anchor = empty();
       this.h();
     },
     l: function claim(nodes) {
@@ -574,7 +819,7 @@ function create_fragment(ctx) {
       t8 = claim_text(p_nodes, "Intensity: ");
       t9 = claim_text(p_nodes,
       /*intensity*/
-      ctx[0]);
+      ctx[3]);
       p_nodes.forEach(detach_dev);
       t10 = claim_space(div_nodes);
       button1 = claim_element(div_nodes, "BUTTON", {
@@ -594,47 +839,60 @@ function create_fragment(ctx) {
       var button2_nodes = children(button2);
       t13 = claim_text(button2_nodes, "Add Symptom");
       button2_nodes.forEach(detach_dev);
+      t14 = claim_space(form_nodes);
+      button3 = claim_element(form_nodes, "BUTTON", {
+        type: true,
+        class: true
+      });
+      var button3_nodes = children(button3);
+      t15 = claim_text(button3_nodes, "Manual Add");
+      button3_nodes.forEach(detach_dev);
       form_nodes.forEach(detach_dev);
-      t14 = claim_space(nodes);
+      t16 = claim_space(nodes);
       if (if_block0) if_block0.l(nodes);
-      t15 = claim_space(nodes);
+      t17 = claim_space(nodes);
       if (if_block1) if_block1.l(nodes);
-      if_block1_anchor = empty();
+      t18 = claim_space(nodes);
+      if (if_block2) if_block2.l(nodes);
+      if_block2_anchor = empty();
       this.h();
     },
     h: function hydrate() {
       document.title = "Symptom Log";
       attr_dev(h1, "class", "text-yellow-500 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 64, 0, 1304);
+      add_location(h1, file, 100, 0, 2098);
       attr_dev(span, "class", "text-xl");
-      add_location(span, file, 67, 4, 1536);
+      add_location(span, file, 103, 4, 2330);
       attr_dev(input, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
       attr_dev(input, "type", "text");
-      add_location(input, file, 68, 4, 1577);
+      add_location(input, file, 104, 4, 2371);
       attr_dev(label, "class", "space-y-1 block text-center");
-      add_location(label, file, 66, 2, 1488);
+      add_location(label, file, 102, 2, 2282);
       button0.value = "-1";
       attr_dev(button0, "type", "button");
       button0.disabled = button0_disabled_value =
       /*intensity*/
-      ctx[0] === 0;
+      ctx[3] === 0;
       attr_dev(button0, "class", "border-black border bg-gray-700 px-2 rounded-lg svelte-kg2gg");
-      add_location(button0, file, 74, 2, 1746);
+      add_location(button0, file, 110, 2, 2540);
       attr_dev(p, "class", "text-xl");
-      add_location(p, file, 80, 2, 1920);
+      add_location(p, file, 116, 2, 2714);
       attr_dev(button1, "type", "button");
       button1.value = "1";
       button1.disabled = button1_disabled_value =
       /*intensity*/
-      ctx[0] === 5;
+      ctx[3] === 5;
       attr_dev(button1, "class", "border-black border bg-gray-700 px-2 rounded-lg svelte-kg2gg");
-      add_location(button1, file, 81, 2, 1968);
+      add_location(button1, file, 117, 2, 2762);
       attr_dev(div, "class", "flex justify-around");
-      add_location(div, file, 73, 1, 1710);
+      add_location(div, file, 109, 1, 2504);
       attr_dev(button2, "class", "text-black border-2 bg-white border-solid rounded-lg shadow-sm border-yellow-500 px-3 py-1 block mx-auto text-xl");
-      add_location(button2, file, 88, 2, 2149);
+      add_location(button2, file, 124, 2, 2943);
+      attr_dev(button3, "type", "button");
+      attr_dev(button3, "class", "mx-auto rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
+      add_location(button3, file, 127, 1, 3102);
       attr_dev(form, "class", "space-y-4 mb-4 border border-gray-700 pb-2");
-      add_location(form, file, 65, 0, 1387);
+      add_location(form, file, 101, 0, 2181);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -649,7 +907,7 @@ function create_fragment(ctx) {
       append_dev(label, input);
       set_input_value(input,
       /*name*/
-      ctx[1]);
+      ctx[4]);
       append_dev(form, t5);
       append_dev(form, div);
       append_dev(div, button0);
@@ -664,22 +922,30 @@ function create_fragment(ctx) {
       append_dev(form, t12);
       append_dev(form, button2);
       append_dev(button2, t13);
-      insert_dev(target, t14, anchor);
+      append_dev(form, t14);
+      append_dev(form, button3);
+      append_dev(button3, t15);
+      insert_dev(target, t16, anchor);
       if (if_block0) if_block0.m(target, anchor);
-      insert_dev(target, t15, anchor);
+      insert_dev(target, t17, anchor);
       if (if_block1) if_block1.m(target, anchor);
-      insert_dev(target, if_block1_anchor, anchor);
+      insert_dev(target, t18, anchor);
+      if (if_block2) if_block2.m(target, anchor);
+      insert_dev(target, if_block2_anchor, anchor);
+      current = true;
 
       if (!mounted) {
         dispose = [listen_dev(input, "input",
         /*input_input_handler*/
-        ctx[8]), listen_dev(button0, "click",
+        ctx[14]), listen_dev(button0, "click",
         /*incrementIntensity*/
-        ctx[6], false, false, false), listen_dev(button1, "click",
+        ctx[12], false, false, false), listen_dev(button1, "click",
         /*incrementIntensity*/
-        ctx[6], false, false, false), listen_dev(form, "submit", prevent_default(
+        ctx[12], false, false, false), listen_dev(button3, "click",
+        /*manualAdd*/
+        ctx[8], false, false, false), listen_dev(form, "submit", prevent_default(
         /*submitSymptom*/
-        ctx[5]), false, true, false)];
+        ctx[11]), false, true, false)];
         mounted = true;
       }
     },
@@ -689,49 +955,49 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*name*/
-      2 && input.value !==
+      16 && input.value !==
       /*name*/
-      ctx[1]) {
+      ctx[4]) {
         set_input_value(input,
         /*name*/
-        ctx[1]);
+        ctx[4]);
       }
 
-      if (dirty &
+      if (!current || dirty &
       /*intensity*/
-      1 && button0_disabled_value !== (button0_disabled_value =
+      8 && button0_disabled_value !== (button0_disabled_value =
       /*intensity*/
-      ctx[0] === 0)) {
+      ctx[3] === 0)) {
         prop_dev(button0, "disabled", button0_disabled_value);
       }
 
-      if (dirty &
+      if (!current || dirty &
       /*intensity*/
-      1) set_data_dev(t9,
+      8) set_data_dev(t9,
       /*intensity*/
-      ctx[0]);
+      ctx[3]);
 
-      if (dirty &
+      if (!current || dirty &
       /*intensity*/
-      1 && button1_disabled_value !== (button1_disabled_value =
+      8 && button1_disabled_value !== (button1_disabled_value =
       /*intensity*/
-      ctx[0] === 5)) {
+      ctx[3] === 5)) {
         prop_dev(button1, "disabled", button1_disabled_value);
       }
 
       if (dirty &
       /*symptomHistory*/
-      8) show_if = Object.values(
+      64) show_if = Object.values(
       /*symptomHistory*/
-      ctx[3]).length;
+      ctx[6]).length;
 
       if (show_if) {
         if (if_block0) {
           if_block0.p(ctx, dirty);
         } else {
-          if_block0 = create_if_block_1(ctx);
+          if_block0 = create_if_block_2(ctx);
           if_block0.c();
-          if_block0.m(t15.parentNode, t15);
+          if_block0.m(t17.parentNode, t17);
         }
       } else if (if_block0) {
         if_block0.d(1);
@@ -740,31 +1006,65 @@ function create_fragment(ctx) {
 
       if (
       /*isHistoryShown*/
-      ctx[2]) {
+      ctx[5]) {
         if (if_block1) {
           if_block1.p(ctx, dirty);
         } else {
-          if_block1 = create_if_block(ctx);
+          if_block1 = create_if_block_1(ctx);
           if_block1.c();
-          if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
+          if_block1.m(t18.parentNode, t18);
         }
       } else if (if_block1) {
         if_block1.d(1);
         if_block1 = null;
       }
+
+      if (
+      /*isManualAdd*/
+      ctx[0]) {
+        if (if_block2) {
+          if_block2.p(ctx, dirty);
+
+          if (dirty &
+          /*isManualAdd*/
+          1) {
+            transition_in(if_block2, 1);
+          }
+        } else {
+          if_block2 = create_if_block(ctx);
+          if_block2.c();
+          transition_in(if_block2, 1);
+          if_block2.m(if_block2_anchor.parentNode, if_block2_anchor);
+        }
+      } else if (if_block2) {
+        group_outros();
+        transition_out(if_block2, 1, 1, function () {
+          if_block2 = null;
+        });
+        check_outros();
+      }
     },
-    i: noop,
-    o: noop,
+    i: function intro(local) {
+      if (current) return;
+      transition_in(if_block2);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(if_block2);
+      current = false;
+    },
     d: function destroy(detaching) {
       if (detaching) detach_dev(t0);
       if (detaching) detach_dev(h1);
       if (detaching) detach_dev(t2);
       if (detaching) detach_dev(form);
-      if (detaching) detach_dev(t14);
+      if (detaching) detach_dev(t16);
       if (if_block0) if_block0.d(detaching);
-      if (detaching) detach_dev(t15);
+      if (detaching) detach_dev(t17);
       if (if_block1) if_block1.d(detaching);
-      if (detaching) detach_dev(if_block1_anchor);
+      if (detaching) detach_dev(t18);
+      if (if_block2) if_block2.d(detaching);
+      if (detaching) detach_dev(if_block2_anchor);
       mounted = false;
       run_all(dispose);
     }
@@ -797,6 +1097,10 @@ function instance($$self, $$props, $$invalidate) {
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
       $$scope = $$props.$$scope;
   validate_slots("Symptom", slots, []);
+  var isManualAdd;
+  var manualAddDate;
+  var manualAddTime;
+  var manualAddLength;
   var intensity = 0;
   var name;
   var isHistoryShown = false;
@@ -807,7 +1111,38 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function showHistory() {
-    $$invalidate(2, isHistoryShown = !isHistoryShown);
+    $$invalidate(5, isHistoryShown = !isHistoryShown);
+  }
+
+  function manualAdd() {
+    $$invalidate(0, isManualAdd = true);
+  }
+
+  function cancelManualAdd() {
+    $$invalidate(0, isManualAdd = false);
+  }
+
+  function submitManualAdd() {
+    var year = parseInt(manualAddDate);
+    var month = parseInt(manualAddDate.slice(5, 7)) - 1;
+    var day = parseInt(manualAddDate.slice(8, 11));
+    var hour = parseInt(manualAddTime);
+    var min = parseInt(manualAddTime.slice(3, 5));
+    var time = new Date(year, month, day, hour, min).getTime();
+    symptomHistory.push({
+      name: name,
+      intensity: intensity,
+      time: time,
+      flag: "manualAdd"
+    });
+
+    {
+      localStorage.symptomHistory = JSON.stringify(symptomHistory);
+    }
+
+    $$invalidate(0, isManualAdd = false);
+    $$invalidate(4, name = "");
+    $$invalidate(3, intensity = 0);
   }
 
   function submitSymptom() {
@@ -821,13 +1156,13 @@ function instance($$self, $$props, $$invalidate) {
       localStorage.symptomHistory = JSON.stringify(symptomHistory);
     }
 
-    $$invalidate(1, name = "");
-    $$invalidate(0, intensity = 0);
+    $$invalidate(4, name = "");
+    $$invalidate(3, intensity = 0);
   }
 
   function incrementIntensity(_ref3) {
     var target = _ref3.target;
-    $$invalidate(0, intensity += parseInt(target.value));
+    $$invalidate(3, intensity += parseInt(target.value));
   }
 
   function formatHistory() {
@@ -851,16 +1186,34 @@ function instance($$self, $$props, $$invalidate) {
 
   function input_input_handler() {
     name = this.value;
-    $$invalidate(1, name);
+    $$invalidate(4, name);
+  }
+
+  function input0_input_handler() {
+    manualAddDate = this.value;
+    $$invalidate(1, manualAddDate);
+  }
+
+  function input1_input_handler() {
+    manualAddTime = this.value;
+    $$invalidate(2, manualAddTime);
   }
 
   $$self.$capture_state = function () {
     return {
+      Modal: Modal,
+      isManualAdd: isManualAdd,
+      manualAddDate: manualAddDate,
+      manualAddTime: manualAddTime,
+      manualAddLength: manualAddLength,
       intensity: intensity,
       name: name,
       isHistoryShown: isHistoryShown,
       symptomHistory: symptomHistory,
       showHistory: showHistory,
+      manualAdd: manualAdd,
+      cancelManualAdd: cancelManualAdd,
+      submitManualAdd: submitManualAdd,
       submitSymptom: submitSymptom,
       incrementIntensity: incrementIntensity,
       formatDate: formatDate,
@@ -870,17 +1223,21 @@ function instance($$self, $$props, $$invalidate) {
   };
 
   $$self.$inject_state = function ($$props) {
-    if ("intensity" in $$props) $$invalidate(0, intensity = $$props.intensity);
-    if ("name" in $$props) $$invalidate(1, name = $$props.name);
-    if ("isHistoryShown" in $$props) $$invalidate(2, isHistoryShown = $$props.isHistoryShown);
-    if ("symptomHistory" in $$props) $$invalidate(3, symptomHistory = $$props.symptomHistory);
+    if ("isManualAdd" in $$props) $$invalidate(0, isManualAdd = $$props.isManualAdd);
+    if ("manualAddDate" in $$props) $$invalidate(1, manualAddDate = $$props.manualAddDate);
+    if ("manualAddTime" in $$props) $$invalidate(2, manualAddTime = $$props.manualAddTime);
+    if ("manualAddLength" in $$props) manualAddLength = $$props.manualAddLength;
+    if ("intensity" in $$props) $$invalidate(3, intensity = $$props.intensity);
+    if ("name" in $$props) $$invalidate(4, name = $$props.name);
+    if ("isHistoryShown" in $$props) $$invalidate(5, isHistoryShown = $$props.isHistoryShown);
+    if ("symptomHistory" in $$props) $$invalidate(6, symptomHistory = $$props.symptomHistory);
   };
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [intensity, name, isHistoryShown, symptomHistory, showHistory, submitSymptom, incrementIntensity, formatHistory, input_input_handler];
+  return [isManualAdd, manualAddDate, manualAddTime, intensity, name, isHistoryShown, symptomHistory, showHistory, manualAdd, cancelManualAdd, submitManualAdd, submitSymptom, incrementIntensity, formatHistory, input_input_handler, input0_input_handler, input1_input_handler];
 }
 
 var Symptom = /*#__PURE__*/function (_SvelteComponentDev) {
