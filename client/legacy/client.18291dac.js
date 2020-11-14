@@ -14,6 +14,8 @@ function _typeof(obj) {
   return _typeof(obj);
 }
 
+var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
 function createCommonjsModule(fn, basedir, module) {
 	return module = {
 	  path: basedir,
@@ -3134,31 +3136,31 @@ var App = /*#__PURE__*/function (_SvelteComponentDev) {
 var ignore = [/^\/blog\.json$/, /^\/blog\/([^\/]+?)\.json$/];
 var components = [{
   js: function js() {
-    return Promise.all([import('./index.e46c7171.js'), __inject_styles(["client-c2ed52fa.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./index.ec25735f.js'), __inject_styles(["client-c2ed52fa.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./activity.4c3c56ff.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","activity-d51c0553.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./activity.a718ba56.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","activity-d51c0553.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./symptom.b7851a8e.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","symptom-cb1c8e6e.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./symptom.59203ed2.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","symptom-cb1c8e6e.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./index.0789bd0f.js'), __inject_styles(["client-c2ed52fa.css","index-ccc6c026.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./index.eefa349f.js'), __inject_styles(["client-c2ed52fa.css","index-ccc6c026.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./[slug].0a59c600.js'), __inject_styles(["client-c2ed52fa.css","[slug]-c55cf7e1.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./[slug].0cafd8be.js'), __inject_styles(["client-c2ed52fa.css","[slug]-c55cf7e1.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./food.b493c0e6.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","food-7e487f49.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./food.e22b6ac1.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","food-7e487f49.css"])]).then(function(x) { return x[0]; });
   }
 }, {
   js: function js() {
-    return Promise.all([import('./pee.5285f057.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","pee-4e5fa2cc.css"])]).then(function(x) { return x[0]; });
+    return Promise.all([import('./pee.bc969fe3.js'), __inject_styles(["client-c2ed52fa.css","Modal-aa110086.css","pee-4e5fa2cc.css"])]).then(function(x) { return x[0]; });
   }
 }];
 var routes = function (d) {
@@ -4094,10 +4096,22 @@ function hydrate_target(dest) {
   }));
 }
 
+var firebaseConfig = {
+  apiKey: "AIzaSyD70XMZVPtIIaaqQF7zQ2FGCJaCQZJgqak",
+  authDomain: "medtracker-78336.firebaseapp.com",
+  databaseURL: "https://medtracker-78336.firebaseio.com",
+  projectId: "medtracker-78336",
+  storageBucket: "medtracker-78336.appspot.com",
+  messagingSenderId: "605701223622",
+  appId: "1:605701223622:web:fbdf208be1401d981713c7"
+};
+
+var app = firebase.initializeApp(firebaseConfig);
+window.db = app.firestore();
 start$1({
   target: document.querySelector('#sapper')
 });
 
-export { destroy_each as A, create_component as B, claim_component as C, mount_component as D, transition_in as E, transition_out as F, destroy_component as G, prevent_default as H, check_outros as I, run_all as J, globals as K, group_outros as L, create_slot as M, createEventDispatcher as N, _slicedToArray as O, update_slot as P, prop_dev as Q, set_data_dev as R, SvelteComponentDev as S, _createClass as T, regenerator as U, _inherits as _, _getPrototypeOf as a, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, space as f, element as g, detach_dev as h, init as i, claim_space as j, claim_element as k, children as l, claim_text as m, add_location as n, attr_dev as o, insert_dev as p, query_selector_all as q, append_dev as r, safe_not_equal as s, text as t, noop as u, validate_slots as v, empty as w, set_input_value as x, listen_dev as y, validate_each_argument as z };
+export { set_input_value as A, validate_each_argument as B, destroy_each as C, create_component as D, claim_component as E, mount_component as F, transition_in as G, transition_out as H, destroy_component as I, prevent_default as J, check_outros as K, run_all as L, globals as M, group_outros as N, create_slot as O, createEventDispatcher as P, _slicedToArray as Q, update_slot as R, SvelteComponentDev as S, prop_dev as T, set_data_dev as U, _createClass as V, _typeof as W, createCommonjsModule as X, commonjsGlobal as Y, _inherits as _, _getPrototypeOf as a, _possibleConstructorReturn as b, _classCallCheck as c, _assertThisInitialized as d, dispatch_dev as e, firebaseConfig as f, space as g, element as h, init as i, detach_dev as j, claim_space as k, claim_element as l, children as m, claim_text as n, add_location as o, attr_dev as p, query_selector_all as q, regenerator as r, safe_not_equal as s, text as t, insert_dev as u, append_dev as v, listen_dev as w, noop as x, validate_slots as y, empty as z };
 
 import __inject_styles from './inject_styles.fe622066.js';

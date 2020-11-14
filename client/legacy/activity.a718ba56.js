@@ -1,5 +1,5 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, f as space, w as empty, k as claim_element, l as children, m as claim_text, h as detach_dev, j as claim_space, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, x as set_input_value, y as listen_dev, u as noop, z as validate_each_argument, A as destroy_each, B as create_component, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component, q as query_selector_all, H as prevent_default, I as check_outros, J as run_all, v as validate_slots, K as globals, L as group_outros } from './client.28dee6d6.js';
-import { M as Modal } from './Modal.791a1a30.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, h as element, t as text, g as space, z as empty, l as claim_element, m as children, n as claim_text, j as detach_dev, k as claim_space, p as attr_dev, o as add_location, u as insert_dev, v as append_dev, A as set_input_value, w as listen_dev, x as noop, B as validate_each_argument, C as destroy_each, D as create_component, E as claim_component, F as mount_component, G as transition_in, H as transition_out, I as destroy_component, q as query_selector_all, J as prevent_default, K as check_outros, L as run_all, y as validate_slots, M as globals, N as group_outros } from './client.18291dac.js';
+import { M as Modal } from './Modal.ace87683.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -17,7 +17,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[29] = list[i];
   return child_ctx;
-} // (152:1) {#if type === 'exercise'}
+} // (155:1) {#if type === 'exercise'}
 
 
 function create_if_block_3(ctx) {
@@ -69,9 +69,9 @@ function create_if_block_3(ctx) {
     h: function hydrate() {
       attr_dev(input, "class", "block mx-auto shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
       attr_dev(input, "type", "text");
-      add_location(input, file, 154, 3, 3515);
+      add_location(input, file, 157, 3, 3586);
       attr_dev(label, "class", "space-y-1 block text-center");
-      add_location(label, file, 152, 3, 3456);
+      add_location(label, file, 155, 3, 3527);
     },
     m: function mount(target, anchor) {
       insert_dev(target, label, anchor);
@@ -87,7 +87,7 @@ function create_if_block_3(ctx) {
       if (!mounted) {
         dispose = listen_dev(input, "input",
         /*input_input_handler*/
-        ctx[23]);
+        ctx[22]);
         mounted = true;
       }
     },
@@ -131,11 +131,11 @@ function create_if_block_3(ctx) {
     block: block,
     id: create_if_block_3.name,
     type: "if",
-    source: "(152:1) {#if type === 'exercise'}",
+    source: "(155:1) {#if type === 'exercise'}",
     ctx: ctx
   });
   return block;
-} // (175:25) 
+} // (178:25) 
 
 
 function create_if_block_5(ctx) {
@@ -180,11 +180,11 @@ function create_if_block_5(ctx) {
     },
     h: function hydrate() {
       attr_dev(button0, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-red-700");
-      add_location(button0, file, 176, 4, 4106);
+      add_location(button0, file, 179, 4, 4177);
       attr_dev(button1, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button1, file, 182, 4, 4270);
+      add_location(button1, file, 185, 4, 4341);
       attr_dev(div, "class", "flex");
-      add_location(div, file, 175, 3, 4083);
+      add_location(div, file, 178, 3, 4154);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -214,11 +214,11 @@ function create_if_block_5(ctx) {
     block: block,
     id: create_if_block_5.name,
     type: "if",
-    source: "(175:25) ",
+    source: "(178:25) ",
     ctx: ctx
   });
   return block;
-} // (160:2) {#if !isExercising}
+} // (163:2) {#if !isExercising}
 
 
 function create_if_block_4(ctx) {
@@ -263,11 +263,11 @@ function create_if_block_4(ctx) {
     },
     h: function hydrate() {
       attr_dev(button0, "class", "block mb-4 mx-auto rounded-md border-black border py-2 px-4 text-white bg-green-700");
-      add_location(button0, file, 161, 4, 3708);
+      add_location(button0, file, 164, 4, 3779);
       attr_dev(button1, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button1, file, 167, 4, 3878);
+      add_location(button1, file, 170, 4, 3949);
       attr_dev(div, "class", "flex");
-      add_location(div, file, 160, 3, 3685);
+      add_location(div, file, 163, 3, 3756);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -297,11 +297,11 @@ function create_if_block_4(ctx) {
     block: block,
     id: create_if_block_4.name,
     type: "if",
-    source: "(160:2) {#if !isExercising}",
+    source: "(163:2) {#if !isExercising}",
     ctx: ctx
   });
   return block;
-} // (197:0) {#if Object.values(activityHistory).length}
+} // (200:0) {#if Object.values(activityHistory).length}
 
 
 function create_if_block_2(ctx) {
@@ -326,7 +326,7 @@ function create_if_block_2(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "mt-2 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
-      add_location(button, file, 197, 1, 4686);
+      add_location(button, file, 200, 1, 4757);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -350,11 +350,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(197:0) {#if Object.values(activityHistory).length}",
+    source: "(200:0) {#if Object.values(activityHistory).length}",
     ctx: ctx
   });
   return block;
-} // (206:0) {#if isHistoryShown}
+} // (209:0) {#if isHistoryShown}
 
 
 function create_if_block_1(ctx) {
@@ -372,9 +372,7 @@ function create_if_block_1(ctx) {
   var th2;
   var t6;
   var t7;
-  var each_value =
-  /*formatHistory*/
-  ctx[18]();
+  var each_value = formatHistory();
   validate_each_argument(each_value);
   var each_blocks = [];
 
@@ -443,12 +441,12 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 206, 1, 4870);
-      add_location(th0, file, 209, 3, 4977);
-      add_location(th1, file, 210, 3, 4994);
-      add_location(th2, file, 211, 3, 5011);
-      add_location(tr, file, 208, 2, 4969);
-      add_location(table, file, 207, 1, 4959);
+      add_location(h2, file, 209, 1, 4941);
+      add_location(th0, file, 212, 3, 5048);
+      add_location(th1, file, 213, 3, 5065);
+      add_location(th2, file, 214, 3, 5082);
+      add_location(tr, file, 211, 2, 5040);
+      add_location(table, file, 210, 1, 5030);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -471,12 +469,10 @@ function create_if_block_1(ctx) {
       }
     },
     p: function update(ctx, dirty) {
-      if (dirty[0] &
-      /*formatHistory*/
-      262144) {
-        each_value =
-        /*formatHistory*/
-        ctx[18]();
+      if (dirty &
+      /*formatHistory, formatTime*/
+      0) {
+        each_value = formatHistory();
         validate_each_argument(each_value);
 
         var _i4;
@@ -513,11 +509,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(206:0) {#if isHistoryShown}",
+    source: "(209:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (218:3) {#each day[1] as activity}
+} // (221:3) {#each day[1] as activity}
 
 
 function create_each_block_1(ctx) {
@@ -579,10 +575,10 @@ function create_each_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(td0, "class", "text-sm");
-      add_location(td0, file, 219, 4, 5177);
-      add_location(td1, file, 220, 4, 5239);
-      add_location(td2, file, 221, 4, 5268);
-      add_location(tr, file, 218, 3, 5168);
+      add_location(td0, file, 222, 4, 5248);
+      add_location(td1, file, 223, 4, 5310);
+      add_location(td2, file, 224, 4, 5339);
+      add_location(tr, file, 221, 3, 5239);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -605,11 +601,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(218:3) {#each day[1] as activity}",
+    source: "(221:3) {#each day[1] as activity}",
     ctx: ctx
   });
   return block;
-} // (214:2) {#each formatHistory() as day}
+} // (217:2) {#each formatHistory() as day}
 
 
 function create_each_block(ctx) {
@@ -668,8 +664,8 @@ function create_each_block(ctx) {
     h: function hydrate() {
       attr_dev(th, "class", "text-left");
       attr_dev(th, "colspan", "3");
-      add_location(th, file, 215, 4, 5078);
-      add_location(tr, file, 214, 3, 5069);
+      add_location(th, file, 218, 4, 5149);
+      add_location(tr, file, 217, 3, 5140);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -684,9 +680,9 @@ function create_each_block(ctx) {
       insert_dev(target, each_1_anchor, anchor);
     },
     p: function update(ctx, dirty) {
-      if (dirty[0] &
-      /*formatHistory*/
-      262144) {
+      if (dirty &
+      /*formatHistory, formatTime*/
+      0) {
         each_value_1 =
         /*day*/
         ctx[29][1];
@@ -726,11 +722,11 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(214:2) {#each formatHistory() as day}",
+    source: "(217:2) {#each formatHistory() as day}",
     ctx: ctx
   });
   return block;
-} // (229:0) {#if isManualAdd}
+} // (232:0) {#if isManualAdd}
 
 
 function create_if_block(ctx) {
@@ -794,11 +790,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(229:0) {#if isManualAdd}",
+    source: "(232:0) {#if isManualAdd}",
     ctx: ctx
   });
   return block;
-} // (230:1) <Modal on:closeModal={cancelManualAdd}>
+} // (233:1) <Modal on:closeModal={cancelManualAdd}>
 
 
 function create_default_slot(ctx) {
@@ -901,25 +897,25 @@ function create_default_slot(ctx) {
     h: function hydrate() {
       attr_dev(input0, "class", "block bg-gray-900 pl-1");
       attr_dev(input0, "type", "date");
-      add_location(input0, file, 233, 4, 5496);
+      add_location(input0, file, 236, 4, 5567);
       attr_dev(label0, "class", "block p-1 mb-1");
-      add_location(label0, file, 231, 3, 5452);
+      add_location(label0, file, 234, 3, 5523);
       attr_dev(input1, "class", "block bg-gray-900 pl-1");
       attr_dev(input1, "type", "time");
-      add_location(input1, file, 241, 4, 5653);
+      add_location(input1, file, 244, 4, 5724);
       attr_dev(label1, "class", "block p-1 mb-1");
-      add_location(label1, file, 239, 3, 5609);
+      add_location(label1, file, 242, 3, 5680);
       attr_dev(input2, "class", "block bg-gray-900 pl-1");
       attr_dev(input2, "type", "text");
-      add_location(input2, file, 249, 4, 5822);
+      add_location(input2, file, 252, 4, 5893);
       attr_dev(label2, "class", "block p-1 mb-1");
-      add_location(label2, file, 247, 3, 5766);
+      add_location(label2, file, 250, 3, 5837);
       attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
-      add_location(button0, file, 255, 3, 5937);
+      add_location(button0, file, 258, 3, 6008);
       attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button1, file, 259, 3, 6102);
+      add_location(button1, file, 262, 3, 6173);
       attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
-      add_location(div, file, 230, 2, 5401);
+      add_location(div, file, 233, 2, 5472);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -953,11 +949,11 @@ function create_default_slot(ctx) {
       if (!mounted) {
         dispose = [listen_dev(input0, "input",
         /*input0_input_handler*/
-        ctx[24]), listen_dev(input1, "input",
+        ctx[23]), listen_dev(input1, "input",
         /*input1_input_handler*/
-        ctx[25]), listen_dev(input2, "input",
+        ctx[24]), listen_dev(input2, "input",
         /*input2_input_handler_1*/
-        ctx[26]), listen_dev(button0, "click",
+        ctx[25]), listen_dev(button0, "click",
         /*submitManualAdd*/
         ctx[15], false, false, false), listen_dev(button1, "click",
         /*cancelManualAdd*/
@@ -1002,7 +998,7 @@ function create_default_slot(ctx) {
     block: block,
     id: create_default_slot.name,
     type: "slot",
-    source: "(230:1) <Modal on:closeModal={cancelManualAdd}>",
+    source: "(233:1) <Modal on:closeModal={cancelManualAdd}>",
     ctx: ctx
   });
   return block;
@@ -1156,34 +1152,34 @@ function create_fragment(ctx) {
     h: function hydrate() {
       document.title = "Activity Log";
       attr_dev(h1, "class", "text-yellow-500 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 133, 0, 2871);
+      add_location(h1, file, 136, 0, 2942);
       attr_dev(input0, "type", "radio");
       input0.__value = "exercise";
       input0.value = input0.__value;
       /*$$binding_groups*/
 
-      ctx[20][0].push(input0);
-      add_location(input0, file, 137, 2, 3044);
-      add_location(label0, file, 135, 1, 3023);
+      ctx[19][0].push(input0);
+      add_location(input0, file, 140, 2, 3115);
+      add_location(label0, file, 138, 1, 3094);
       attr_dev(input1, "type", "radio");
       input1.__value = "other";
       input1.value = input1.__value;
       /*$$binding_groups*/
 
-      ctx[20][0].push(input1);
-      add_location(input1, file, 141, 2, 3129);
-      add_location(label1, file, 139, 1, 3111);
+      ctx[19][0].push(input1);
+      add_location(input1, file, 144, 2, 3200);
+      add_location(label1, file, 142, 1, 3182);
       attr_dev(span, "class", "text-xl");
-      add_location(span, file, 145, 4, 3243);
+      add_location(span, file, 148, 4, 3314);
       attr_dev(input2, "class", "block mx-auto shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
       attr_dev(input2, "type", "text");
-      add_location(input2, file, 146, 4, 3281);
+      add_location(input2, file, 149, 4, 3352);
       attr_dev(label2, "class", "space-y-1 block text-center");
-      add_location(label2, file, 144, 2, 3195);
+      add_location(label2, file, 147, 2, 3266);
       attr_dev(button, "class", "text-black border-2 bg-white border-solid rounded-lg shadow-sm border-yellow-500 px-3 py-1 block mx-auto text-xl");
-      add_location(button, file, 191, 2, 4473);
+      add_location(button, file, 194, 2, 4544);
       attr_dev(form, "class", "space-y-4");
-      add_location(form, file, 134, 0, 2955);
+      add_location(form, file, 137, 0, 3026);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -1230,11 +1226,11 @@ function create_fragment(ctx) {
       if (!mounted) {
         dispose = [listen_dev(input0, "change",
         /*input0_change_handler*/
-        ctx[19]), listen_dev(input1, "change",
+        ctx[18]), listen_dev(input1, "change",
         /*input1_change_handler*/
-        ctx[21]), listen_dev(input2, "input",
+        ctx[20]), listen_dev(input2, "input",
         /*input2_input_handler*/
-        ctx[22]), listen_dev(form, "submit", prevent_default(
+        ctx[21]), listen_dev(form, "submit", prevent_default(
         /*submitActivity*/
         ctx[17]), false, true, false)];
         mounted = true;
@@ -1357,14 +1353,14 @@ function create_fragment(ctx) {
       if (detaching) detach_dev(form);
       /*$$binding_groups*/
 
-      ctx[20][0].splice(
+      ctx[19][0].splice(
       /*$$binding_groups*/
-      ctx[20][0].indexOf(input0), 1);
+      ctx[19][0].indexOf(input0), 1);
       /*$$binding_groups*/
 
-      ctx[20][0].splice(
+      ctx[19][0].splice(
       /*$$binding_groups*/
-      ctx[20][0].indexOf(input1), 1);
+      ctx[19][0].indexOf(input1), 1);
       if (if_block0) if_block0.d();
       if (detaching) detach_dev(t12);
       if (if_block1) if_block1.d(detaching);
@@ -1398,6 +1394,20 @@ function formatTime(epoch) {
     hour: "2-digit",
     minute: "2-digit"
   });
+}
+
+function formatHistory(activityHistory) {
+  var formatted = {};
+  activityHistory.forEach(function (activity) {
+    var date = formatDate(activity.startTime);
+
+    if (!formatted[date]) {
+      formatted[date] = [activity];
+    } else {
+      formatted[date].push(activity);
+    }
+  });
+  return Object.entries(formatted).reverse();
 }
 
 function instance($$self, $$props, $$invalidate) {
@@ -1507,20 +1517,6 @@ function instance($$self, $$props, $$invalidate) {
     $$invalidate(2, quantity = "");
   }
 
-  function formatHistory() {
-    var formatted = {};
-    activityHistory.forEach(function (activity) {
-      var date = formatDate(activity.startTime);
-
-      if (!formatted[date]) {
-        formatted[date] = [activity];
-      } else {
-        formatted[date].push(activity);
-      }
-    });
-    return Object.entries(formatted).reverse();
-  }
-
   var writable_props = [];
   Object_1.keys($$props).forEach(function (key) {
     if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<Activity> was created with unknown prop '".concat(key, "'"));
@@ -1587,7 +1583,8 @@ function instance($$self, $$props, $$invalidate) {
       submitActivity: submitActivity,
       formatDate: formatDate,
       formatTime: formatTime,
-      formatHistory: formatHistory
+      formatHistory: formatHistory,
+      formattedHistory: formattedHistory
     };
   };
 
@@ -1604,13 +1601,24 @@ function instance($$self, $$props, $$invalidate) {
     if ("manualAddLength" in $$props) $$invalidate(7, manualAddLength = $$props.manualAddLength);
     if ("isHistoryShown" in $$props) $$invalidate(8, isHistoryShown = $$props.isHistoryShown);
     if ("activityHistory" in $$props) $$invalidate(9, activityHistory = $$props.activityHistory);
+    if ("formattedHistory" in $$props) formattedHistory = $$props.formattedHistory;
   };
+
+  var formattedHistory;
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [type, name, quantity, isExercising, isManualAdd, manualAddDate, manualAddTime, manualAddLength, isHistoryShown, activityHistory, startExercise, endExercise, cancelExercise, manualAdd, cancelManualAdd, submitManualAdd, showHistory, submitActivity, formatHistory, input0_change_handler, $$binding_groups, input1_change_handler, input2_input_handler, input_input_handler, input0_input_handler, input1_input_handler, input2_input_handler_1];
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty[0] &
+    /*activityHistory*/
+    512) {
+       formattedHistory = formatHistory(activityHistory);
+    }
+  };
+
+  return [type, name, quantity, isExercising, isManualAdd, manualAddDate, manualAddTime, manualAddLength, isHistoryShown, activityHistory, startExercise, endExercise, cancelExercise, manualAdd, cancelManualAdd, submitManualAdd, showHistory, submitActivity, input0_change_handler, $$binding_groups, input1_change_handler, input2_input_handler, input_input_handler, input0_input_handler, input1_input_handler, input2_input_handler_1];
 }
 
 var Activity = /*#__PURE__*/function (_SvelteComponentDev) {

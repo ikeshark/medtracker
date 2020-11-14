@@ -1,11 +1,480 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, y as listen_dev, u as noop, z as validate_each_argument, f as space, j as claim_space, A as destroy_each, w as empty, B as create_component, C as claim_component, D as mount_component, E as transition_in, F as transition_out, G as destroy_component, q as query_selector_all, x as set_input_value, H as prevent_default, O as _slicedToArray, I as check_outros, J as run_all, v as validate_slots, K as globals, L as group_outros } from './client.28dee6d6.js';
-import { M as Modal } from './Modal.791a1a30.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, V as _createClass, S as SvelteComponentDev, y as validate_slots, P as createEventDispatcher, D as create_component, E as claim_component, F as mount_component, Q as _slicedToArray, G as transition_in, H as transition_out, I as destroy_component, h as element, t as text, g as space, l as claim_element, m as children, n as claim_text, j as detach_dev, k as claim_space, p as attr_dev, o as add_location, u as insert_dev, v as append_dev, A as set_input_value, w as listen_dev, L as run_all, x as noop, B as validate_each_argument, C as destroy_each, z as empty, q as query_selector_all, J as prevent_default, K as check_outros, M as globals, N as group_outros } from './client.18291dac.js';
+import { M as Modal } from './Modal.ace87683.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+var file = "src/components/TimePicker.svelte"; // (72:0) <Modal on:closeModal={dismiss}>
+
+function create_default_slot(ctx) {
+  var div;
+  var label0;
+  var t0;
+  var input0;
+  var t1;
+  var label1;
+  var t2;
+  var input1;
+  var t3;
+  var button0;
+  var t4;
+  var t5;
+  var button1;
+  var t6;
+  var mounted;
+  var dispose;
+  var block = {
+    c: function create() {
+      div = element("div");
+      label0 = element("label");
+      t0 = text("DATE\n      ");
+      input0 = element("input");
+      t1 = space();
+      label1 = element("label");
+      t2 = text("TIME\n      ");
+      input1 = element("input");
+      t3 = space();
+      button0 = element("button");
+      t4 = text("Submit Time");
+      t5 = space();
+      button1 = element("button");
+      t6 = text("ABORT");
+      this.h();
+    },
+    l: function claim(nodes) {
+      div = claim_element(nodes, "DIV", {
+        class: true
+      });
+      var div_nodes = children(div);
+      label0 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label0_nodes = children(label0);
+      t0 = claim_text(label0_nodes, "DATE\n      ");
+      input0 = claim_element(label0_nodes, "INPUT", {
+        class: true,
+        max: true,
+        min: true,
+        type: true
+      });
+      label0_nodes.forEach(detach_dev);
+      t1 = claim_space(div_nodes);
+      label1 = claim_element(div_nodes, "LABEL", {
+        class: true
+      });
+      var label1_nodes = children(label1);
+      t2 = claim_text(label1_nodes, "TIME\n      ");
+      input1 = claim_element(label1_nodes, "INPUT", {
+        class: true,
+        max: true,
+        min: true,
+        type: true
+      });
+      label1_nodes.forEach(detach_dev);
+      t3 = claim_space(div_nodes);
+      button0 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button0_nodes = children(button0);
+      t4 = claim_text(button0_nodes, "Submit Time");
+      button0_nodes.forEach(detach_dev);
+      t5 = claim_space(div_nodes);
+      button1 = claim_element(div_nodes, "BUTTON", {
+        class: true
+      });
+      var button1_nodes = children(button1);
+      t6 = claim_text(button1_nodes, "ABORT");
+      button1_nodes.forEach(detach_dev);
+      div_nodes.forEach(detach_dev);
+      this.h();
+    },
+    h: function hydrate() {
+      attr_dev(input0, "class", "block bg-gray-900 pl-1");
+      attr_dev(input0, "max",
+      /*maxDate*/
+      ctx[1]);
+      attr_dev(input0, "min",
+      /*minDate*/
+      ctx[0]);
+      attr_dev(input0, "type", "date");
+      add_location(input0, file, 75, 6, 1715);
+      attr_dev(label0, "class", "block p-1 mb-1");
+      add_location(label0, file, 73, 4, 1667);
+      attr_dev(input1, "class", "block bg-gray-900 pl-1");
+      attr_dev(input1, "max",
+      /*maxTime*/
+      ctx[3]);
+      attr_dev(input1, "min",
+      /*minTime*/
+      ctx[2]);
+      attr_dev(input1, "type", "time");
+      add_location(input1, file, 85, 6, 1924);
+      attr_dev(label1, "class", "block p-1 mb-1");
+      add_location(label1, file, 83, 4, 1876);
+      attr_dev(button0, "class", "block w-full mb-4 p-4 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
+      add_location(button0, file, 93, 4, 2085);
+      attr_dev(button1, "class", "block w-full mb-4 p-4 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
+      add_location(button1, file, 97, 4, 2252);
+      attr_dev(div, "class", "w-10/12 max-666 bg-gray-800 p-4 border-double border-black border-8");
+      add_location(div, file, 72, 2, 1581);
+    },
+    m: function mount(target, anchor) {
+      insert_dev(target, div, anchor);
+      append_dev(div, label0);
+      append_dev(label0, t0);
+      append_dev(label0, input0);
+      set_input_value(input0,
+      /*date*/
+      ctx[4]);
+      append_dev(div, t1);
+      append_dev(div, label1);
+      append_dev(label1, t2);
+      append_dev(label1, input1);
+      set_input_value(input1,
+      /*time*/
+      ctx[5]);
+      append_dev(div, t3);
+      append_dev(div, button0);
+      append_dev(button0, t4);
+      append_dev(div, t5);
+      append_dev(div, button1);
+      append_dev(button1, t6);
+
+      if (!mounted) {
+        dispose = [listen_dev(input0, "input",
+        /*input0_input_handler*/
+        ctx[10]), listen_dev(input1, "input",
+        /*input1_input_handler*/
+        ctx[11]), listen_dev(button0, "click",
+        /*submit*/
+        ctx[6], false, false, false), listen_dev(button1, "click",
+        /*dismiss*/
+        ctx[7], false, false, false)];
+        mounted = true;
+      }
+    },
+    p: function update(ctx, dirty) {
+      if (dirty &
+      /*maxDate*/
+      2) {
+        attr_dev(input0, "max",
+        /*maxDate*/
+        ctx[1]);
+      }
+
+      if (dirty &
+      /*minDate*/
+      1) {
+        attr_dev(input0, "min",
+        /*minDate*/
+        ctx[0]);
+      }
+
+      if (dirty &
+      /*date*/
+      16) {
+        set_input_value(input0,
+        /*date*/
+        ctx[4]);
+      }
+
+      if (dirty &
+      /*maxTime*/
+      8) {
+        attr_dev(input1, "max",
+        /*maxTime*/
+        ctx[3]);
+      }
+
+      if (dirty &
+      /*minTime*/
+      4) {
+        attr_dev(input1, "min",
+        /*minTime*/
+        ctx[2]);
+      }
+
+      if (dirty &
+      /*time*/
+      32) {
+        set_input_value(input1,
+        /*time*/
+        ctx[5]);
+      }
+    },
+    d: function destroy(detaching) {
+      if (detaching) detach_dev(div);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_default_slot.name,
+    type: "slot",
+    source: "(72:0) <Modal on:closeModal={dismiss}>",
+    ctx: ctx
+  });
+  return block;
+}
+
+function create_fragment(ctx) {
+  var modal;
+  var current;
+  modal = new Modal({
+    props: {
+      $$slots: {
+        default: [create_default_slot]
+      },
+      $$scope: {
+        ctx: ctx
+      }
+    },
+    $$inline: true
+  });
+  modal.$on("closeModal",
+  /*dismiss*/
+  ctx[7]);
+  var block = {
+    c: function create() {
+      create_component(modal.$$.fragment);
+    },
+    l: function claim(nodes) {
+      claim_component(modal.$$.fragment, nodes);
+    },
+    m: function mount(target, anchor) {
+      mount_component(modal, target, anchor);
+      current = true;
+    },
+    p: function update(ctx, _ref) {
+      var _ref2 = _slicedToArray(_ref, 1),
+          dirty = _ref2[0];
+
+      var modal_changes = {};
+
+      if (dirty &
+      /*$$scope, maxTime, minTime, time, maxDate, minDate, date*/
+      16447) {
+        modal_changes.$$scope = {
+          dirty: dirty,
+          ctx: ctx
+        };
+      }
+
+      modal.$set(modal_changes);
+    },
+    i: function intro(local) {
+      if (current) return;
+      transition_in(modal.$$.fragment, local);
+      current = true;
+    },
+    o: function outro(local) {
+      transition_out(modal.$$.fragment, local);
+      current = false;
+    },
+    d: function destroy(detaching) {
+      destroy_component(modal, detaching);
+    }
+  };
+  dispatch_dev("SvelteRegisterBlock", {
+    block: block,
+    id: create_fragment.name,
+    type: "component",
+    source: "",
+    ctx: ctx
+  });
+  return block;
+}
+
+function convertEpoch(epoch) {
+  var dateObj = new Date(epoch);
+  var year = dateObj.getFullYear() + "";
+  var month = dateObj.getMonth() + "";
+  var day = dateObj.getDate() + "";
+  if (month.length === 1) month = "0" + month;
+  if (month.length === 1) day = "0" + day;
+  var date = "".concat(year, "-").concat(month, "-").concat(date);
+  var hour = dateObj.getHours() + "";
+  var min = dateObj.getMinutes() + "";
+  if (month.length === 1) hour = "0" + hour;
+  if (month.length === 1) min = "0" + min;
+  var time = "".concat(hour, ":").concat(min);
+  return {
+    date: date,
+    time: time
+  };
+}
+
+function instance($$self, $$props, $$invalidate) {
+  var _$$props$$$slots = $$props.$$slots,
+      slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
+      $$scope = $$props.$$scope;
+  validate_slots("TimePicker", slots, []);
+  var dispatch = createEventDispatcher();
+  var minEpoch = $$props.minEpoch;
+  var maxEpoch = $$props.maxEpoch;
+  var minDate;
+  var maxDate;
+  var minTime;
+  var maxTime;
+  var date;
+  var time;
+  var epoch;
+
+  if (minEpoch) {
+    var formatted = convertEpoch(minEpoch);
+    minDate = formatted.date;
+    minTime = formatted.time;
+  }
+
+  if (maxEpoch) {
+    var _formatted = convertEpoch(maxEpoch);
+
+    maxDate = _formatted.date;
+    maxTime = _formatted.time;
+  }
+
+  function submit() {
+    var year = parseInt(date);
+    var month = parseInt(date.slice(5, 7)) - 1;
+    var day = parseInt(date.slice(8, 11));
+    var hour = parseInt(time);
+    var min = parseInt(time.slice(3, 5));
+    var epoch = new Date(year, month, day, hour, min).getTime();
+    dispatch("confirm", {
+      epoch: epoch
+    });
+    dispatch("dismiss");
+  }
+
+  function dismiss() {
+    dispatch("dismiss");
+  }
+
+  var writable_props = ["minEpoch", "maxEpoch"];
+  Object.keys($$props).forEach(function (key) {
+    if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn("<TimePicker> was created with unknown prop '".concat(key, "'"));
+  });
+
+  function input0_input_handler() {
+    date = this.value;
+    $$invalidate(4, date);
+  }
+
+  function input1_input_handler() {
+    time = this.value;
+    $$invalidate(5, time);
+  }
+
+  $$self.$$set = function ($$props) {
+    if ("minEpoch" in $$props) $$invalidate(8, minEpoch = $$props.minEpoch);
+    if ("maxEpoch" in $$props) $$invalidate(9, maxEpoch = $$props.maxEpoch);
+  };
+
+  $$self.$capture_state = function () {
+    return {
+      createEventDispatcher: createEventDispatcher,
+      Modal: Modal,
+      dispatch: dispatch,
+      minEpoch: minEpoch,
+      maxEpoch: maxEpoch,
+      minDate: minDate,
+      maxDate: maxDate,
+      minTime: minTime,
+      maxTime: maxTime,
+      date: date,
+      time: time,
+      epoch: epoch,
+      convertEpoch: convertEpoch,
+      submit: submit,
+      dismiss: dismiss
+    };
+  };
+
+  $$self.$inject_state = function ($$props) {
+    if ("minEpoch" in $$props) $$invalidate(8, minEpoch = $$props.minEpoch);
+    if ("maxEpoch" in $$props) $$invalidate(9, maxEpoch = $$props.maxEpoch);
+    if ("minDate" in $$props) $$invalidate(0, minDate = $$props.minDate);
+    if ("maxDate" in $$props) $$invalidate(1, maxDate = $$props.maxDate);
+    if ("minTime" in $$props) $$invalidate(2, minTime = $$props.minTime);
+    if ("maxTime" in $$props) $$invalidate(3, maxTime = $$props.maxTime);
+    if ("date" in $$props) $$invalidate(4, date = $$props.date);
+    if ("time" in $$props) $$invalidate(5, time = $$props.time);
+    if ("epoch" in $$props) epoch = $$props.epoch;
+  };
+
+  if ($$props && "$$inject" in $$props) {
+    $$self.$inject_state($$props.$$inject);
+  }
+
+  return [minDate, maxDate, minTime, maxTime, date, time, submit, dismiss, minEpoch, maxEpoch, input0_input_handler, input1_input_handler];
+}
+
+var TimePicker = /*#__PURE__*/function (_SvelteComponentDev) {
+  _inherits(TimePicker, _SvelteComponentDev);
+
+  var _super = _createSuper(TimePicker);
+
+  function TimePicker(options) {
+    var _this;
+
+    _classCallCheck(this, TimePicker);
+
+    _this = _super.call(this, options);
+    init(_assertThisInitialized(_this), options, instance, create_fragment, safe_not_equal, {
+      minEpoch: 8,
+      maxEpoch: 9
+    });
+    dispatch_dev("SvelteRegisterComponent", {
+      component: _assertThisInitialized(_this),
+      tagName: "TimePicker",
+      options: options,
+      id: create_fragment.name
+    });
+    var ctx = _this.$$.ctx;
+    var props = options.props || {};
+
+    if (
+    /*minEpoch*/
+    ctx[8] === undefined && !("minEpoch" in props)) {
+      console.warn("<TimePicker> was created without expected prop 'minEpoch'");
+    }
+
+    if (
+    /*maxEpoch*/
+    ctx[9] === undefined && !("maxEpoch" in props)) {
+      console.warn("<TimePicker> was created without expected prop 'maxEpoch'");
+    }
+
+    return _this;
+  }
+
+  _createClass(TimePicker, [{
+    key: "minEpoch",
+    get: function get() {
+      throw new Error("<TimePicker>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    },
+    set: function set(value) {
+      throw new Error("<TimePicker>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    }
+  }, {
+    key: "maxEpoch",
+    get: function get() {
+      throw new Error("<TimePicker>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    },
+    set: function set(value) {
+      throw new Error("<TimePicker>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    }
+  }]);
+
+  return TimePicker;
+}(SvelteComponentDev);
+
+function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _isNativeReflectConstruct$1() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 var Object_1 = globals.Object;
-var file = "src/routes/food.svelte";
+var file$1 = "src/routes/food.svelte";
 
 function get_each_context_1(ctx, list, i) {
   var child_ctx = ctx.slice();
@@ -15,9 +484,9 @@ function get_each_context_1(ctx, list, i) {
 
 function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
-  child_ctx[6] = list[i];
+  child_ctx[5] = list[i];
   return child_ctx;
-} // (127:0) {#if Object.values(foodHistory).length}
+} // (155:0) {#if Object.values(foodHistory).length}
 
 
 function create_if_block_2(ctx) {
@@ -42,7 +511,7 @@ function create_if_block_2(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "mt-4 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-yellow-700");
-      add_location(button, file, 127, 1, 3085);
+      add_location(button, file$1, 155, 1, 3615);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -51,7 +520,7 @@ function create_if_block_2(ctx) {
       if (!mounted) {
         dispose = listen_dev(button, "click",
         /*showHistory*/
-        ctx[10], false, false, false);
+        ctx[8], false, false, false);
         mounted = true;
       }
     },
@@ -66,11 +535,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(127:0) {#if Object.values(foodHistory).length}",
+    source: "(155:0) {#if Object.values(foodHistory).length}",
     ctx: ctx
   });
   return block;
-} // (136:0) {#if isHistoryShown}
+} // (164:0) {#if isHistoryShown}
 
 
 function create_if_block_1(ctx) {
@@ -88,9 +557,7 @@ function create_if_block_1(ctx) {
   var th2;
   var t6;
   var t7;
-  var each_value =
-  /*formatHistory*/
-  ctx[12]();
+  var each_value = formatHistory();
   validate_each_argument(each_value);
   var each_blocks = [];
 
@@ -167,16 +634,16 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-300 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 136, 1, 3271);
+      add_location(h2, file$1, 164, 1, 3801);
       attr_dev(th0, "class", "svelte-cyr33f");
-      add_location(th0, file, 139, 3, 3374);
+      add_location(th0, file$1, 167, 3, 3904);
       attr_dev(th1, "class", "svelte-cyr33f");
-      add_location(th1, file, 140, 3, 3391);
+      add_location(th1, file$1, 168, 3, 3921);
       attr_dev(th2, "class", "svelte-cyr33f");
-      add_location(th2, file, 141, 6, 3411);
+      add_location(th2, file$1, 169, 6, 3941);
       attr_dev(tr, "class", "svelte-cyr33f");
-      add_location(tr, file, 138, 2, 3366);
-      add_location(table, file, 137, 1, 3356);
+      add_location(tr, file$1, 166, 2, 3896);
+      add_location(table, file$1, 165, 1, 3886);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -201,10 +668,8 @@ function create_if_block_1(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      4096) {
-        each_value =
-        /*formatHistory*/
-        ctx[12]();
+      0) {
+        each_value = formatHistory();
         validate_each_argument(each_value);
 
         var _i4;
@@ -241,11 +706,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(136:0) {#if isHistoryShown}",
+    source: "(164:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (148:3) {#each food[1] as history}
+} // (176:3) {#each food[1] as history}
 
 
 function create_each_block_1(ctx) {
@@ -313,13 +778,13 @@ function create_each_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(td0, "class", "text-sm svelte-cyr33f");
-      add_location(td0, file, 149, 4, 3581);
+      add_location(td0, file$1, 177, 4, 4111);
       attr_dev(td1, "class", "svelte-cyr33f");
-      add_location(td1, file, 150, 4, 3637);
+      add_location(td1, file$1, 178, 4, 4167);
       attr_dev(td2, "class", "svelte-cyr33f");
-      add_location(td2, file, 151, 8, 3669);
+      add_location(td2, file$1, 179, 8, 4199);
       attr_dev(tr, "class", "svelte-cyr33f");
-      add_location(tr, file, 148, 3, 3572);
+      add_location(tr, file$1, 176, 3, 4102);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -342,11 +807,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(148:3) {#each food[1] as history}",
+    source: "(176:3) {#each food[1] as history}",
     ctx: ctx
   });
   return block;
-} // (144:2) {#each formatHistory() as food}
+} // (172:2) {#each formatHistory() as food}
 
 
 function create_each_block(ctx) {
@@ -354,13 +819,13 @@ function create_each_block(ctx) {
   var th;
   var t0_value =
   /*food*/
-  ctx[6][0] + "";
+  ctx[5][0] + "";
   var t0;
   var t1;
   var each_1_anchor;
   var each_value_1 =
   /*food*/
-  ctx[6][1];
+  ctx[5][1];
   validate_each_argument(each_value_1);
   var each_blocks = [];
 
@@ -407,9 +872,9 @@ function create_each_block(ctx) {
     h: function hydrate() {
       attr_dev(th, "class", "text-left svelte-cyr33f");
       attr_dev(th, "colspan", "3");
-      add_location(th, file, 145, 4, 3481);
+      add_location(th, file$1, 173, 4, 4011);
       attr_dev(tr, "class", "svelte-cyr33f");
-      add_location(tr, file, 144, 3, 3472);
+      add_location(tr, file$1, 172, 3, 4002);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -426,10 +891,10 @@ function create_each_block(ctx) {
     p: function update(ctx, dirty) {
       if (dirty &
       /*formatHistory, formatTime*/
-      4096) {
+      0) {
         each_value_1 =
         /*food*/
-        ctx[6][1];
+        ctx[5][1];
         validate_each_argument(each_value_1);
 
         var _i8;
@@ -466,244 +931,74 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(144:2) {#each formatHistory() as food}",
+    source: "(172:2) {#each formatHistory() as food}",
     ctx: ctx
   });
   return block;
-} // (159:0) {#if isManualAdd}
+} // (187:0) {#if isTimePicker}
 
 
 function create_if_block(ctx) {
-  var modal;
+  var timepicker;
   var current;
-  modal = new Modal({
+  timepicker = new TimePicker({
     props: {
-      $$slots: {
-        default: [create_default_slot]
-      },
-      $$scope: {
-        ctx: ctx
-      }
+      maxEpoch:
+      /*maxEpoch*/
+      ctx[2]
     },
     $$inline: true
   });
-  modal.$on("closeModal",
-  /*cancelManualAdd*/
-  ctx[8]);
+  timepicker.$on("dismiss",
+  /*dismiss_handler*/
+  ctx[12]);
+  timepicker.$on("confirm",
+  /*pickedTimeSubmit*/
+  ctx[6]);
   var block = {
     c: function create() {
-      create_component(modal.$$.fragment);
+      create_component(timepicker.$$.fragment);
     },
     l: function claim(nodes) {
-      claim_component(modal.$$.fragment, nodes);
+      claim_component(timepicker.$$.fragment, nodes);
     },
     m: function mount(target, anchor) {
-      mount_component(modal, target, anchor);
+      mount_component(timepicker, target, anchor);
       current = true;
     },
     p: function update(ctx, dirty) {
-      var modal_changes = {};
-
+      var timepicker_changes = {};
       if (dirty &
-      /*$$scope, manualAddTime, manualAddDate*/
-      8388620) {
-        modal_changes.$$scope = {
-          dirty: dirty,
-          ctx: ctx
-        };
-      }
-
-      modal.$set(modal_changes);
+      /*maxEpoch*/
+      4) timepicker_changes.maxEpoch =
+      /*maxEpoch*/
+      ctx[2];
+      timepicker.$set(timepicker_changes);
     },
     i: function intro(local) {
       if (current) return;
-      transition_in(modal.$$.fragment, local);
+      transition_in(timepicker.$$.fragment, local);
       current = true;
     },
     o: function outro(local) {
-      transition_out(modal.$$.fragment, local);
+      transition_out(timepicker.$$.fragment, local);
       current = false;
     },
     d: function destroy(detaching) {
-      destroy_component(modal, detaching);
+      destroy_component(timepicker, detaching);
     }
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(159:0) {#if isManualAdd}",
-    ctx: ctx
-  });
-  return block;
-} // (160:1) <Modal on:closeModal={cancelManualAdd}>
-
-
-function create_default_slot(ctx) {
-  var div;
-  var label0;
-  var t0;
-  var input0;
-  var t1;
-  var label1;
-  var t2;
-  var input1;
-  var t3;
-  var button0;
-  var t4;
-  var t5;
-  var button1;
-  var t6;
-  var mounted;
-  var dispose;
-  var block = {
-    c: function create() {
-      div = element("div");
-      label0 = element("label");
-      t0 = text("DATE\n\t\t\t\t");
-      input0 = element("input");
-      t1 = space();
-      label1 = element("label");
-      t2 = text("TIME\n\t\t\t\t");
-      input1 = element("input");
-      t3 = space();
-      button0 = element("button");
-      t4 = text("SUBMIT");
-      t5 = space();
-      button1 = element("button");
-      t6 = text("ABORT");
-      this.h();
-    },
-    l: function claim(nodes) {
-      div = claim_element(nodes, "DIV", {
-        class: true
-      });
-      var div_nodes = children(div);
-      label0 = claim_element(div_nodes, "LABEL", {
-        class: true
-      });
-      var label0_nodes = children(label0);
-      t0 = claim_text(label0_nodes, "DATE\n\t\t\t\t");
-      input0 = claim_element(label0_nodes, "INPUT", {
-        class: true,
-        type: true
-      });
-      label0_nodes.forEach(detach_dev);
-      t1 = claim_space(div_nodes);
-      label1 = claim_element(div_nodes, "LABEL", {
-        class: true
-      });
-      var label1_nodes = children(label1);
-      t2 = claim_text(label1_nodes, "TIME\n\t\t\t\t");
-      input1 = claim_element(label1_nodes, "INPUT", {
-        class: true,
-        type: true
-      });
-      label1_nodes.forEach(detach_dev);
-      t3 = claim_space(div_nodes);
-      button0 = claim_element(div_nodes, "BUTTON", {
-        class: true
-      });
-      var button0_nodes = children(button0);
-      t4 = claim_text(button0_nodes, "SUBMIT");
-      button0_nodes.forEach(detach_dev);
-      t5 = claim_space(div_nodes);
-      button1 = claim_element(div_nodes, "BUTTON", {
-        class: true
-      });
-      var button1_nodes = children(button1);
-      t6 = claim_text(button1_nodes, "ABORT");
-      button1_nodes.forEach(detach_dev);
-      div_nodes.forEach(detach_dev);
-      this.h();
-    },
-    h: function hydrate() {
-      attr_dev(input0, "class", "block bg-gray-900 pl-1");
-      attr_dev(input0, "type", "date");
-      add_location(input0, file, 163, 4, 3906);
-      attr_dev(label0, "class", "block p-1 mb-1");
-      add_location(label0, file, 161, 3, 3862);
-      attr_dev(input1, "class", "block bg-gray-900 pl-1");
-      attr_dev(input1, "type", "time");
-      add_location(input1, file, 171, 4, 4063);
-      attr_dev(label1, "class", "block p-1 mb-1");
-      add_location(label1, file, 169, 3, 4019);
-      attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
-      add_location(button0, file, 177, 3, 4176);
-      attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button1, file, 181, 3, 4341);
-      attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
-      add_location(div, file, 160, 2, 3811);
-    },
-    m: function mount(target, anchor) {
-      insert_dev(target, div, anchor);
-      append_dev(div, label0);
-      append_dev(label0, t0);
-      append_dev(label0, input0);
-      set_input_value(input0,
-      /*manualAddDate*/
-      ctx[2]);
-      append_dev(div, t1);
-      append_dev(div, label1);
-      append_dev(label1, t2);
-      append_dev(label1, input1);
-      set_input_value(input1,
-      /*manualAddTime*/
-      ctx[3]);
-      append_dev(div, t3);
-      append_dev(div, button0);
-      append_dev(button0, t4);
-      append_dev(div, t5);
-      append_dev(div, button1);
-      append_dev(button1, t6);
-
-      if (!mounted) {
-        dispose = [listen_dev(input0, "input",
-        /*input0_input_handler_1*/
-        ctx[15]), listen_dev(input1, "input",
-        /*input1_input_handler_1*/
-        ctx[16]), listen_dev(button0, "click",
-        /*submitManualAdd*/
-        ctx[9], false, false, false), listen_dev(button1, "click",
-        /*cancelManualAdd*/
-        ctx[8], false, false, false)];
-        mounted = true;
-      }
-    },
-    p: function update(ctx, dirty) {
-      if (dirty &
-      /*manualAddDate*/
-      4) {
-        set_input_value(input0,
-        /*manualAddDate*/
-        ctx[2]);
-      }
-
-      if (dirty &
-      /*manualAddTime*/
-      8) {
-        set_input_value(input1,
-        /*manualAddTime*/
-        ctx[3]);
-      }
-    },
-    d: function destroy(detaching) {
-      if (detaching) detach_dev(div);
-      mounted = false;
-      run_all(dispose);
-    }
-  };
-  dispatch_dev("SvelteRegisterBlock", {
-    block: block,
-    id: create_default_slot.name,
-    type: "slot",
-    source: "(160:1) <Modal on:closeModal={cancelManualAdd}>",
+    source: "(187:0) {#if isTimePicker}",
     ctx: ctx
   });
   return block;
 }
 
-function create_fragment(ctx) {
+function create_fragment$1(ctx) {
   var t0;
   var h1;
   var t1;
@@ -732,7 +1027,7 @@ function create_fragment(ctx) {
   var t13;
   var show_if = Object.values(
   /*foodHistory*/
-  ctx[5]).length;
+  ctx[4]).length;
   var t14;
   var t15;
   var if_block2_anchor;
@@ -744,7 +1039,7 @@ function create_fragment(ctx) {
   /*isHistoryShown*/
   ctx[0] && create_if_block_1(ctx);
   var if_block2 =
-  /*isManualAdd*/
+  /*isTimePicker*/
   ctx[1] && create_if_block(ctx);
   var block = {
     c: function create() {
@@ -769,10 +1064,10 @@ function create_fragment(ctx) {
       t9 = space();
       div = element("div");
       button0 = element("button");
-      t10 = text("Add");
+      t10 = text("Add Now");
       t11 = space();
       button1 = element("button");
-      t12 = text("Manual Add");
+      t12 = text("Add Past");
       t13 = space();
       if (if_block0) if_block0.c();
       t14 = space();
@@ -839,7 +1134,7 @@ function create_fragment(ctx) {
         class: true
       });
       var button0_nodes = children(button0);
-      t10 = claim_text(button0_nodes, "Add");
+      t10 = claim_text(button0_nodes, "Add Now");
       button0_nodes.forEach(detach_dev);
       t11 = claim_space(div_nodes);
       button1 = claim_element(div_nodes, "BUTTON", {
@@ -847,7 +1142,7 @@ function create_fragment(ctx) {
         class: true
       });
       var button1_nodes = children(button1);
-      t12 = claim_text(button1_nodes, "Manual Add");
+      t12 = claim_text(button1_nodes, "Add Past");
       button1_nodes.forEach(detach_dev);
       div_nodes.forEach(detach_dev);
       form_nodes.forEach(detach_dev);
@@ -862,30 +1157,30 @@ function create_fragment(ctx) {
     },
     h: function hydrate() {
       document.title = "Food Log";
-      add_location(br, file, 94, 14, 2137);
+      add_location(br, file$1, 119, 14, 2641);
       attr_dev(h1, "class", "mb-4 text-yellow-400 bold text-3xl md:text-4xl text-center leading-tight");
-      add_location(h1, file, 93, 0, 2037);
+      add_location(h1, file$1, 118, 0, 2541);
       attr_dev(span0, "class", "text-xl");
-      add_location(span0, file, 98, 4, 2292);
+      add_location(span0, file$1, 126, 4, 2804);
       attr_dev(input0, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input0, file, 99, 4, 2335);
+      add_location(input0, file$1, 127, 4, 2847);
       attr_dev(label0, "class", "space-y-1 block text-center");
-      add_location(label0, file, 97, 2, 2244);
+      add_location(label0, file$1, 125, 2, 2756);
       attr_dev(span1, "class", "text-xl");
-      add_location(span1, file, 104, 4, 2499);
+      add_location(span1, file$1, 132, 4, 3011);
       attr_dev(input1, "class", "w-10 ml-2 px-1 shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input1, file, 105, 4, 2541);
+      add_location(input1, file$1, 133, 4, 3053);
       attr_dev(label1, "class", "space-y-1 block text-center");
-      add_location(label1, file, 103, 2, 2451);
+      add_location(label1, file$1, 131, 2, 2963);
       attr_dev(button0, "class", "rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button0, file, 110, 4, 2723);
+      add_location(button0, file$1, 138, 4, 3235);
       attr_dev(button1, "type", "button");
       attr_dev(button1, "class", "rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button1, file, 115, 4, 2849);
+      add_location(button1, file$1, 143, 4, 3365);
       attr_dev(div, "class", "pt-1 flex justify-evenly");
-      add_location(div, file, 109, 2, 2680);
+      add_location(div, file$1, 137, 2, 3192);
       attr_dev(form, "class", "space-y-2 border border-gray-700 py-2");
-      add_location(form, file, 96, 0, 2151);
+      add_location(form, file$1, 121, 0, 2655);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -902,7 +1197,7 @@ function create_fragment(ctx) {
       append_dev(label0, input0);
       set_input_value(input0,
       /*food*/
-      ctx[6]);
+      ctx[5]);
       append_dev(form, t6);
       append_dev(form, label1);
       append_dev(label1, span1);
@@ -911,7 +1206,7 @@ function create_fragment(ctx) {
       append_dev(label1, input1);
       set_input_value(input1,
       /*foodQuantity*/
-      ctx[4]);
+      ctx[3]);
       append_dev(form, t9);
       append_dev(form, div);
       append_dev(div, button0);
@@ -931,13 +1226,13 @@ function create_fragment(ctx) {
       if (!mounted) {
         dispose = [listen_dev(input0, "input",
         /*input0_input_handler*/
-        ctx[13]), listen_dev(input1, "input",
+        ctx[9]), listen_dev(input1, "input",
         /*input1_input_handler*/
-        ctx[14]), listen_dev(button1, "click",
-        /*manualAdd*/
-        ctx[7], false, false, false), listen_dev(form, "submit", prevent_default(
-        /*submitFood*/
-        ctx[11]), false, true, false)];
+        ctx[10]), listen_dev(button1, "click",
+        /*click_handler*/
+        ctx[11], false, false, false), listen_dev(form, "submit", prevent_default(
+        /*defaultSubmit*/
+        ctx[7]), false, true, false)];
         mounted = true;
       }
     },
@@ -947,29 +1242,29 @@ function create_fragment(ctx) {
 
       if (dirty &
       /*food*/
-      64 && input0.value !==
+      32 && input0.value !==
       /*food*/
-      ctx[6]) {
+      ctx[5]) {
         set_input_value(input0,
         /*food*/
-        ctx[6]);
+        ctx[5]);
       }
 
       if (dirty &
       /*foodQuantity*/
-      16 && input1.value !==
+      8 && input1.value !==
       /*foodQuantity*/
-      ctx[4]) {
+      ctx[3]) {
         set_input_value(input1,
         /*foodQuantity*/
-        ctx[4]);
+        ctx[3]);
       }
 
       if (dirty &
       /*foodHistory*/
-      32) show_if = Object.values(
+      16) show_if = Object.values(
       /*foodHistory*/
-      ctx[5]).length;
+      ctx[4]).length;
 
       if (show_if) {
         if (if_block0) {
@@ -1000,13 +1295,13 @@ function create_fragment(ctx) {
       }
 
       if (
-      /*isManualAdd*/
+      /*isTimePicker*/
       ctx[1]) {
         if (if_block2) {
           if_block2.p(ctx, dirty);
 
           if (dirty &
-          /*isManualAdd*/
+          /*isTimePicker*/
           2) {
             transition_in(if_block2, 1);
           }
@@ -1051,7 +1346,7 @@ function create_fragment(ctx) {
   };
   dispatch_dev("SvelteRegisterBlock", {
     block: block,
-    id: create_fragment.name,
+    id: create_fragment$1.name,
     type: "component",
     source: "",
     ctx: ctx
@@ -1072,39 +1367,85 @@ function formatTime(epoch) {
   });
 }
 
-function instance($$self, $$props, $$invalidate) {
+function formatHistory(foodHistory) {
+  var formatted = {};
+  foodHistory.forEach(function (history) {
+    var date = formatDate(history.time);
+
+    if (!formatted[date]) {
+      formatted[date] = [history];
+    } else {
+      formatted[date].push(history);
+    }
+  });
+  return Object.entries(formatted).reverse();
+}
+
+function instance$1($$self, $$props, $$invalidate) {
   var _$$props$$$slots = $$props.$$slots,
       slots = _$$props$$$slots === void 0 ? {} : _$$props$$$slots,
       $$scope = $$props.$$scope;
   validate_slots("Food", slots, []);
   var isHistoryShown = false;
   var isManualAdd;
-  var manualAddDate;
-  var manualAddTime;
-  var manualAddLength;
+  var isTimePicker = false;
+  var maxEpoch;
+  var time; // let manualAddDate;
+  // let manualAddTime;
+  // let manualAddLength;
+
   var food;
   var foodQuantity;
   var foodHistory = [];
 
   {
     foodHistory = !!localStorage.foodHistory ? JSON.parse(localStorage.foodHistory) : [];
+  } // function manualAdd() {
+  //   isManualAdd = true;
+  // }
+  // function cancelManualAdd() {
+  //   isManualAdd = false;
+  // }
+  // function submitManualAdd() {
+  //   const year = parseInt(manualAddDate)
+  //   const month = parseInt(manualAddDate.slice(5, 7)) - 1;
+  //   const day = parseInt(manualAddDate.slice(8, 11));
+  //   const hour = parseInt(manualAddTime);
+  //   const min = parseInt(manualAddTime.slice(3, 5));
+  //
+  //   const time = new Date(year, month, day, hour, min).getTime();
+  //
+  //   foodHistory.push({
+  //     time,
+  //     name: food,
+  //     quantity: foodQuantity
+  //   });
+  //   if (true) {
+  //     localStorage.foodHistory = JSON.stringify(foodHistory);
+  //   }
+  //   food = '';
+  //   foodQuantity = '';
+  //   isManualAdd = false;
+  // }
+
+
+  function startTimePick() {
+    $$invalidate(2, maxEpoch = new Date().getTime());
+    $$invalidate(1, isTimePicker = true);
   }
 
-  function manualAdd() {
-    $$invalidate(1, isManualAdd = true);
+  function pickedTimeSubmit(event) {
+    $$invalidate(1, isTimePicker = false);
+    time = event.detail.epoch;
+    submitFood();
   }
 
-  function cancelManualAdd() {
-    $$invalidate(1, isManualAdd = false);
+  function defaultSubmit() {
+    time = new Date().getTime();
+    submitFood();
   }
 
-  function submitManualAdd() {
-    var year = parseInt(manualAddDate);
-    var month = parseInt(manualAddDate.slice(5, 7)) - 1;
-    var day = parseInt(manualAddDate.slice(8, 11));
-    var hour = parseInt(manualAddTime);
-    var min = parseInt(manualAddTime.slice(3, 5));
-    var time = new Date(year, month, day, hour, min).getTime();
+  function submitFood() {
     foodHistory.push({
       time: time,
       name: food,
@@ -1115,42 +1456,12 @@ function instance($$self, $$props, $$invalidate) {
       localStorage.foodHistory = JSON.stringify(foodHistory);
     }
 
-    $$invalidate(6, food = "");
-    $$invalidate(4, foodQuantity = "");
-    $$invalidate(1, isManualAdd = false);
+    $$invalidate(5, food = "");
+    $$invalidate(3, foodQuantity = "");
   }
 
   function showHistory() {
     $$invalidate(0, isHistoryShown = !isHistoryShown);
-  }
-
-  function submitFood() {
-    foodHistory.push({
-      time: new Date().getTime(),
-      name: food,
-      quantity: foodQuantity
-    });
-
-    {
-      localStorage.foodHistory = JSON.stringify(foodHistory);
-    }
-
-    $$invalidate(6, food = "");
-    $$invalidate(4, foodQuantity = "");
-  }
-
-  function formatHistory() {
-    var formatted = {};
-    foodHistory.forEach(function (history) {
-      var date = formatDate(history.time);
-
-      if (!formatted[date]) {
-        formatted[date] = [history];
-      } else {
-        formatted[date].push(history);
-      }
-    });
-    return Object.entries(formatted).reverse();
   }
 
   var writable_props = [];
@@ -1160,68 +1471,78 @@ function instance($$self, $$props, $$invalidate) {
 
   function input0_input_handler() {
     food = this.value;
-    $$invalidate(6, food);
+    $$invalidate(5, food);
   }
 
   function input1_input_handler() {
     foodQuantity = this.value;
-    $$invalidate(4, foodQuantity);
+    $$invalidate(3, foodQuantity);
   }
 
-  function input0_input_handler_1() {
-    manualAddDate = this.value;
-    $$invalidate(2, manualAddDate);
-  }
+  var click_handler = function click_handler() {
+    return $$invalidate(1, isTimePicker = true);
+  };
 
-  function input1_input_handler_1() {
-    manualAddTime = this.value;
-    $$invalidate(3, manualAddTime);
-  }
+  var dismiss_handler = function dismiss_handler() {
+    return $$invalidate(1, isTimePicker = false);
+  };
 
   $$self.$capture_state = function () {
     return {
-      Modal: Modal,
+      TimePicker: TimePicker,
       isHistoryShown: isHistoryShown,
       isManualAdd: isManualAdd,
-      manualAddDate: manualAddDate,
-      manualAddTime: manualAddTime,
-      manualAddLength: manualAddLength,
+      isTimePicker: isTimePicker,
+      maxEpoch: maxEpoch,
+      time: time,
       food: food,
       foodQuantity: foodQuantity,
       foodHistory: foodHistory,
-      manualAdd: manualAdd,
-      cancelManualAdd: cancelManualAdd,
-      submitManualAdd: submitManualAdd,
-      showHistory: showHistory,
+      startTimePick: startTimePick,
+      pickedTimeSubmit: pickedTimeSubmit,
+      defaultSubmit: defaultSubmit,
       submitFood: submitFood,
+      showHistory: showHistory,
       formatDate: formatDate,
       formatTime: formatTime,
-      formatHistory: formatHistory
+      formatHistory: formatHistory,
+      formattedHistory: formattedHistory
     };
   };
 
   $$self.$inject_state = function ($$props) {
     if ("isHistoryShown" in $$props) $$invalidate(0, isHistoryShown = $$props.isHistoryShown);
-    if ("isManualAdd" in $$props) $$invalidate(1, isManualAdd = $$props.isManualAdd);
-    if ("manualAddDate" in $$props) $$invalidate(2, manualAddDate = $$props.manualAddDate);
-    if ("manualAddTime" in $$props) $$invalidate(3, manualAddTime = $$props.manualAddTime);
-    if ("manualAddLength" in $$props) manualAddLength = $$props.manualAddLength;
-    if ("food" in $$props) $$invalidate(6, food = $$props.food);
-    if ("foodQuantity" in $$props) $$invalidate(4, foodQuantity = $$props.foodQuantity);
-    if ("foodHistory" in $$props) $$invalidate(5, foodHistory = $$props.foodHistory);
+    if ("isManualAdd" in $$props) isManualAdd = $$props.isManualAdd;
+    if ("isTimePicker" in $$props) $$invalidate(1, isTimePicker = $$props.isTimePicker);
+    if ("maxEpoch" in $$props) $$invalidate(2, maxEpoch = $$props.maxEpoch);
+    if ("time" in $$props) time = $$props.time;
+    if ("food" in $$props) $$invalidate(5, food = $$props.food);
+    if ("foodQuantity" in $$props) $$invalidate(3, foodQuantity = $$props.foodQuantity);
+    if ("foodHistory" in $$props) $$invalidate(4, foodHistory = $$props.foodHistory);
+    if ("formattedHistory" in $$props) formattedHistory = $$props.formattedHistory;
   };
+
+  var formattedHistory;
 
   if ($$props && "$$inject" in $$props) {
     $$self.$inject_state($$props.$$inject);
   }
 
-  return [isHistoryShown, isManualAdd, manualAddDate, manualAddTime, foodQuantity, foodHistory, food, manualAdd, cancelManualAdd, submitManualAdd, showHistory, submitFood, formatHistory, input0_input_handler, input1_input_handler, input0_input_handler_1, input1_input_handler_1];
+  $$self.$$.update = function () {
+    if ($$self.$$.dirty &
+    /*foodHistory*/
+    16) {
+       formattedHistory = formatHistory(foodHistory);
+    }
+  };
+
+  return [isHistoryShown, isTimePicker, maxEpoch, foodQuantity, foodHistory, food, pickedTimeSubmit, defaultSubmit, showHistory, input0_input_handler, input1_input_handler, click_handler, dismiss_handler];
 }
 
 var Food = /*#__PURE__*/function (_SvelteComponentDev) {
   _inherits(Food, _SvelteComponentDev);
 
-  var _super = _createSuper(Food);
+  var _super = _createSuper$1(Food);
 
   function Food(options) {
     var _this;
@@ -1229,12 +1550,12 @@ var Food = /*#__PURE__*/function (_SvelteComponentDev) {
     _classCallCheck(this, Food);
 
     _this = _super.call(this, options);
-    init(_assertThisInitialized(_this), options, instance, create_fragment, safe_not_equal, {});
+    init(_assertThisInitialized(_this), options, instance$1, create_fragment$1, safe_not_equal, {});
     dispatch_dev("SvelteRegisterComponent", {
       component: _assertThisInitialized(_this),
       tagName: "Food",
       options: options,
-      id: create_fragment.name
+      id: create_fragment$1.name
     });
     return _this;
   }
