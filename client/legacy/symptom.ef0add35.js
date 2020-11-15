@@ -1,5 +1,7 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, h as element, t as text, l as claim_element, m as children, n as claim_text, j as detach_dev, p as attr_dev, o as add_location, u as insert_dev, v as append_dev, w as listen_dev, x as noop, B as validate_each_argument, g as space, k as claim_space, C as destroy_each, z as empty, D as create_component, E as claim_component, F as mount_component, G as transition_in, H as transition_out, I as destroy_component, q as query_selector_all, A as set_input_value, J as prevent_default, Q as _slicedToArray, T as prop_dev, U as set_data_dev, K as check_outros, L as run_all, y as validate_slots, M as globals, N as group_outros } from './client.18291dac.js';
-import { M as Modal } from './Modal.ace87683.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as element, t as text, k as claim_element, l as children, m as claim_text, h as detach_dev, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, u as listen_dev, v as noop, B as validate_each_argument, f as space, j as claim_space, C as destroy_each, z as empty, D as create_component, E as claim_component, F as mount_component, G as transition_in, H as transition_out, I as destroy_component, q as query_selector_all, A as set_input_value, J as prevent_default, Q as _slicedToArray, T as prop_dev, U as set_data_dev, K as check_outros, L as run_all, w as validate_slots, M as globals, N as group_outros, x as regenerator } from './client.f4345633.js';
+import { _ as _asyncToGenerator } from './asyncToGenerator.5229e80b.js';
+import { f as firestore } from './firebase.5a1090f6.js';
+import { M as Modal } from './Modal.80d9e9b3.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -17,7 +19,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[24] = list[i];
   return child_ctx;
-} // (155:0) {#if Object.values(symptomHistory).length}
+} // (156:0) {#if Object.values(symptomHistory).length}
 
 
 function create_if_block_3(ctx) {
@@ -42,7 +44,7 @@ function create_if_block_3(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "mt-2 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
-      add_location(button, file, 155, 1, 3714);
+      add_location(button, file, 156, 1, 3683);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -66,11 +68,11 @@ function create_if_block_3(ctx) {
     block: block,
     id: create_if_block_3.name,
     type: "if",
-    source: "(155:0) {#if Object.values(symptomHistory).length}",
+    source: "(156:0) {#if Object.values(symptomHistory).length}",
     ctx: ctx
   });
   return block;
-} // (164:0) {#if isHistoryShown}
+} // (165:0) {#if isHistoryShown}
 
 
 function create_if_block_2(ctx) {
@@ -157,12 +159,12 @@ function create_if_block_2(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file, 164, 1, 3898);
-      add_location(th0, file, 167, 3, 4000);
-      add_location(th1, file, 168, 3, 4017);
-      add_location(th2, file, 169, 3, 4034);
-      add_location(tr, file, 166, 2, 3992);
-      add_location(table, file, 165, 1, 3982);
+      add_location(h2, file, 165, 1, 3867);
+      add_location(th0, file, 168, 3, 3969);
+      add_location(th1, file, 169, 3, 3986);
+      add_location(th2, file, 170, 3, 4003);
+      add_location(tr, file, 167, 2, 3961);
+      add_location(table, file, 166, 1, 3951);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -225,11 +227,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(164:0) {#if isHistoryShown}",
+    source: "(165:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (176:3) {#each day[1] as symptom}
+} // (177:3) {#each day[1] as symptom}
 
 
 function create_each_block_1(ctx) {
@@ -303,12 +305,12 @@ function create_each_block_1(ctx) {
       button.value = button_value_value =
       /*symptom*/
       ctx[27].time;
-      add_location(button, file, 178, 5, 4230);
+      add_location(button, file, 179, 5, 4199);
       attr_dev(td0, "class", "text-sm");
-      add_location(td0, file, 177, 4, 4204);
-      add_location(td1, file, 182, 4, 4343);
-      add_location(td2, file, 183, 4, 4371);
-      add_location(tr, file, 176, 3, 4195);
+      add_location(td0, file, 178, 4, 4173);
+      add_location(td1, file, 183, 4, 4312);
+      add_location(td2, file, 184, 4, 4340);
+      add_location(tr, file, 177, 3, 4164);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -341,11 +343,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(176:3) {#each day[1] as symptom}",
+    source: "(177:3) {#each day[1] as symptom}",
     ctx: ctx
   });
   return block;
-} // (172:2) {#each formatHistory() as day}
+} // (173:2) {#each formatHistory() as day}
 
 
 function create_each_block(ctx) {
@@ -404,8 +406,8 @@ function create_each_block(ctx) {
     h: function hydrate() {
       attr_dev(th, "class", "text-left");
       attr_dev(th, "colspan", "3");
-      add_location(th, file, 173, 4, 4106);
-      add_location(tr, file, 172, 3, 4097);
+      add_location(th, file, 174, 4, 4075);
+      add_location(tr, file, 173, 3, 4066);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -462,11 +464,11 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(172:2) {#each formatHistory() as day}",
+    source: "(173:2) {#each formatHistory() as day}",
     ctx: ctx
   });
   return block;
-} // (191:0) {#if isManualAdd}
+} // (192:0) {#if isManualAdd}
 
 
 function create_if_block_1(ctx) {
@@ -528,11 +530,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(191:0) {#if isManualAdd}",
+    source: "(192:0) {#if isManualAdd}",
     ctx: ctx
   });
   return block;
-} // (192:1) <Modal on:closeModal={cancelManualAdd}>
+} // (193:1) <Modal on:closeModal={cancelManualAdd}>
 
 
 function create_default_slot_1(ctx) {
@@ -616,20 +618,20 @@ function create_default_slot_1(ctx) {
     h: function hydrate() {
       attr_dev(input0, "class", "block bg-gray-900 pl-1");
       attr_dev(input0, "type", "date");
-      add_location(input0, file, 195, 4, 4603);
+      add_location(input0, file, 196, 4, 4572);
       attr_dev(label0, "class", "block p-1 mb-1");
-      add_location(label0, file, 193, 3, 4559);
+      add_location(label0, file, 194, 3, 4528);
       attr_dev(input1, "class", "block bg-gray-900 pl-1");
       attr_dev(input1, "type", "time");
-      add_location(input1, file, 203, 4, 4760);
+      add_location(input1, file, 204, 4, 4729);
       attr_dev(label1, "class", "block p-1 mb-1");
-      add_location(label1, file, 201, 3, 4716);
+      add_location(label1, file, 202, 3, 4685);
       attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
-      add_location(button0, file, 209, 3, 4873);
+      add_location(button0, file, 210, 3, 4842);
       attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button1, file, 213, 3, 5038);
+      add_location(button1, file, 214, 3, 5007);
       attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
-      add_location(div, file, 192, 2, 4508);
+      add_location(div, file, 193, 2, 4477);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -693,11 +695,11 @@ function create_default_slot_1(ctx) {
     block: block,
     id: create_default_slot_1.name,
     type: "slot",
-    source: "(192:1) <Modal on:closeModal={cancelManualAdd}>",
+    source: "(193:1) <Modal on:closeModal={cancelManualAdd}>",
     ctx: ctx
   });
   return block;
-} // (222:0) {#if isEdit}
+} // (223:0) {#if isEdit}
 
 
 function create_if_block(ctx) {
@@ -759,11 +761,11 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(222:0) {#if isEdit}",
+    source: "(223:0) {#if isEdit}",
     ctx: ctx
   });
   return block;
-} // (223:1) <Modal on:closeModal={() => isEdit = false}>
+} // (224:1) <Modal on:closeModal={() => isEdit = false}>
 
 
 function create_default_slot(ctx) {
@@ -808,11 +810,11 @@ function create_default_slot(ctx) {
     },
     h: function hydrate() {
       attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button0, file, 224, 3, 5325);
+      add_location(button0, file, 225, 3, 5294);
       attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button1, file, 228, 3, 5484);
+      add_location(button1, file, 229, 3, 5453);
       attr_dev(div, "class", "w-10/12 bg-gray-800 p-4");
-      add_location(div, file, 223, 2, 5284);
+      add_location(div, file, 224, 2, 5253);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -842,7 +844,7 @@ function create_default_slot(ctx) {
     block: block,
     id: create_default_slot.name,
     type: "slot",
-    source: "(223:1) <Modal on:closeModal={() => isEdit = false}>",
+    source: "(224:1) <Modal on:closeModal={() => isEdit = false}>",
     ctx: ctx
   });
   return block;
@@ -1037,39 +1039,39 @@ function create_fragment(ctx) {
     h: function hydrate() {
       document.title = "Symptom Log";
       attr_dev(h1, "class", "text-yellow-500 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file, 118, 0, 2495);
+      add_location(h1, file, 119, 0, 2464);
       attr_dev(span, "class", "text-xl");
-      add_location(span, file, 121, 4, 2727);
+      add_location(span, file, 122, 4, 2696);
       attr_dev(input, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
       attr_dev(input, "type", "text");
-      add_location(input, file, 122, 4, 2768);
+      add_location(input, file, 123, 4, 2737);
       attr_dev(label, "class", "space-y-1 block text-center");
-      add_location(label, file, 120, 2, 2679);
+      add_location(label, file, 121, 2, 2648);
       button0.value = "-1";
       attr_dev(button0, "type", "button");
       button0.disabled = button0_disabled_value =
       /*intensity*/
       ctx[4] === 0;
       attr_dev(button0, "class", "border-black border bg-gray-700 px-2 rounded-lg svelte-kg2gg");
-      add_location(button0, file, 128, 2, 2937);
+      add_location(button0, file, 129, 2, 2906);
       attr_dev(p, "class", "text-xl");
-      add_location(p, file, 134, 2, 3111);
+      add_location(p, file, 135, 2, 3080);
       attr_dev(button1, "type", "button");
       button1.value = "1";
       button1.disabled = button1_disabled_value =
       /*intensity*/
       ctx[4] === 5;
       attr_dev(button1, "class", "border-black border bg-gray-700 px-2 rounded-lg svelte-kg2gg");
-      add_location(button1, file, 135, 2, 3159);
+      add_location(button1, file, 136, 2, 3128);
       attr_dev(div, "class", "flex justify-around");
-      add_location(div, file, 127, 1, 2901);
+      add_location(div, file, 128, 1, 2870);
       attr_dev(button2, "class", "text-black border-2 bg-white border-solid rounded-lg shadow-sm border-yellow-500 px-3 py-1 block mx-auto text-xl");
-      add_location(button2, file, 142, 2, 3340);
+      add_location(button2, file, 143, 2, 3309);
       attr_dev(button3, "type", "button");
       attr_dev(button3, "class", "mx-auto rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button3, file, 145, 1, 3499);
+      add_location(button3, file, 146, 1, 3468);
       attr_dev(form, "class", "space-y-4 mb-4 border border-gray-700 pb-2");
-      add_location(form, file, 119, 0, 2578);
+      add_location(form, file, 120, 0, 2547);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -1347,41 +1349,79 @@ function instance($$self, $$props, $$invalidate) {
   }
 
   function submitManualAdd() {
-    var year = parseInt(manualAddDate);
-    var month = parseInt(manualAddDate.slice(5, 7)) - 1;
-    var day = parseInt(manualAddDate.slice(8, 11));
-    var hour = parseInt(manualAddTime);
-    var min = parseInt(manualAddTime.slice(3, 5));
-    var time = new Date(year, month, day, hour, min).getTime();
-    symptomHistory.push({
-      name: name,
-      intensity: intensity,
-      time: time,
-      flag: "manualAdd"
-    });
+    return _submitManualAdd.apply(this, arguments);
+  }
 
-    {
-      localStorage.symptomHistory = JSON.stringify(symptomHistory);
-    }
+  function _submitManualAdd() {
+    _submitManualAdd = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
+      var db, year, month, day, hour, min, time;
+      return regenerator.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return firestore();
 
-    $$invalidate(0, isManualAdd = false);
-    $$invalidate(5, name = "");
-    $$invalidate(4, intensity = 0);
+            case 2:
+              db = _context.sent;
+              year = parseInt(manualAddDate);
+              month = parseInt(manualAddDate.slice(5, 7)) - 1;
+              day = parseInt(manualAddDate.slice(8, 11));
+              hour = parseInt(manualAddTime);
+              min = parseInt(manualAddTime.slice(3, 5));
+              time = new Date(year, month, day, hour, min).getTime();
+              db.collection("symptom").add({
+                name: name,
+                intensity: intensity,
+                time: time,
+                flag: "manualAdd"
+              });
+              $$invalidate(0, isManualAdd = false);
+              $$invalidate(5, name = "");
+              $$invalidate(4, intensity = 0);
+
+            case 13:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+    return _submitManualAdd.apply(this, arguments);
   }
 
   function submitSymptom() {
-    symptomHistory.push({
-      time: new Date().getTime(),
-      name: name,
-      intensity: intensity
-    });
+    return _submitSymptom.apply(this, arguments);
+  }
 
-    {
-      localStorage.symptomHistory = JSON.stringify(symptomHistory);
-    }
+  function _submitSymptom() {
+    _submitSymptom = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee2() {
+      var db;
+      return regenerator.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return firestore();
 
-    $$invalidate(5, name = "");
-    $$invalidate(4, intensity = 0);
+            case 2:
+              db = _context2.sent;
+              db.collection("symptom").add({
+                time: new Date().getTime(),
+                name: name,
+                intensity: intensity
+              });
+              $$invalidate(5, name = "");
+              $$invalidate(4, intensity = 0);
+
+            case 6:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+    return _submitSymptom.apply(this, arguments);
   }
 
   function incrementIntensity(_ref3) {
@@ -1436,6 +1476,7 @@ function instance($$self, $$props, $$invalidate) {
 
   $$self.$capture_state = function () {
     return {
+      firestore: firestore,
       Modal: Modal,
       isManualAdd: isManualAdd,
       manualAddDate: manualAddDate,

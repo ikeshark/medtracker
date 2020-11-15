@@ -1,5 +1,7 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, V as _createClass, S as SvelteComponentDev, y as validate_slots, P as createEventDispatcher, D as create_component, E as claim_component, F as mount_component, Q as _slicedToArray, G as transition_in, H as transition_out, I as destroy_component, h as element, t as text, g as space, l as claim_element, m as children, n as claim_text, j as detach_dev, k as claim_space, p as attr_dev, o as add_location, u as insert_dev, v as append_dev, A as set_input_value, w as listen_dev, L as run_all, x as noop, B as validate_each_argument, C as destroy_each, z as empty, q as query_selector_all, J as prevent_default, K as check_outros, M as globals, N as group_outros } from './client.18291dac.js';
-import { M as Modal } from './Modal.ace87683.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, V as _createClass, S as SvelteComponentDev, w as validate_slots, P as createEventDispatcher, D as create_component, E as claim_component, F as mount_component, Q as _slicedToArray, G as transition_in, H as transition_out, I as destroy_component, g as element, t as text, f as space, k as claim_element, l as children, m as claim_text, h as detach_dev, j as claim_space, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, A as set_input_value, u as listen_dev, L as run_all, v as noop, B as validate_each_argument, C as destroy_each, z as empty, q as query_selector_all, J as prevent_default, K as check_outros, M as globals, N as group_outros, x as regenerator } from './client.f4345633.js';
+import { _ as _asyncToGenerator } from './asyncToGenerator.5229e80b.js';
+import { f as firestore } from './firebase.5a1090f6.js';
+import { M as Modal } from './Modal.80d9e9b3.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -486,7 +488,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[5] = list[i];
   return child_ctx;
-} // (155:0) {#if Object.values(foodHistory).length}
+} // (156:0) {#if Object.values(foodHistory).length}
 
 
 function create_if_block_2(ctx) {
@@ -511,7 +513,7 @@ function create_if_block_2(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "mt-4 block mx-auto rounded-md border-black border py-2 px-4 text-white bg-yellow-700");
-      add_location(button, file$1, 155, 1, 3615);
+      add_location(button, file$1, 156, 1, 3634);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -535,11 +537,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(155:0) {#if Object.values(foodHistory).length}",
+    source: "(156:0) {#if Object.values(foodHistory).length}",
     ctx: ctx
   });
   return block;
-} // (164:0) {#if isHistoryShown}
+} // (165:0) {#if isHistoryShown}
 
 
 function create_if_block_1(ctx) {
@@ -634,16 +636,16 @@ function create_if_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-300 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file$1, 164, 1, 3801);
+      add_location(h2, file$1, 165, 1, 3820);
       attr_dev(th0, "class", "svelte-cyr33f");
-      add_location(th0, file$1, 167, 3, 3904);
+      add_location(th0, file$1, 168, 3, 3923);
       attr_dev(th1, "class", "svelte-cyr33f");
-      add_location(th1, file$1, 168, 3, 3921);
+      add_location(th1, file$1, 169, 3, 3940);
       attr_dev(th2, "class", "svelte-cyr33f");
-      add_location(th2, file$1, 169, 6, 3941);
+      add_location(th2, file$1, 170, 6, 3960);
       attr_dev(tr, "class", "svelte-cyr33f");
-      add_location(tr, file$1, 166, 2, 3896);
-      add_location(table, file$1, 165, 1, 3886);
+      add_location(tr, file$1, 167, 2, 3915);
+      add_location(table, file$1, 166, 1, 3905);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -706,11 +708,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(164:0) {#if isHistoryShown}",
+    source: "(165:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (176:3) {#each food[1] as history}
+} // (177:3) {#each food[1] as history}
 
 
 function create_each_block_1(ctx) {
@@ -778,13 +780,13 @@ function create_each_block_1(ctx) {
     },
     h: function hydrate() {
       attr_dev(td0, "class", "text-sm svelte-cyr33f");
-      add_location(td0, file$1, 177, 4, 4111);
+      add_location(td0, file$1, 178, 4, 4130);
       attr_dev(td1, "class", "svelte-cyr33f");
-      add_location(td1, file$1, 178, 4, 4167);
+      add_location(td1, file$1, 179, 4, 4186);
       attr_dev(td2, "class", "svelte-cyr33f");
-      add_location(td2, file$1, 179, 8, 4199);
+      add_location(td2, file$1, 180, 8, 4218);
       attr_dev(tr, "class", "svelte-cyr33f");
-      add_location(tr, file$1, 176, 3, 4102);
+      add_location(tr, file$1, 177, 3, 4121);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -807,11 +809,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(176:3) {#each food[1] as history}",
+    source: "(177:3) {#each food[1] as history}",
     ctx: ctx
   });
   return block;
-} // (172:2) {#each formatHistory() as food}
+} // (173:2) {#each formatHistory() as food}
 
 
 function create_each_block(ctx) {
@@ -872,9 +874,9 @@ function create_each_block(ctx) {
     h: function hydrate() {
       attr_dev(th, "class", "text-left svelte-cyr33f");
       attr_dev(th, "colspan", "3");
-      add_location(th, file$1, 173, 4, 4011);
+      add_location(th, file$1, 174, 4, 4030);
       attr_dev(tr, "class", "svelte-cyr33f");
-      add_location(tr, file$1, 172, 3, 4002);
+      add_location(tr, file$1, 173, 3, 4021);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -931,11 +933,11 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(172:2) {#each formatHistory() as food}",
+    source: "(173:2) {#each formatHistory() as food}",
     ctx: ctx
   });
   return block;
-} // (187:0) {#if isTimePicker}
+} // (188:0) {#if isTimePicker}
 
 
 function create_if_block(ctx) {
@@ -992,7 +994,7 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(187:0) {#if isTimePicker}",
+    source: "(188:0) {#if isTimePicker}",
     ctx: ctx
   });
   return block;
@@ -1157,30 +1159,30 @@ function create_fragment$1(ctx) {
     },
     h: function hydrate() {
       document.title = "Food Log";
-      add_location(br, file$1, 119, 14, 2641);
+      add_location(br, file$1, 120, 14, 2660);
       attr_dev(h1, "class", "mb-4 text-yellow-400 bold text-3xl md:text-4xl text-center leading-tight");
-      add_location(h1, file$1, 118, 0, 2541);
+      add_location(h1, file$1, 119, 0, 2560);
       attr_dev(span0, "class", "text-xl");
-      add_location(span0, file$1, 126, 4, 2804);
+      add_location(span0, file$1, 127, 4, 2823);
       attr_dev(input0, "class", "shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input0, file$1, 127, 4, 2847);
+      add_location(input0, file$1, 128, 4, 2866);
       attr_dev(label0, "class", "space-y-1 block text-center");
-      add_location(label0, file$1, 125, 2, 2756);
+      add_location(label0, file$1, 126, 2, 2775);
       attr_dev(span1, "class", "text-xl");
-      add_location(span1, file$1, 132, 4, 3011);
+      add_location(span1, file$1, 133, 4, 3030);
       attr_dev(input1, "class", "w-10 ml-2 px-1 shadow-sm bg-gray-900 border-2 rounded border-yellow-300");
-      add_location(input1, file$1, 133, 4, 3053);
+      add_location(input1, file$1, 134, 4, 3072);
       attr_dev(label1, "class", "space-y-1 block text-center");
-      add_location(label1, file$1, 131, 2, 2963);
+      add_location(label1, file$1, 132, 2, 2982);
       attr_dev(button0, "class", "rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button0, file$1, 138, 4, 3235);
+      add_location(button0, file$1, 139, 4, 3254);
       attr_dev(button1, "type", "button");
       attr_dev(button1, "class", "rounded-md block border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button1, file$1, 143, 4, 3365);
+      add_location(button1, file$1, 144, 4, 3384);
       attr_dev(div, "class", "pt-1 flex justify-evenly");
-      add_location(div, file$1, 137, 2, 3192);
+      add_location(div, file$1, 138, 2, 3211);
       attr_dev(form, "class", "space-y-2 border border-gray-700 py-2");
-      add_location(form, file$1, 121, 0, 2655);
+      add_location(form, file$1, 122, 0, 2674);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -1446,18 +1448,37 @@ function instance$1($$self, $$props, $$invalidate) {
   }
 
   function submitFood() {
-    foodHistory.push({
-      time: time,
-      name: food,
-      quantity: foodQuantity
-    });
+    return _submitFood.apply(this, arguments);
+  }
 
-    {
-      localStorage.foodHistory = JSON.stringify(foodHistory);
-    }
+  function _submitFood() {
+    _submitFood = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
+      var db;
+      return regenerator.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return firestore();
 
-    $$invalidate(5, food = "");
-    $$invalidate(3, foodQuantity = "");
+            case 2:
+              db = _context.sent;
+              db.collection("food").add({
+                time: time,
+                name: food,
+                quantity: foodQuantity
+              });
+              $$invalidate(5, food = "");
+              $$invalidate(3, foodQuantity = "");
+
+            case 6:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+    return _submitFood.apply(this, arguments);
   }
 
   function showHistory() {
@@ -1489,6 +1510,7 @@ function instance$1($$self, $$props, $$invalidate) {
 
   $$self.$capture_state = function () {
     return {
+      firestore: firestore,
       TimePicker: TimePicker,
       isHistoryShown: isHistoryShown,
       isManualAdd: isManualAdd,

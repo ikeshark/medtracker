@@ -1,48 +1,6 @@
-import { r as regenerator, f as firebaseConfig, _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, g as space, h as element, t as text, q as query_selector_all, j as detach_dev, k as claim_space, l as claim_element, m as children, n as claim_text, o as add_location, p as attr_dev, u as insert_dev, v as append_dev, w as listen_dev, x as noop, y as validate_slots } from './client.18291dac.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, f as space, g as element, t as text, q as query_selector_all, h as detach_dev, j as claim_space, k as claim_element, l as children, m as claim_text, n as add_location, o as attr_dev, p as insert_dev, r as append_dev, u as listen_dev, v as noop, w as validate_slots, x as regenerator } from './client.f4345633.js';
 import { _ as _asyncToGenerator } from './asyncToGenerator.5229e80b.js';
-
-function firestore() {
-  return _firestore.apply(this, arguments);
-}
-
-function _firestore() {
-  _firestore = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
-    var _firestore2, app;
-
-    return regenerator.wrap(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-
-            return _context.abrupt("return", window.db);
-
-          case 4:
-            _context.next = 6;
-            return Promise.all([import('./index.esm.5875cd99.js'), __inject_styles(["client-c2ed52fa.css"])]).then(function(x) { return x[0]; });
-
-          case 6:
-            _firestore2 = _context.sent;
-
-            if (!(firebase.apps.length == 0)) {
-              _context.next = 12;
-              break;
-            }
-
-            app = firebase.initializeApp(firebaseConfig);
-            return _context.abrupt("return", app.firestore());
-
-          case 12:
-            return _context.abrupt("return", firebase.apps[0].firestore());
-
-          case 13:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, _callee);
-  }));
-  return _firestore.apply(this, arguments);
-}
+import { f as firestore } from './firebase.5a1090f6.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -95,11 +53,11 @@ function create_fragment(ctx) {
     },
     h: function hydrate() {
       document.title = "Symptom Tracker";
-      add_location(br, file, 44, 65, 1128);
+      add_location(br, file, 44, 65, 1116);
       attr_dev(h1, "class", "text-orange-400 text-6xl md:text-4xl leading-none");
-      add_location(h1, file, 44, 0, 1063);
+      add_location(h1, file, 44, 0, 1051);
       attr_dev(button, "class", "border-2 border-black p-2 text-md mt-12");
-      add_location(button, file, 45, 0, 1145);
+      add_location(button, file, 45, 0, 1133);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -152,7 +110,7 @@ function instance($$self, $$props, $$invalidate) {
 
   function _exportData() {
     _exportData = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
-      var db, peeHistory, foodHistory, symptomHistory;
+      var db, activityHistory, peeHistory, foodHistory, symptomHistory;
       return regenerator.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -164,10 +122,10 @@ function instance($$self, $$props, $$invalidate) {
               db = _context.sent;
 
               {
-                // const activityHistory = JSON.parse(localStorage.activityHistory);
-                // activityHistory.forEach(item => {
-                // 	db.collection('activity').add(item)
-                // });
+                activityHistory = JSON.parse(localStorage.activityHistory);
+                activityHistory.forEach(function (item) {
+                  db.collection("activity").add(item);
+                });
                 peeHistory = JSON.parse(localStorage.peeHistory);
                 peeHistory.forEach(function (item) {
                   db.collection("urine").add(item);
@@ -232,5 +190,3 @@ var Routes = /*#__PURE__*/function (_SvelteComponentDev) {
 }(SvelteComponentDev);
 
 export default Routes;
-
-import __inject_styles from './inject_styles.fe622066.js';

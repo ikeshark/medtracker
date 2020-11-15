@@ -1,5 +1,7 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, V as _createClass, S as SvelteComponentDev, y as validate_slots, P as createEventDispatcher, D as create_component, E as claim_component, F as mount_component, Q as _slicedToArray, G as transition_in, H as transition_out, I as destroy_component, h as element, t as text, g as space, l as claim_element, m as children, n as claim_text, j as detach_dev, k as claim_space, p as attr_dev, o as add_location, u as insert_dev, v as append_dev, A as set_input_value, w as listen_dev, L as run_all, x as noop, B as validate_each_argument, C as destroy_each, z as empty, U as set_data_dev, q as query_selector_all, K as check_outros, M as globals, T as prop_dev, N as group_outros } from './client.18291dac.js';
-import { M as Modal } from './Modal.ace87683.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, s as safe_not_equal, d as _assertThisInitialized, e as dispatch_dev, V as _createClass, S as SvelteComponentDev, w as validate_slots, P as createEventDispatcher, D as create_component, E as claim_component, F as mount_component, Q as _slicedToArray, G as transition_in, H as transition_out, I as destroy_component, g as element, t as text, f as space, k as claim_element, l as children, m as claim_text, h as detach_dev, j as claim_space, o as attr_dev, n as add_location, p as insert_dev, r as append_dev, A as set_input_value, u as listen_dev, L as run_all, v as noop, B as validate_each_argument, C as destroy_each, z as empty, U as set_data_dev, q as query_selector_all, K as check_outros, M as globals, T as prop_dev, N as group_outros, x as regenerator } from './client.f4345633.js';
+import { _ as _asyncToGenerator } from './asyncToGenerator.5229e80b.js';
+import { f as firestore } from './firebase.5a1090f6.js';
+import { M as Modal } from './Modal.80d9e9b3.js';
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -506,7 +508,7 @@ function get_each_context(ctx, list, i) {
   var child_ctx = ctx.slice();
   child_ctx[36] = list[i];
   return child_ctx;
-} // (197:19) 
+} // (200:19) 
 
 
 function create_if_block_6(ctx) {
@@ -568,9 +570,9 @@ function create_if_block_6(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "underline ml-2");
-      add_location(button, file$1, 198, 2, 4582);
+      add_location(button, file$1, 201, 2, 4570);
       attr_dev(p, "class", "mb-2");
-      add_location(p, file$1, 197, 1, 4524);
+      add_location(p, file$1, 200, 1, 4512);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -622,11 +624,11 @@ function create_if_block_6(ctx) {
     block: block,
     id: create_if_block_6.name,
     type: "if",
-    source: "(197:19) ",
+    source: "(200:19) ",
     ctx: ctx
   });
   return block;
-} // (182:0) {#if !isPeeing}
+} // (185:0) {#if !isPeeing}
 
 
 function create_if_block_5(ctx) {
@@ -671,11 +673,11 @@ function create_if_block_5(ctx) {
     },
     h: function hydrate() {
       attr_dev(button0, "class", "block mb-4 mx-auto rounded-md border-black border py-2 px-4 text-white bg-green-700");
-      add_location(button0, file$1, 183, 2, 4182);
+      add_location(button0, file$1, 186, 2, 4170);
       attr_dev(button1, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button1, file$1, 189, 2, 4339);
+      add_location(button1, file$1, 192, 2, 4327);
       attr_dev(div, "class", "flex");
-      add_location(div, file$1, 182, 1, 4161);
+      add_location(div, file$1, 185, 1, 4149);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -705,11 +707,11 @@ function create_if_block_5(ctx) {
     block: block,
     id: create_if_block_5.name,
     type: "if",
-    source: "(182:0) {#if !isPeeing}",
+    source: "(185:0) {#if !isPeeing}",
     ctx: ctx
   });
   return block;
-} // (216:1) {:else}
+} // (219:1) {:else}
 
 
 function create_else_block(ctx) {
@@ -766,11 +768,11 @@ function create_else_block(ctx) {
     },
     h: function hydrate() {
       attr_dev(button0, "class", "underline ml-2");
-      add_location(button0, file$1, 217, 3, 5087);
+      add_location(button0, file$1, 220, 3, 5075);
       attr_dev(p, "class", "mb-2");
-      add_location(p, file$1, 216, 2, 5036);
+      add_location(p, file$1, 219, 2, 5024);
       attr_dev(button1, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button1, file$1, 218, 2, 5161);
+      add_location(button1, file$1, 221, 2, 5149);
     },
     m: function mount(target, anchor) {
       insert_dev(target, p, anchor);
@@ -811,11 +813,11 @@ function create_else_block(ctx) {
     block: block,
     id: create_else_block.name,
     type: "else",
-    source: "(216:1) {:else}",
+    source: "(219:1) {:else}",
     ctx: ctx
   });
   return block;
-} // (201:1) {#if !endTime}
+} // (204:1) {#if !endTime}
 
 
 function create_if_block_7(ctx) {
@@ -860,11 +862,11 @@ function create_if_block_7(ctx) {
     },
     h: function hydrate() {
       attr_dev(button0, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-red-700");
-      add_location(button0, file$1, 202, 3, 4698);
+      add_location(button0, file$1, 205, 3, 4686);
       attr_dev(button1, "class", "rounded-md mb-4 block mx-auto border-black border py-2 px-4 text-white bg-gray-700");
-      add_location(button1, file$1, 208, 3, 4855);
+      add_location(button1, file$1, 211, 3, 4843);
       attr_dev(div, "class", "flex");
-      add_location(div, file$1, 201, 2, 4676);
+      add_location(div, file$1, 204, 2, 4664);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -894,11 +896,11 @@ function create_if_block_7(ctx) {
     block: block,
     id: create_if_block_7.name,
     type: "if",
-    source: "(201:1) {#if !endTime}",
+    source: "(204:1) {#if !endTime}",
     ctx: ctx
   });
   return block;
-} // (226:0) {#if Object.values(peeHistory).length}
+} // (229:0) {#if Object.values(peeHistory).length}
 
 
 function create_if_block_4(ctx) {
@@ -923,7 +925,7 @@ function create_if_block_4(ctx) {
     },
     h: function hydrate() {
       attr_dev(button, "class", "block mx-auto rounded-md border-black border py-2 px-4 text-white bg-blue-700");
-      add_location(button, file$1, 226, 1, 5360);
+      add_location(button, file$1, 229, 1, 5348);
     },
     m: function mount(target, anchor) {
       insert_dev(target, button, anchor);
@@ -947,11 +949,11 @@ function create_if_block_4(ctx) {
     block: block,
     id: create_if_block_4.name,
     type: "if",
-    source: "(226:0) {#if Object.values(peeHistory).length}",
+    source: "(229:0) {#if Object.values(peeHistory).length}",
     ctx: ctx
   });
   return block;
-} // (235:0) {#if isHistoryShown}
+} // (238:0) {#if isHistoryShown}
 
 
 function create_if_block_3(ctx) {
@@ -1029,11 +1031,11 @@ function create_if_block_3(ctx) {
     },
     h: function hydrate() {
       attr_dev(h2, "class", "text-yellow-500 bold text-2xl md:text-3xl text-center");
-      add_location(h2, file$1, 235, 1, 5539);
-      add_location(th0, file$1, 238, 3, 5641);
-      add_location(th1, file$1, 239, 3, 5658);
-      add_location(tr, file$1, 237, 2, 5633);
-      add_location(table, file$1, 236, 1, 5623);
+      add_location(h2, file$1, 238, 1, 5527);
+      add_location(th0, file$1, 241, 3, 5629);
+      add_location(th1, file$1, 242, 3, 5646);
+      add_location(tr, file$1, 240, 2, 5621);
+      add_location(table, file$1, 239, 1, 5611);
     },
     m: function mount(target, anchor) {
       insert_dev(target, h2, anchor);
@@ -1095,11 +1097,11 @@ function create_if_block_3(ctx) {
     block: block,
     id: create_if_block_3.name,
     type: "if",
-    source: "(235:0) {#if isHistoryShown}",
+    source: "(238:0) {#if isHistoryShown}",
     ctx: ctx
   });
   return block;
-} // (246:3) {#each day[1] as pee}
+} // (249:3) {#each day[1] as pee}
 
 
 function create_each_block_1(ctx) {
@@ -1159,11 +1161,11 @@ function create_each_block_1(ctx) {
       button.value = button_value_value =
       /*pee*/
       ctx[13].startTime;
-      add_location(button, file$1, 248, 5, 5848);
+      add_location(button, file$1, 251, 5, 5836);
       attr_dev(td0, "class", "text-sm");
-      add_location(td0, file$1, 247, 4, 5822);
-      add_location(td1, file$1, 252, 4, 5963);
-      add_location(tr, file$1, 246, 3, 5813);
+      add_location(td0, file$1, 250, 4, 5810);
+      add_location(td1, file$1, 255, 4, 5951);
+      add_location(tr, file$1, 249, 3, 5801);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -1213,11 +1215,11 @@ function create_each_block_1(ctx) {
     block: block,
     id: create_each_block_1.name,
     type: "each",
-    source: "(246:3) {#each day[1] as pee}",
+    source: "(249:3) {#each day[1] as pee}",
     ctx: ctx
   });
   return block;
-} // (242:2) {#each formattedHistory as day}
+} // (245:2) {#each formattedHistory as day}
 
 
 function create_each_block(ctx) {
@@ -1276,8 +1278,8 @@ function create_each_block(ctx) {
     h: function hydrate() {
       attr_dev(th, "class", "text-left");
       attr_dev(th, "colspan", "2");
-      add_location(th, file$1, 243, 4, 5728);
-      add_location(tr, file$1, 242, 3, 5719);
+      add_location(th, file$1, 246, 4, 5716);
+      add_location(tr, file$1, 245, 3, 5707);
     },
     m: function mount(target, anchor) {
       insert_dev(target, tr, anchor);
@@ -1340,11 +1342,11 @@ function create_each_block(ctx) {
     block: block,
     id: create_each_block.name,
     type: "each",
-    source: "(242:2) {#each formattedHistory as day}",
+    source: "(245:2) {#each formattedHistory as day}",
     ctx: ctx
   });
   return block;
-} // (260:0) {#if isManualAdd}
+} // (263:0) {#if isManualAdd}
 
 
 function create_if_block_2(ctx) {
@@ -1408,11 +1410,11 @@ function create_if_block_2(ctx) {
     block: block,
     id: create_if_block_2.name,
     type: "if",
-    source: "(260:0) {#if isManualAdd}",
+    source: "(263:0) {#if isManualAdd}",
     ctx: ctx
   });
   return block;
-} // (261:1) <Modal on:closeModal={cancelManualAdd}>
+} // (264:1) <Modal on:closeModal={cancelManualAdd}>
 
 
 function create_default_slot_1(ctx) {
@@ -1515,25 +1517,25 @@ function create_default_slot_1(ctx) {
     h: function hydrate() {
       attr_dev(input0, "class", "block bg-gray-900 pl-1 svelte-dbfpqa");
       attr_dev(input0, "type", "date");
-      add_location(input0, file$1, 264, 4, 6208);
+      add_location(input0, file$1, 267, 4, 6196);
       attr_dev(label0, "class", "block p-1 mb-1");
-      add_location(label0, file$1, 262, 3, 6164);
+      add_location(label0, file$1, 265, 3, 6152);
       attr_dev(input1, "class", "block bg-gray-900 pl-1 svelte-dbfpqa");
       attr_dev(input1, "type", "time");
-      add_location(input1, file$1, 272, 4, 6365);
+      add_location(input1, file$1, 275, 4, 6353);
       attr_dev(label1, "class", "block p-1 mb-1");
-      add_location(label1, file$1, 270, 3, 6321);
+      add_location(label1, file$1, 273, 3, 6309);
       attr_dev(input2, "class", "block bg-gray-900 pl-1 svelte-dbfpqa");
       attr_dev(input2, "type", "text");
-      add_location(input2, file$1, 280, 4, 6534);
+      add_location(input2, file$1, 283, 4, 6522);
       attr_dev(label2, "class", "block p-1 mb-1");
-      add_location(label2, file$1, 278, 3, 6478);
+      add_location(label2, file$1, 281, 3, 6466);
       attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-green-700 rounded-lg font-bold text-xl");
-      add_location(button0, file$1, 286, 3, 6649);
+      add_location(button0, file$1, 289, 3, 6637);
       attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button1, file$1, 290, 3, 6814);
+      add_location(button1, file$1, 293, 3, 6802);
       attr_dev(div, "class", "w-10/12 shadow-lg p-4 bg-gray-800");
-      add_location(div, file$1, 261, 2, 6113);
+      add_location(div, file$1, 264, 2, 6101);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -1616,11 +1618,11 @@ function create_default_slot_1(ctx) {
     block: block,
     id: create_default_slot_1.name,
     type: "slot",
-    source: "(261:1) <Modal on:closeModal={cancelManualAdd}>",
+    source: "(264:1) <Modal on:closeModal={cancelManualAdd}>",
     ctx: ctx
   });
   return block;
-} // (299:0) {#if isEdit}
+} // (302:0) {#if isEdit}
 
 
 function create_if_block_1(ctx) {
@@ -1684,11 +1686,11 @@ function create_if_block_1(ctx) {
     block: block,
     id: create_if_block_1.name,
     type: "if",
-    source: "(299:0) {#if isEdit}",
+    source: "(302:0) {#if isEdit}",
     ctx: ctx
   });
   return block;
-} // (300:1) <Modal on:closeModal={() => isEdit = false}>
+} // (303:1) <Modal on:closeModal={() => isEdit = false}>
 
 
 function create_default_slot$1(ctx) {
@@ -1733,11 +1735,11 @@ function create_default_slot$1(ctx) {
     },
     h: function hydrate() {
       attr_dev(button0, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button0, file$1, 301, 3, 7101);
+      add_location(button0, file$1, 304, 3, 7089);
       attr_dev(button1, "class", "block w-full mb-2 p-2 border-double border-8 border-red-700 rounded-lg font-bold text-xl");
-      add_location(button1, file$1, 305, 3, 7260);
+      add_location(button1, file$1, 308, 3, 7248);
       attr_dev(div, "class", "w-10/12 bg-gray-800 p-4");
-      add_location(div, file$1, 300, 2, 7060);
+      add_location(div, file$1, 303, 2, 7048);
     },
     m: function mount(target, anchor) {
       insert_dev(target, div, anchor);
@@ -1767,11 +1769,11 @@ function create_default_slot$1(ctx) {
     block: block,
     id: create_default_slot$1.name,
     type: "slot",
-    source: "(300:1) <Modal on:closeModal={() => isEdit = false}>",
+    source: "(303:1) <Modal on:closeModal={() => isEdit = false}>",
     ctx: ctx
   });
   return block;
-} // (315:0) {#if isTimePicker}
+} // (318:0) {#if isTimePicker}
 
 
 function create_if_block(ctx) {
@@ -1836,7 +1838,7 @@ function create_if_block(ctx) {
     block: block,
     id: create_if_block.name,
     type: "if",
-    source: "(315:0) {#if isTimePicker}",
+    source: "(318:0) {#if isTimePicker}",
     ctx: ctx
   });
   return block;
@@ -1930,7 +1932,7 @@ function create_fragment$1(ctx) {
     h: function hydrate() {
       document.title = "Pee Log";
       attr_dev(h1, "class", "mb-2 text-yellow-500 bold text-3xl md:text-4xl text-center");
-      add_location(h1, file$1, 179, 0, 4059);
+      add_location(h1, file$1, 182, 0, 4047);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -2212,18 +2214,40 @@ function instance$1($$self, $$props, $$invalidate) {
   }
 
   function submitPee() {
-    $$invalidate(4, isPeeing = false);
-    localStorage.isPeeing = false;
-    $$invalidate(13, pee.totalTime = endTime - pee.startTime, pee);
-    $$invalidate(1, endTime = null);
-    peeHistory.push(pee);
-    $$invalidate(3, peeHistory);
-    $$invalidate(13, pee = _objectSpread({}, peeInit));
+    return _submitPee.apply(this, arguments);
+  }
 
-    {
-      localStorage.peeHistory = JSON.stringify(peeHistory);
-      localStorage.pee = JSON.stringify(pee);
-    }
+  function _submitPee() {
+    _submitPee = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
+      var db;
+      return regenerator.wrap(function _callee$(_context) {
+        while (1) {
+          switch (_context.prev = _context.next) {
+            case 0:
+              _context.next = 2;
+              return firestore();
+
+            case 2:
+              db = _context.sent;
+              $$invalidate(4, isPeeing = false);
+              localStorage.isPeeing = false;
+              $$invalidate(13, pee.totalTime = endTime - pee.startTime, pee);
+              $$invalidate(1, endTime = null);
+              db.collection("urine").add(pee);
+              $$invalidate(13, pee = _objectSpread({}, peeInit));
+
+              {
+                localStorage.pee = JSON.stringify(pee);
+              }
+
+            case 10:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    }));
+    return _submitPee.apply(this, arguments);
   }
 
   function startPee() {
@@ -2258,24 +2282,43 @@ function instance$1($$self, $$props, $$invalidate) {
   }
 
   function submitManualAdd() {
-    var year = parseInt(manualAddDate);
-    var month = parseInt(manualAddDate.slice(5, 7)) - 1;
-    var day = parseInt(manualAddDate.slice(8, 11));
-    var hour = parseInt(manualAddTime);
-    var min = parseInt(manualAddTime.slice(3, 5));
-    var startTime = new Date(year, month, day, hour, min).getTime();
-    var totalTime = parseInt(manualAddLength) * 60000;
-    peeHistory.push({
-      startTime: startTime,
-      totalTime: totalTime,
-      flag: "manualAdd"
-    });
+    return _submitManualAdd.apply(this, arguments);
+  }
 
-    {
-      localStorage.peeHistory = JSON.stringify(peeHistory);
-    }
+  function _submitManualAdd() {
+    _submitManualAdd = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee2() {
+      var db, year, month, day, hour, min, startTime, totalTime;
+      return regenerator.wrap(function _callee2$(_context2) {
+        while (1) {
+          switch (_context2.prev = _context2.next) {
+            case 0:
+              _context2.next = 2;
+              return firestore();
 
-    $$invalidate(5, isManualAdd = false);
+            case 2:
+              db = _context2.sent;
+              year = parseInt(manualAddDate);
+              month = parseInt(manualAddDate.slice(5, 7)) - 1;
+              day = parseInt(manualAddDate.slice(8, 11));
+              hour = parseInt(manualAddTime);
+              min = parseInt(manualAddTime.slice(3, 5));
+              startTime = new Date(year, month, day, hour, min).getTime();
+              totalTime = parseInt(manualAddLength) * 60000;
+              db.collection("urine").add({
+                startTime: startTime,
+                totalTime: totalTime,
+                flag: "manualAdd"
+              });
+              $$invalidate(5, isManualAdd = false);
+
+            case 12:
+            case "end":
+              return _context2.stop();
+          }
+        }
+      }, _callee2);
+    }));
+    return _submitManualAdd.apply(this, arguments);
   }
 
   function showHistory() {
@@ -2333,6 +2376,7 @@ function instance$1($$self, $$props, $$invalidate) {
 
   $$self.$capture_state = function () {
     return {
+      firestore: firestore,
       Modal: Modal,
       TimePicker: Timepicker,
       peeInit: peeInit,
