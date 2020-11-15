@@ -1,6 +1,6 @@
-import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, f as space, g as element, t as text, q as query_selector_all, h as detach_dev, j as claim_space, k as claim_element, l as children, m as claim_text, n as add_location, o as attr_dev, p as insert_dev, r as append_dev, u as listen_dev, v as noop, w as validate_slots, x as regenerator } from './client.f4345633.js';
+import { _ as _inherits, a as _getPrototypeOf, b as _possibleConstructorReturn, c as _classCallCheck, i as init, d as _assertThisInitialized, e as dispatch_dev, S as SvelteComponentDev, s as safe_not_equal, f as space, g as element, t as text, q as query_selector_all, h as detach_dev, j as claim_space, k as claim_element, l as children, m as claim_text, n as add_location, o as attr_dev, p as insert_dev, r as append_dev, u as listen_dev, v as noop, w as validate_slots, x as regenerator } from './client.cc5323c7.js';
 import { _ as _asyncToGenerator } from './asyncToGenerator.5229e80b.js';
-import { f as firestore } from './firebase.5a1090f6.js';
+import { f as firestore } from './firebase.463db9f1.js';
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -27,7 +27,7 @@ function create_fragment(ctx) {
       t2 = text("Tracker");
       t3 = space();
       button = element("button");
-      t4 = text("Export Data");
+      t4 = text("Export Food / Symptom");
       this.h();
     },
     l: function claim(nodes) {
@@ -47,17 +47,17 @@ function create_fragment(ctx) {
         class: true
       });
       var button_nodes = children(button);
-      t4 = claim_text(button_nodes, "Export Data");
+      t4 = claim_text(button_nodes, "Export Food / Symptom");
       button_nodes.forEach(detach_dev);
       this.h();
     },
     h: function hydrate() {
       document.title = "Symptom Tracker";
-      add_location(br, file, 44, 65, 1116);
+      add_location(br, file, 34, 65, 826);
       attr_dev(h1, "class", "text-orange-400 text-6xl md:text-4xl leading-none");
-      add_location(h1, file, 44, 0, 1051);
+      add_location(h1, file, 34, 0, 761);
       attr_dev(button, "class", "border-2 border-black p-2 text-md mt-12");
-      add_location(button, file, 45, 0, 1133);
+      add_location(button, file, 35, 0, 843);
     },
     m: function mount(target, anchor) {
       insert_dev(target, t0, anchor);
@@ -110,7 +110,7 @@ function instance($$self, $$props, $$invalidate) {
 
   function _exportData() {
     _exportData = _asyncToGenerator( /*#__PURE__*/regenerator.mark(function _callee() {
-      var db, activityHistory, peeHistory, foodHistory, symptomHistory;
+      var db, foodHistory, symptomHistory;
       return regenerator.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -122,14 +122,6 @@ function instance($$self, $$props, $$invalidate) {
               db = _context.sent;
 
               {
-                activityHistory = JSON.parse(localStorage.activityHistory);
-                activityHistory.forEach(function (item) {
-                  db.collection("activity").add(item);
-                });
-                peeHistory = JSON.parse(localStorage.peeHistory);
-                peeHistory.forEach(function (item) {
-                  db.collection("urine").add(item);
-                });
                 foodHistory = JSON.parse(localStorage.foodHistory);
                 foodHistory.forEach(function (item) {
                   db.collection("food").add(item);

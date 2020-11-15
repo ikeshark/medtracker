@@ -1,4 +1,4 @@
-import { x as regenerator, y as firebaseConfig } from './client.f4345633.js';
+import { x as regenerator, y as firebaseConfig } from './client.cc5323c7.js';
 import { _ as _asyncToGenerator } from './asyncToGenerator.5229e80b.js';
 
 function firestore() {
@@ -18,7 +18,7 @@ function _firestore() {
 
           case 4:
             _context.next = 6;
-            return Promise.all([import('./index.esm.38b1a214.js'), __inject_styles(["client-c2ed52fa.css"])]).then(function(x) { return x[0]; });
+            return Promise.all([import('./index.esm.f5d152a2.js'), __inject_styles(["client-c2ed52fa.css"])]).then(function(x) { return x[0]; });
 
           case 6:
             _firestore2 = _context.sent;
